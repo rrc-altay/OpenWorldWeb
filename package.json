@@ -11,6 +11,8 @@
     "lint-staged": "lint-staged --config lint-staged.js"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.0",
+    "@emotion/styled": "^11.11.0",
     "@mui/material": "^5.13.0",
     "@mui/styled-engine-sc": "^5.12.0",
     "@reduxjs/toolkit": "^1.9.5",

@@ -1,0 +1,16 @@
+enum ColorScheme {
+  MAIN = "#FFFFFF",
+  MAIN_TWO = "#DEF9FF",
+  MAIN_THREE = "#0FAACC",
+  PRIMARY = "#A0D4EC",
+  PRIMARY_TWO = "#4295C1",
+  PRIMARY_THREE = "#317BA3",
+  PRIMARY_DARK = "#0D242C",
+  SECONDARY = "#0FAACC",
+  SECONDARY_TWO = "#63A6B5",
+  SECONDARY_DARK = "#3A626F",
+  GRAY = "#404040",
+  GRAY_LIGHT = "#6A7881",
+}
+
+export default ColorScheme;
