@@ -1,7 +1,6 @@
 import { Html, Head, Main, NextScript } from "next/document";
 
-
-        console.log(123);
+console.log("fix");
 
 export default function Document() {
   return (
