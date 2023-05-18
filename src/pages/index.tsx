@@ -1,7 +1,13 @@
+import { Button } from "@mui/material";
+import SpinnerUI from "@/UI/SpinnerUI/SpinnerUI";
+
 const Index = () => {
   return (
     <div>
-      <p>text</p>
+      <br />
+      <Button id="specialButton">ВЕРСИЯ ДЛЯ СЛАБОВИДЯЩИХ</Button>
+      <br />
+      <br />
       <p>
         Lorem Ipsum is simply dummy text of the printing and typesetting
         industry. Lorem Ipsum has been the standard dummy text ever since the
@@ -14,7 +20,10 @@ const Index = () => {
         Ipsum.
       </p>
       <br />
-      <button id="specialButton">ВЕРСИЯ ДЛЯ СЛАБОВИДЯЩИХ</button>
+      <Button>Показать ещё</Button>
+      <br />
+      <br />
+      <SpinnerUI />
     </div>
   );
 };
