@@ -1,4 +1,4 @@
-export default function Home() {
+const Index = () => {
   return (
     <div>
       <p>text</p>
@@ -17,4 +17,6 @@ export default function Home() {
       <button id="specialButton">ВЕРСИЯ ДЛЯ СЛАБОВИДЯЩИХ</button>
     </div>
   );
-}
+};
+
+export default Index;

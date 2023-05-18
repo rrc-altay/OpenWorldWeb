@@ -4,15 +4,15 @@ import type { AppProps } from "next/app";
 
 import "normalize.css";
 import "@/styles/globalStyles";
-import HeadLayout from "@/layout/HeadLayout";
+import HTMLLayout from "@/layout/Default/HTMLLayout";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <HeadLayout>
+    <HTMLLayout>
       <MainLayout>
         <Component {...pageProps} />
       </MainLayout>
-    </HeadLayout>
+    </HTMLLayout>
   );
 }
 
