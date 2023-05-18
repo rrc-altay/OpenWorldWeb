@@ -20,6 +20,16 @@ const HeadLayout = ({ children }: Children) => {
         />
       </Head>
       {children}
+      <script
+        defer
+        crossOrigin={undefined}
+        src="https://lidrekon.ru/slep/js/jquery.js"
+      />
+      <script
+        defer
+        crossOrigin={undefined}
+        src="https://lidrekon.ru/slep/js/uhpv-full.min.js"
+      />
     </>
   );
 };
