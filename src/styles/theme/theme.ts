@@ -19,6 +19,14 @@ const theme = createTheme({
       disabled: ColorScheme.GRAY,
     },
   },
+  typography: {
+    fontFamily: "Late, sans-serif",
+
+    fontWeightBold: "800",
+    fontWeightMedium: "700",
+    fontWeightRegular: "600",
+    fontWeightLight: "400",
+  },
   components: {
     MuiButton: {
       defaultProps: {
