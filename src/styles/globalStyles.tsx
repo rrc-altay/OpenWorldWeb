@@ -10,6 +10,7 @@ export const GlobalStyles = createGlobalStyle`
     font-family: Lato, sans-serif;
     font-size: 14px;
     font-weight: 600;
+    overflow-x: hidden;
   }
   
   *, *:after, *:before {
@@ -33,6 +34,10 @@ export const GlobalStyles = createGlobalStyle`
     max-width: 1950px;
     padding: 0 15px;
     margin: 0 auto;
+  }
+  
+  .p-0 {
+    padding: 0;
   }
   
   

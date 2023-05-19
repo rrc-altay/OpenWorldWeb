@@ -1,11 +1,5 @@
-import { Button } from "@mui/material";
-
 const Index = () => {
-  return (
-    <div>
-      <Button id="specialButton">ВЕРСИЯ ДЛЯ СЛАБОВИДЯЩИХ</Button>
-    </div>
-  );
+  return <div></div>;
 };
 
 export default Index;

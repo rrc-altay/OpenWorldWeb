@@ -1,7 +1,7 @@
 import { styled } from "@mui/material";
 import ColorScheme from "@/styles/theme/colorScheme";
 
-const ContainerSC = styled("div")`
+const ContainerSC = styled("li")`
   display: flex;
   align-items: center;
   margin-right: 10px;
