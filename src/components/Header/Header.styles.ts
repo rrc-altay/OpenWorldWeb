@@ -9,13 +9,7 @@ const WrapperSC = styled("section")`
   justify-content: space-between;
 `;
 
-const SearchContainerSC = styled("div")`
-  flex-shrink: 0;
-  margin-right: 50px;
-`;
-
 export const useHeaderStyles = () => ({
   HeaderSC,
   WrapperSC,
-  SearchContainerSC,
 });

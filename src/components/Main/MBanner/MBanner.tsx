@@ -1,7 +1,6 @@
 import React from "react";
-import { styled } from "@mui/material";
-import ColorScheme from "@/styles/theme/colorScheme";
 import AccessibilityButton from "@/components/AccessibilityButton/AccessibilityButton";
+import { useMBannerStyles } from "@/components/Main/MBanner/MBanner.styles";
 
 const MBanner = () => {
   return (
@@ -19,32 +18,6 @@ const MBanner = () => {
   );
 };
 
-const ContainerSC = styled("section")`
-  width: 100%;
-  height: 416px;
-  background: ${ColorScheme.PRIMARY};
-`;
-
-const WrapperSC = styled("div")`
-  position: relative;
-  height: 100%;
-  overflow: hidden;
-`;
-
-const AccessibilityContainerSC = styled("div")`
-  position: absolute;
-  top: 32px;
-  right: -240px;
-  transition: 0.3s all linear;
-  &:hover {
-    right: 0;
-  }
-`;
-
-const ImageSC = styled("img")`
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-`;
-
+const { ContainerSC, WrapperSC, ImageSC, AccessibilityContainerSC } =
+  useMBannerStyles();
 export default React.memo(MBanner);

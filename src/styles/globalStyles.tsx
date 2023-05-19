@@ -1,6 +1,13 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle, css } from "styled-components";
 import ColorScheme from "@/styles/theme/colorScheme";
 import fontFace from "@/styles/fontFace";
+
+const container = css`
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+`;
 
 export const GlobalStyles = createGlobalStyle`
   body {
@@ -18,6 +25,20 @@ export const GlobalStyles = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
   }
+
+  ul,li {
+    list-style-type: none;
+  }
+
+  button {
+    font-family: inherit;
+    border: 0;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
   
   #__next {
     display: flex;
@@ -30,29 +51,27 @@ export const GlobalStyles = createGlobalStyle`
   }
   
   .container {
-    width: 100%;
     max-width: 1950px;
-    padding: 0 15px;
-    margin: 0 auto;
+    ${container};
+  }
+
+  .container-two {
+    max-width: 1646px;
+    ${container};
+  }
+  
+  .container-three {
+    max-width: 1500px;
+    ${container};
+  }
+
+  .container-main {
+    max-width: 1470px;
+    ${container};
   }
   
   .p-0 {
     padding: 0;
-  }
-  
-  
-  ul,li {
-    list-style-type: none;
-  }
-  
-  button {
-    font-family: inherit;
-    border: 0;
-  }
-  
-  a {
-    color: inherit;
-    text-decoration: none;
   }
   
   ${fontFace}

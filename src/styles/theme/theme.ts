@@ -1,6 +1,10 @@
-import { createTheme } from "@mui/material";
+import { createTheme } from "@mui/material/styles";
 import ColorScheme from "@/styles/theme/colorScheme";
+
 const theme = createTheme({
+  customPalette: {
+    primaryDark: ColorScheme.PRIMARY_DARK,
+  },
   palette: {
     mode: "light",
     primary: {
@@ -26,6 +30,29 @@ const theme = createTheme({
     fontWeightMedium: "700",
     fontWeightRegular: "600",
     fontWeightLight: "400",
+
+    h1: {
+      color: ColorScheme.SECONDARY,
+      fontWeight: 600,
+      fontSize: "18px",
+      lineHeight: "22px",
+      textTransform: "uppercase",
+    },
+
+    h2: {
+      color: ColorScheme.SECONDARY_DARK,
+      fontWeight: 800,
+      fontSize: "18px",
+      lineHeight: "22px",
+      textTransform: "uppercase",
+    },
+
+    h3: {
+      color: ColorScheme.GRAY_LIGHT,
+      fontWeight: 700,
+      fontSize: "16px",
+      lineHeight: "19px",
+    },
   },
   components: {
     MuiButton: {
@@ -98,5 +125,19 @@ const theme = createTheme({
     },
   },
 });
+
+declare module "@mui/material/styles" {
+  interface Theme {
+    customPalette: {
+      primaryDark: string;
+    };
+  }
+  // allow configuration using `createTheme`
+  interface ThemeOptions {
+    customPalette?: {
+      primaryDark?: string;
+    };
+  }
+}
 
 export default theme;

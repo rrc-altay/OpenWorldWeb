@@ -17,15 +17,17 @@ const ButtonSC = styled(Button)`
   padding: 0 25px 0 15px;
 
   font-weight: 700;
-  //font-size: 12px;
-  //line-height: 14px;
 
   background-color: ${ColorScheme.MAIN};
   border-radius: 50px 0 0 50px;
 
   justify-content: flex-end;
 
+  transform: translateX(calc(100% - 74px));
+  transition: 0.2s all linear;
+
   &:hover {
+    transform: translateY(0);
     background-color: ${ColorScheme.MAIN};
   }
 
