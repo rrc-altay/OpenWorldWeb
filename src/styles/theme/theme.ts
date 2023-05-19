@@ -71,6 +71,31 @@ const theme = createTheme({
         },
       },
     },
+    MuiTextField: {
+      defaultProps: {
+        sx: {
+          "& .MuiInputBase-input": {
+            color: ColorScheme.GRAY,
+            fontSize: "16px",
+            lineHeight: "19px",
+            fontWeight: "400",
+
+            "&::placeholder": {
+              opacity: 1,
+              color: ColorScheme.GRAY_LIGHT,
+              fontSize: "inherit",
+              lineHeight: "inherit",
+              fontWeight: "inherit",
+            },
+            "&:focus": {
+              "&::placeholder": {
+                opacity: 0.5,
+              },
+            },
+          },
+        },
+      },
+    },
   },
 });
 

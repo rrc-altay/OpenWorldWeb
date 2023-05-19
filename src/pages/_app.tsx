@@ -1,5 +1,5 @@
 import React from "react";
-import MainLayout from "@/layout/MainLayout";
+import AppLayout from "@/layout/AppLayout/AppLayout";
 import type { AppProps } from "next/app";
 
 import "normalize.css";
@@ -9,9 +9,9 @@ import HTMLLayout from "@/layout/Default/HTMLLayout";
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <HTMLLayout>
-      <MainLayout>
+      <AppLayout>
         <Component {...pageProps} />
-      </MainLayout>
+      </AppLayout>
     </HTMLLayout>
   );
 }

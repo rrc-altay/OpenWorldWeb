@@ -7,13 +7,14 @@ import theme from "@/styles/theme/theme";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
 import { GlobalStyles } from "@/styles/globalStyles";
+import MainLayout from "@/layout/AppLayout/MainLayout/MainLayout";
 
-const MainLayout = ({ children }: Children) => {
+const AppLayout = ({ children }: Children) => {
   return (
     <Provider store={store}>
       <ThemeProvider theme={theme}>
         <Header />
-        <main>{children}</main>
+        <MainLayout>{children}</MainLayout>
         <Footer />
         <GlobalStyles />
       </ThemeProvider>
@@ -21,4 +22,4 @@ const MainLayout = ({ children }: Children) => {
   );
 };
 
-export default React.memo(MainLayout);
+export default React.memo(AppLayout);

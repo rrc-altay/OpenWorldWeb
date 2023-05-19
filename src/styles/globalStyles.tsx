@@ -9,7 +9,7 @@ export const GlobalStyles = createGlobalStyle`
     
     font-family: Lato, sans-serif;
     font-size: 14px;
-    font-weight: 400;
+    font-weight: 600;
   }
   
   *, *:after, *:before {
@@ -30,8 +30,8 @@ export const GlobalStyles = createGlobalStyle`
   
   .container {
     width: 100%;
-    max-width: 1920px;
-    
+    max-width: 1950px;
+    padding: 0 15px;
     margin: 0 auto;
   }
   
