@@ -5,17 +5,14 @@ import { Provider } from "react-redux";
 import store from "@/store/store";
 import theme from "@/styles/theme/theme";
 import Header from "@/components/Header/Header";
-import Footer from "@/components/Footer/Footer";
 import { GlobalStyles } from "@/styles/globalStyles";
-import MainLayout from "@/layout/AppLayout/MainLayout/MainLayout";
 
 const AppLayout = ({ children }: Children) => {
   return (
     <Provider store={store}>
       <ThemeProvider theme={theme}>
         <Header />
-        <MainLayout>{children}</MainLayout>
-        <Footer />
+        {children}
         <GlobalStyles />
       </ThemeProvider>
     </Provider>

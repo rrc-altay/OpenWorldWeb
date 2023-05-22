@@ -12,6 +12,8 @@ enum ColorScheme {
   SECONDARY_DARK = "#3A626F",
   GRAY = "#404040",
   GRAY_LIGHT = "#6A7881",
+
+  SHADOW = "rgba(32, 43, 109, 0.1)",
 }
 
 export default ColorScheme;

@@ -1,10 +1,10 @@
-import React, { ReactNode } from "react";
+import React from "react";
 import { styled, Typography } from "@mui/material";
 import ColorScheme from "@/styles/theme/colorScheme";
+import { Children } from "@/types/types";
 
-interface BoxContainer {
+interface BoxContainer extends Children {
   title?: string;
-  children: ReactNode;
 }
 const BoxContainer = ({ title, children }: BoxContainer) => {
   return (
@@ -20,7 +20,7 @@ const ContainerSC = styled("div")`
   padding: 24px 36px;
 
   background: ${ColorScheme.MAIN};
-  box-shadow: 0 0 10px rgba(32, 43, 109, 0.1);
+  box-shadow: 0 0 10px ${ColorScheme.SHADOW};
   border-radius: 50px;
 `;
 

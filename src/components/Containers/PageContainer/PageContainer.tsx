@@ -1,9 +1,10 @@
-import React, { ReactNode } from "react";
+import React from "react";
 import { BreadCrumbsUIProps } from "@/UI/BreadCrumbsUI/types";
 import BreadCrumbsUI from "@/UI/BreadCrumbsUI/BreadCrumbsUI";
 import { usePageContainerStyles } from "@/components/Containers/PageContainer/PageContainer.styles";
+import { Children } from "@/types/types";
 
-type PageContainerProps = BreadCrumbsUIProps & { children: ReactNode };
+type PageContainerProps = BreadCrumbsUIProps & Children;
 
 const PageContainer = ({ breadCrumbs, children }: PageContainerProps) => {
   return (

@@ -21,7 +21,7 @@ const ListSC = styled("ul")`
   border-radius: 50px;
 
   background: ${ColorScheme.PRIMARY_THREE};
-  box-shadow: 0 0 10px rgba(32, 43, 109, 0.1);
+  box-shadow: 0 0 10px ${ColorScheme.SHADOW};
 `;
 
 const ItemSC = styled("li")`
