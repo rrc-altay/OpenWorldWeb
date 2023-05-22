@@ -5,9 +5,13 @@ const ContainerSC = styled("li")`
   display: flex;
   align-items: center;
   margin-right: 10px;
+  flex-shrink: 0.5;
 `;
 
 const IconContainerSC = styled("div")`
+  width: 32px;
+  height: 32px;
+
   margin-right: 20px;
   & > svg {
     & > path {

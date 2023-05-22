@@ -11,7 +11,7 @@ const HSearch = () => {
 };
 
 const ContainerSC = styled("div")`
-  flex-shrink: 0;
+  flex: 1;
   margin-right: 50px;
 `;
 

@@ -2,6 +2,7 @@ import React from "react";
 import HAbout from "@/components/Header/HAbout/HAbout";
 import { useHeaderStyles } from "@/components/Header/Header.styles";
 import HSearch from "@/components/Header/HSearch/HSearch";
+import HDrawer from "@/components/Header/HDrawer/HDrawer";
 
 const Header = () => {
   return (
@@ -9,6 +10,7 @@ const Header = () => {
       <WrapperSC className="container-two">
         <HSearch />
         <HAbout />
+        <HDrawer />
       </WrapperSC>
     </HeaderSC>
   );

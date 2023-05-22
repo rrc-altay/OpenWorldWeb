@@ -1,4 +1,5 @@
 import { styled } from "@mui/material";
+import { Breakpoints } from "@/styles/breakpoints";
 
 const ContainerSC = styled("ul")`
   max-width: 830px;
@@ -9,6 +10,10 @@ const ContainerSC = styled("ul")`
 
   & > *:last-child {
     margin-right: 0;
+  }
+
+  @media (max-width: ${Breakpoints.BIG_TABLET}px) {
+    display: none;
   }
 `;
 

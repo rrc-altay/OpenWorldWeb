@@ -7,6 +7,7 @@ import {
   TextFieldProps,
 } from "@mui/material";
 import ColorScheme from "@/styles/theme/colorScheme";
+import { Breakpoints } from "@/styles/breakpoints";
 
 const SearchUI = (props: TextFieldProps) => {
   return (
@@ -27,7 +28,10 @@ const SearchUI = (props: TextFieldProps) => {
 };
 
 const TextFieldSC = styled(TextField)`
-  width: 320px;
+  width: 100%;
+  max-width: 320px;
+  min-width: 180px;
+
   & .MuiInputBase-root {
     &::before {
       border-bottom-color: ${ColorScheme.GRAY_LIGHT};
@@ -38,11 +42,19 @@ const TextFieldSC = styled(TextField)`
     padding-bottom: 8px;
     padding-right: 5px;
   }
+
+  @media (max-width: ${Breakpoints.BIG_TABLET}px) {
+    max-width: 271px;
+  }
 `;
 
 const SearchIconSC = styled(SearchIcon)`
+  width: 32px;
+  height: 32px;
+
   margin-bottom: 5px;
   margin-right: 8px;
+
   & > path {
     fill: ${ColorScheme.GRAY_LIGHT};
   }
