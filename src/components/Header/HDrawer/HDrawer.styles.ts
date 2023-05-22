@@ -31,6 +31,8 @@ const DrawerSC = styled(Drawer)`
   & .MuiPaper-root {
     position: relative;
 
+    justify-content: center;
+
     width: 100%;
     padding: 10px 0;
     background-color: ${ColorScheme.PRIMARY_THREE};

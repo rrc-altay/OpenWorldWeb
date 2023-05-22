@@ -70,6 +70,11 @@ export const GlobalStyles = createGlobalStyle`
     max-width: 1470px;
     ${container};
   }
+
+  .container-main-two {
+    max-width: 776px;
+    ${container};
+  }
   
   .p-0 {
     padding: 0;

@@ -20,13 +20,15 @@ const HDrawer = () => {
         <CloseButtonSC onClick={handleChangeDrawer(false)}>
           <CloseIcon />
         </CloseButtonSC>
-        <DrawerWrapperSC>
-          {navigationMock.map((item) => (
-            <DrawerItemSC key={item.path}>
-              <Link href={item.path}>{item.title}</Link>
-            </DrawerItemSC>
-          ))}
-        </DrawerWrapperSC>
+        <nav>
+          <DrawerWrapperSC>
+            {navigationMock.map((item) => (
+              <DrawerItemSC key={item.path}>
+                <Link href={item.path}>{item.title}</Link>
+              </DrawerItemSC>
+            ))}
+          </DrawerWrapperSC>
+        </nav>
       </DrawerSC>
     </>
   );
