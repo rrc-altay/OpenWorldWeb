@@ -30,6 +30,11 @@ const ItemSC = styled("li")`
   width: 32px;
   height: 32px;
   margin-right: 20px;
+
+  @media (max-width: ${Breakpoints.TABLE}px) {
+    width: 30px;
+    height: 30px;
+  }
 `;
 
 const LinkSC = styled("a")`
@@ -38,7 +43,10 @@ const LinkSC = styled("a")`
   height: 100%;
 `;
 
-const ImgSC = styled("img")``;
+const ImgSC = styled("img")`
+  width: 100%;
+  height: 100%;
+`;
 
 export const useFSocialStyles = () => ({
   ContainerSC,

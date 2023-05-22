@@ -18,15 +18,26 @@ const ContainerSC = styled("li")`
   display: flex;
   align-items: center;
   margin-bottom: 30px;
+
+  @media (max-width: ${Breakpoints.BIG_TABLET}px) {
+    margin-bottom: 20px;
+  }
 `;
 
 const IconContainerSC = styled("div")`
   margin-right: 20px;
+
+  width: 25px;
+  height: 25px;
+
+  @media (max-width: ${Breakpoints.BIG_TABLET}px) {
+    width: 23px;
+    height: 23px;
+  }
+
   & > svg {
-    @media (max-width: ${Breakpoints.BIG_TABLET}px) {
-      width: 23px;
-      height: 23px;
-    }
+    width: inherit;
+    height: inherit;
 
     & > path {
       fill: ${ColorScheme.SECONDARY_DARK};
