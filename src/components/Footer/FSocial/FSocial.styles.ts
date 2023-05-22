@@ -2,7 +2,7 @@ import { styled } from "@mui/material";
 import { Breakpoints } from "@/styles/breakpoints";
 
 const ContainerSC = styled("div")`
-  flex-shrink: 0;
+  flex-shrink: 0.5;
   margin-right: 90px;
 
   @media (max-width: ${Breakpoints.NOTEBOOK}px) {

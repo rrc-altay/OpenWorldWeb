@@ -2,7 +2,7 @@ import { styled } from "@mui/material";
 import { Breakpoints } from "@/styles/breakpoints";
 
 const ContainerSC = styled("div")`
-  flex-shrink: 0;
+  flex-shrink: 0.5;
 
   @media (max-width: ${Breakpoints.BIG_TABLET}px) {
     order: 2;
