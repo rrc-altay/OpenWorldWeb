@@ -20,6 +20,8 @@ const HiddenButton = styled("div")`
   height: 0;
 
   visibility: hidden;
+
+  position: absolute;
   z-index: ${zIndexes.HIDDEN};
 `;
 

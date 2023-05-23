@@ -1,6 +1,7 @@
 import React, { FC } from "react";
 import AccessibilityContainer from "@/components/Containers/AccessibilityContainer/AccessibilityContainer";
 import { useErrorPageStyles } from "@/components/ErrorPage/ErrorPage.styles";
+import { useBigMobile } from "@/hooks/useAdaptive";
 
 interface ErrorPageProps {
   Icon: FC;
@@ -20,6 +21,9 @@ const ErrorPage = ({
   description,
   button,
 }: ErrorPageProps) => {
+  const isBigMobile = useBigMobile();
+  console.log(isBigMobile);
+
   return (
     <ContainerSC>
       <AccessibilityContainer>
@@ -27,7 +31,8 @@ const ErrorPage = ({
           <IconContainerSC>
             <Icon />
           </IconContainerSC>
-          <TitleSC>{title}</TitleSC>
+          <MobileTitleSC>{title}</MobileTitleSC>
+          <TitleSC>ОШИБКА {isBigMobile ? "" : title}</TitleSC>
           <SubtitleSC>{subtitle}</SubtitleSC>
           <DescriptionSC>{description}</DescriptionSC>
           <ButtonSC onClick={button.onClick}>{button.text}</ButtonSC>
@@ -41,6 +46,7 @@ const {
   ContainerSC,
   WrapperSC,
   IconContainerSC,
+  MobileTitleSC,
   TitleSC,
   SubtitleSC,
   DescriptionSC,
