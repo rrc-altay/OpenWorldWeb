@@ -127,7 +127,7 @@ const ButtonSC = styled(Button)`
   }
 `;
 
-export const useErrorPageStyles = () => ({
+export const useErrorContentStyles = () => ({
   ContainerSC,
   WrapperSC,
   IconContainerSC,

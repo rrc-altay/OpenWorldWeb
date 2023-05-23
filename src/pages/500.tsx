@@ -1,15 +1,15 @@
 import React from "react";
-import ErrorPage from "@/components/ErrorPage/ErrorPage";
 import ErrorIcon from "@/assets/icons/505.svg";
 import { useRouter } from "next/router";
 import TitleLayout from "@/layout/TitleLayout";
+import ErrorContent from "@/components/ErrorContent/ErrorContent";
 
 const Index = () => {
   const router = useRouter();
 
   return (
     <TitleLayout title="500">
-      <ErrorPage
+      <ErrorContent
         Icon={ErrorIcon}
         title="500"
         subtitle="Кажется что-то пошло не так!"

@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import AccessibilityContainer from "@/components/Containers/AccessibilityContainer/AccessibilityContainer";
-import { useErrorPageStyles } from "@/components/ErrorPage/ErrorPage.styles";
+import { useErrorContentStyles } from "@/components/ErrorContent/ErrorContent.styles";
 import { useBigMobile } from "@/hooks/useAdaptive";
 
 interface ErrorPageProps {
@@ -14,7 +14,7 @@ interface ErrorPageProps {
   };
 }
 
-const ErrorPage = ({
+const ErrorContent = ({
   Icon,
   title,
   subtitle,
@@ -50,5 +50,5 @@ const {
   SubtitleSC,
   DescriptionSC,
   ButtonSC,
-} = useErrorPageStyles();
-export default React.memo(ErrorPage);
+} = useErrorContentStyles();
+export default React.memo(ErrorContent);

@@ -1,15 +1,15 @@
 import React from "react";
-import ErrorPage from "@/components/ErrorPage/ErrorPage";
 import NotFoundIcon from "@/assets/icons/404.svg";
 import { useRouter } from "next/router";
 import TitleLayout from "@/layout/TitleLayout";
+import ErrorContent from "@/components/ErrorContent/ErrorContent";
 
 const Index = () => {
   const router = useRouter();
 
   return (
     <TitleLayout title="404">
-      <ErrorPage
+      <ErrorContent
         Icon={NotFoundIcon}
         title="404"
         subtitle="Кажется что-то пошло не так!"
