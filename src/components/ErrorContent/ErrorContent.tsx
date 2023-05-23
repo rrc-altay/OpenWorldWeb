@@ -1,7 +1,7 @@
 import React, { FC } from "react";
-import AccessibilityContainer from "@/components/Containers/AccessibilityContainer/AccessibilityContainer";
 import { useErrorContentStyles } from "@/components/ErrorContent/ErrorContent.styles";
 import { useBigMobile } from "@/hooks/useAdaptive";
+import AccessibilityWrapper from "@/components/Wrappers/AccessibilityWrapper/AccessibilityWrapper";
 
 interface ErrorPageProps {
   Icon: FC;
@@ -25,7 +25,7 @@ const ErrorContent = ({
 
   return (
     <ContainerSC>
-      <AccessibilityContainer>
+      <AccessibilityWrapper>
         <WrapperSC>
           <IconContainerSC>
             <Icon />
@@ -36,7 +36,7 @@ const ErrorContent = ({
           <DescriptionSC>{description}</DescriptionSC>
           <ButtonSC onClick={button.onClick}>{button.text}</ButtonSC>
         </WrapperSC>
-      </AccessibilityContainer>
+      </AccessibilityWrapper>
     </ContainerSC>
   );
 };

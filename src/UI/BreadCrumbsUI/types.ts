@@ -1,3 +1,5 @@
+import { BreadCrumbsArr } from "@/lib/models/BreadCrumbsModel";
+
 export interface BreadCrumbsUIProps {
-  breadCrumbs: { href: string; title: string }[];
+  breadCrumbs: BreadCrumbsArr;
 }

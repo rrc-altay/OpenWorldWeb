@@ -1,8 +1,13 @@
+import {
+  RoutesNamespace,
+  RoutesNamespaceRU,
+} from "@/lib/constants/routesNamespace";
+
 export const navigationMock = [
-  { title: "Главная", path: "/" },
-  { title: "Государственное задание", path: "/gosudarstvennoe-zadanie" },
-  { title: "Карта сайта", path: "/karta" },
-  { title: "Контакты", path: "/kontakti" },
-  { title: "Обратная связь", path: "/obratnaya-svyaz" },
-  { title: "Опрос граждан «Уровень доверия»", path: "/opros-grazhdan" },
+  { title: RoutesNamespaceRU.HOME, path: RoutesNamespace.HOME },
+  { title: RoutesNamespaceRU.GOS_TASK, path: RoutesNamespace.GOS_TASK },
+  { title: RoutesNamespaceRU.MAP, path: RoutesNamespace.MAP },
+  { title: RoutesNamespaceRU.CONTACTS, path: RoutesNamespace.CONTACTS },
+  { title: RoutesNamespaceRU.FEEDBACK, path: RoutesNamespace.FEEDBACK },
+  { title: RoutesNamespaceRU.SURVEY, path: RoutesNamespace.SURVEY },
 ];

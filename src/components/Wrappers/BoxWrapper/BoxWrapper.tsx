@@ -3,10 +3,10 @@ import { styled, Typography } from "@mui/material";
 import ColorScheme from "@/styles/theme/colorScheme";
 import { Children } from "@/types/types";
 
-interface BoxContainer extends Children {
+interface BoxWrapperProps extends Children {
   title?: string;
 }
-const BoxContainer = ({ title, children }: BoxContainer) => {
+const BoxWrapper = ({ title, children }: BoxWrapperProps) => {
   return (
     <ContainerSC>
       {title && <TitleSC variant="h1">{title}</TitleSC>}
@@ -28,4 +28,4 @@ const TitleSC = styled(Typography)`
   text-align: center;
   margin-bottom: 24px;
 `;
-export default React.memo(BoxContainer);
+export default React.memo(BoxWrapper);

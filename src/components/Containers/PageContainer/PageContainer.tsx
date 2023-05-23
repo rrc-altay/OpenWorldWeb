@@ -2,26 +2,28 @@ import React from "react";
 import { BreadCrumbsUIProps } from "@/UI/BreadCrumbsUI/types";
 import BreadCrumbsUI from "@/UI/BreadCrumbsUI/BreadCrumbsUI";
 import { usePageContainerStyles } from "@/components/Containers/PageContainer/PageContainer.styles";
-import { Children } from "@/types/types";
+import { CatalogProps, Children } from "@/types/types";
+import AsideContainer from "@/components/Containers/AsideContainer/AsideContainer";
 
-type PageContainerProps = BreadCrumbsUIProps & Children;
+export type PageContainerProps = BreadCrumbsUIProps & Children & CatalogProps;
 
-const PageContainer = ({ breadCrumbs, children }: PageContainerProps) => {
+const PageContainer = ({
+  breadCrumbs,
+  catalog,
+  children,
+}: PageContainerProps) => {
   return (
     <section className="container-main">
       <BreadCrumbContainerSC>
         <BreadCrumbsUI breadCrumbs={breadCrumbs} />
       </BreadCrumbContainerSC>
-      <ContentSC>
-        <AsideSC>aside</AsideSC>
+      <AsideContainer catalog={catalog}>
         <ChildrenSC className="container-main-two p-0">{children}</ChildrenSC>
-        <AsideSC>aside</AsideSC>
-      </ContentSC>
+      </AsideContainer>
     </section>
   );
 };
 
-const { BreadCrumbContainerSC, ContentSC, AsideSC, ChildrenSC } =
-  usePageContainerStyles();
+const { BreadCrumbContainerSC, ChildrenSC } = usePageContainerStyles();
 
 export default React.memo(PageContainer);

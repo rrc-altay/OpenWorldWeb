@@ -4,7 +4,7 @@ import AccessibilityButton from "@/components/AccessibilityButton/AccessibilityB
 import { styled } from "@mui/material";
 import { zIndexes } from "@/styles/zIndexes";
 
-const AccessibilityContainer = ({ children }: Children) => {
+const AccessibilityWrapper = ({ children }: Children) => {
   return (
     <>
       {children}
@@ -25,4 +25,4 @@ const HiddenButton = styled("div")`
   z-index: ${zIndexes.HIDDEN};
 `;
 
-export default React.memo(AccessibilityContainer);
+export default React.memo(AccessibilityWrapper);

@@ -1,8 +1,8 @@
 import axios from "axios";
-import { BASE_URL, TIMEOUT } from "@/lib/constants";
+import { API_URL, TIMEOUT } from "@/lib/constants";
 
 const axiosProject = axios.create({
-  baseURL: BASE_URL,
+  baseURL: API_URL,
   timeout: TIMEOUT,
 });
 
