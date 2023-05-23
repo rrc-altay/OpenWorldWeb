@@ -22,7 +22,6 @@ const ErrorPage = ({
   button,
 }: ErrorPageProps) => {
   const isBigMobile = useBigMobile();
-  console.log(isBigMobile);
 
   return (
     <ContainerSC>

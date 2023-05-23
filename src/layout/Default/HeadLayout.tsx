@@ -1,17 +1,15 @@
 import React from "react";
 import Head from "next/head";
+import { headMock } from "@/lib/mock/headMock";
 
 const HeadLayout = () => {
   return (
     <Head>
       <meta
         name="description"
-        content={`БУ РА "РРЦ ДЛЯ ДЕТЕЙ И ПОДРОСТКОВ С ОГРАНИЧЕННЫМИ ВОЗМОЖНОСТЯМИ"`}
+        content={headMock.desc}
       />
-      <title>
-        {/* eslint-disable-next-line react/no-unescaped-entities */}
-        БУ РА "РРЦ ДЛЯ ДЕТЕЙ И ПОДРОСТКОВ С ОГРАНИЧЕННЫМИ ВОЗМОЖНОСТЯМИ"
-      </title>
+      <title>{headMock.titleFull}</title>
       <link
         rel="apple-touch-icon"
         sizes="57x57"
