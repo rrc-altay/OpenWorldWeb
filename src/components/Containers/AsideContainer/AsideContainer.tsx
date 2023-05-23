@@ -9,13 +9,11 @@ type AsideContainerProps = CatalogProps & Children;
 const AsideContainer = ({ children, catalog = [] }: AsideContainerProps) => {
   const { leftAside, rightAside } = useAsideContainer(catalog);
 
-  console.log(leftAside, rightAside);
-
   return (
     <ContainerSC>
-      <Aside />
+      <Aside catalog={leftAside} />
       {children}
-      <Aside />
+      <Aside catalog={rightAside} />
     </ContainerSC>
   );
 };

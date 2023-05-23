@@ -6,7 +6,7 @@ import { ElementsModel } from "@/lib/models/Catalog/properties/ElementsModel";
 export interface CatalogItemModel {
   app: AppModel | null;
   phone: PhoneModel | null;
-  partners: PartnersModel | null;
+  partners: PartnersModel[] | null;
 
   elements: ElementsModel[] | null;
 }

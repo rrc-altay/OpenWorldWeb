@@ -4,6 +4,7 @@ import AccessibilityButton from "@/components/AccessibilityButton/AccessibilityB
 import { styled } from "@mui/material";
 import { zIndexes } from "@/styles/zIndexes";
 
+// TODO: Если страницу не оборачивает MainContainer, то обернуть в AccessibilityWrapper. Нужно для корректной работы версии для слабовидящих
 const AccessibilityWrapper = ({ children }: Children) => {
   return (
     <>
