@@ -6,10 +6,6 @@ import { useNewsItemStyles } from "@/components/News/NewsItem/NewsItem.styles";
 const NewsItem = ({ id, title, description, images }: NewsModel) => {
   const previewImage = images[0];
 
-  console.log(
-    description.includes("10 января в учреждении  прошло") && description,
-  );
-
   return (
     <ContainerSC>
       {previewImage?.src && (
