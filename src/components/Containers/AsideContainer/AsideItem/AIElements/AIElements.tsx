@@ -3,6 +3,7 @@ import { ElementsModel } from "@/lib/models/Catalog/properties/ElementsModel";
 import { styled } from "@mui/material";
 import Link from "next/link";
 import ColorScheme from "@/styles/theme/colorScheme";
+import { Breakpoints } from "@/styles/breakpoints";
 
 interface AIElementsProps {
   elements: ElementsModel[];
@@ -46,6 +47,11 @@ const ItemSC = styled("li")`
 
     width: 100%;
     padding: 2.5px 0;
+  }
+
+  @media (max-width: ${Breakpoints.NOTEBOOK}px) {
+    font-size: 14px;
+    line-height: 18px;
   }
 `;
 

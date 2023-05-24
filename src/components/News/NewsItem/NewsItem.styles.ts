@@ -1,10 +1,10 @@
 import { styled } from "@mui/material";
 import ColorScheme from "@/styles/theme/colorScheme";
+import { Breakpoints } from "@/styles/breakpoints";
 
 const ContainerSC = styled("div")`
   width: 100%;
   max-width: 776px;
-  min-width: 550px;
 
   display: flex;
 
@@ -24,6 +24,10 @@ const ImageSC = styled("img")`
 
   object-fit: cover;
   border-radius: 49px 49px 49px 43px;
+
+  @media (max-width: ${Breakpoints.NOTEBOOK}px) {
+    max-width: 180px;
+  }
 `;
 
 const TextContainerSC = styled("div")`

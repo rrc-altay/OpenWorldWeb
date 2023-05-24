@@ -33,8 +33,12 @@ const ContainerSC = styled("ul")`
 `;
 
 const ItemSC = styled("li")`
-  width: 88px;
-  height: 88px;
+  width: 100%;
+  height: 100%;
+
+  max-width: 88px;
+  max-height: 88px;
+
   overflow: hidden;
 `;
 

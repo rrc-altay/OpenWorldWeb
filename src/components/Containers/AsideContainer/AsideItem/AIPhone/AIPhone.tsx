@@ -6,6 +6,7 @@ import InfoIcon from "@/assets/icons/InfoIcon.svg";
 import WaveLeftIcon from "@/assets/icons/WaveLeftIcon.svg";
 import WaveMiddleIcon from "@/assets/icons/WaveMiddleIcon.svg";
 import { zIndexes } from "@/styles/zIndexes";
+import { Breakpoints } from "@/styles/breakpoints";
 
 interface AIPhoneProps {
   phone: PhoneModel;
@@ -59,6 +60,10 @@ const TelSC = styled("a")`
   margin-right: 16px;
 
   z-index: ${zIndexes.UPPER};
+
+  @media (max-width: ${Breakpoints.NOTEBOOK}px) {
+    font-size: 18px;
+  }
 `;
 
 const InfoSC = styled("a")`
