@@ -5,7 +5,7 @@ import HTMLLayout from "@/layout/Default/HTMLLayout";
 import type { AppProps } from "next/app";
 import "normalize.css";
 import "@/styles/globalStyles";
-import ErrorBoundary from "@/components/ErrorBoundary/ErrorBoundary";
+import ErrorBoundary from "@/layout/ErrorBoundary";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (

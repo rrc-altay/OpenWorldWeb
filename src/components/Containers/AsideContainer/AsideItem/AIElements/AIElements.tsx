@@ -9,7 +9,6 @@ interface AIElementsProps {
 }
 
 const AIElements = ({ elements }: AIElementsProps) => {
-  console.log(elements);
   return (
     <ContainerSC>
       {elements.map((elementsItem) => (

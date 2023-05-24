@@ -14,6 +14,8 @@ enum ColorScheme {
   GRAY_LIGHT = "#6A7881",
 
   SHADOW = "rgba(32, 43, 109, 0.1)",
+
+  ERROR = "red",
 }
 
 export default ColorScheme;
