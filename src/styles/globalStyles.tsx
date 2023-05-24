@@ -1,6 +1,7 @@
 import { createGlobalStyle, css } from "styled-components";
 import ColorScheme from "@/styles/theme/colorScheme";
 import fontFace from "@/styles/fontFace";
+import { Breakpoints } from "@/styles/breakpoints";
 
 const container = css`
   width: 100%;
@@ -17,7 +18,6 @@ export const GlobalStyles = createGlobalStyle`
     font-family: Lato, sans-serif;
     font-size: 14px;
     font-weight: 600;
-    overflow-x: hidden;
   }
   
   *, *:after, *:before {
@@ -69,11 +69,19 @@ export const GlobalStyles = createGlobalStyle`
   .container-main {
     max-width: 1470px;
     ${container};
+      
+    @media(max-width: ${Breakpoints.BIG_TABLET}px) {
+        padding: 0 15px
+    }  
   }
 
   .container-main-two {
     max-width: 776px;
     ${container};
+    
+    @media(max-width: ${Breakpoints.BIG_TABLET}px) {
+        max-width: none;
+    }  
   }
   
   .p-0 {

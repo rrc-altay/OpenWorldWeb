@@ -22,10 +22,6 @@ const WrapperSC = styled("section")`
 
   @media (max-width: ${Breakpoints.BIG_TABLET}px) {
     flex-direction: column;
-    padding: 24px 48px 20px !important;
-  }
-
-  @media (max-width: ${Breakpoints.TABLE}px) {
     padding: 24px 15px 20px !important;
   }
 `;

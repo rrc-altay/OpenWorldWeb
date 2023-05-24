@@ -3,7 +3,6 @@ import { AppModel } from "@/lib/models/Catalog/properties/AppModel";
 import { styled } from "@mui/material";
 import ColorScheme from "@/styles/theme/colorScheme";
 import { about } from "@/lib/mock/about";
-import { Breakpoints } from "@/styles/breakpoints";
 
 interface AIAppProps {
   app: AppModel;
@@ -44,17 +43,14 @@ const ImgSC = styled("img")`
 `;
 
 const ImgTextSC = styled("p")`
-  width: 200px;
+  width: 100%;
+  max-width: 195px;
 
   font-weight: 600;
   font-size: 14px;
   line-height: 17px;
 
   color: ${ColorScheme.GRAY_LIGHT};
-
-  @media (max-width: ${Breakpoints.NOTEBOOK}px) {
-    width: 160px;
-  }
 `;
 
 const LinkSC = styled("a")`

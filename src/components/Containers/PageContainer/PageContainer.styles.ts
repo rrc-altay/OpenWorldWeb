@@ -13,6 +13,11 @@ const ChildrenSC = styled("div")`
   @media (max-width: ${Breakpoints.NOTEBOOK}px) {
     margin: 0 15px !important;
   }
+
+  @media (max-width: ${Breakpoints.BIG_TABLET}px) {
+    margin: 0 !important;
+    min-width: auto;
+  }
 `;
 
 export const usePageContainerStyles = () => ({

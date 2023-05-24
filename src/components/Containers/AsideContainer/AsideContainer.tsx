@@ -1,25 +1,15 @@
 import React from "react";
-import { CatalogProps, Children } from "@/types/types";
-import Aside from "@/components/Containers/AsideContainer/Aside/Aside";
-import { styled } from "@mui/material";
-import { useAsideContainer } from "@/components/Containers/AsideContainer/useAsideContainer";
-
-type AsideContainerProps = CatalogProps & Children;
+import AsideDesktop from "@/components/Containers/AsideContainer/AsideDesktop/AsideDesktop";
+import { AsideContainerProps } from "@/components/Containers/AsideContainer/types";
+import { useBigTablet } from "@/hooks/useAdaptive";
+import AsideMobile from "@/components/Containers/AsideContainer/AsideMobile/AsideMobile";
 
 const AsideContainer = ({ children, catalog = [] }: AsideContainerProps) => {
-  const { leftAside, rightAside } = useAsideContainer(catalog);
+  const isBigTablet = useBigTablet();
 
-  return (
-    <ContainerSC>
-      <Aside catalog={leftAside} />
-      {children}
-      <Aside catalog={rightAside} />
-    </ContainerSC>
-  );
+  const Container = isBigTablet ? AsideMobile : AsideDesktop;
+
+  return <Container catalog={catalog}>{children}</Container>;
 };
-
-const ContainerSC = styled("section")`
-  display: flex;
-`;
 
 export default React.memo(AsideContainer);

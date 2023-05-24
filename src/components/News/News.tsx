@@ -39,6 +39,7 @@ const ContainerSC = styled("section")`
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 30px;
 `;
 
 const NewsListSC = styled("div")`

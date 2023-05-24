@@ -12,7 +12,7 @@ const ContainerSC = styled("div")`
 
   @media (max-width: ${Breakpoints.BIG_TABLET}px) {
     transform: translateY(0);
-    margin-top: 33px;
+    margin-top: 32px;
   }
 `;
 
