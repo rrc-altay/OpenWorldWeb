@@ -27,7 +27,9 @@ const News = ({ initialNews }: NewsProps) => {
       <NewsError hasError={hasError} />
       {isLoading && <SpinnerUI />}
       {!isEnd && (
-        <ButtonSC onClick={handleLoadNews}>
+        <ButtonSC
+          disabled={isLoading}
+          onClick={handleLoadNews}>
           {hasError ? "Повторить попытку" : "Показать еще"}
         </ButtonSC>
       )}
@@ -46,10 +48,11 @@ const NewsListSC = styled("div")`
   & > *:last-child {
     margin-bottom: 0;
   }
+  margin-bottom: 30px;
 `;
 
 const ButtonSC = styled(Button)`
-  margin-top: 30px;
+  margin-top: 10px;
 `;
 
 export default React.memo(News);

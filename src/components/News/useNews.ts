@@ -19,7 +19,10 @@ export const useNews = (initialNews: NewsModelArr) => {
 
     fetchGetNews(page)
       .then((response) => {
-        if (response.data.results.length < PAGE_LIMIT) {
+        if (
+          response.data.count ===
+          response.data.results.length + news.length
+        ) {
           setIsEnd(true);
         }
 

@@ -50,7 +50,7 @@ const AIApp = ({ app }: AIAppProps) => {
 
 const ContainerSC = styled("div")`
   @media (max-width: ${Breakpoints.BIG_TABLET}px) {
-    max-width: 167px;
+    max-width: 250px;
   }
 `;
 

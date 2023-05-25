@@ -21,6 +21,10 @@ const AsideItem = ({ title, data }: CatalogModel) => {
 
 const ContainerSC = styled("div")`
   margin-bottom: 50px;
+
+  @media (max-width: ${Breakpoints.BIG_TABLET}px) {
+    margin-bottom: 10px;
+  }
 `;
 
 const TitleSC = styled(Typography)`

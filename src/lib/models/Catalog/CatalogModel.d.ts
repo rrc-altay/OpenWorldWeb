@@ -6,3 +6,5 @@ export interface CatalogModel {
   path: string;
   data: CatalogItemModel;
 }
+
+export type CatalogModelArr = CatalogModel[];

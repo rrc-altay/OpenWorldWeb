@@ -4,6 +4,9 @@ import { Breakpoints } from "@/styles/breakpoints";
 export const useBigTablet = () =>
   useMediaQuery(`(max-width: ${Breakpoints.BIG_TABLET}px)`);
 
+export const useTablet = () =>
+  useMediaQuery(`(max-width: ${Breakpoints.TABLE}px)`);
+
 export const useSmallTablet = () =>
   useMediaQuery(`(max-width: ${Breakpoints.SMALL_TABLET}px)`);
 

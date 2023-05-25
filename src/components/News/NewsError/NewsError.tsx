@@ -12,7 +12,6 @@ const NewsError = ({ hasError }: NewsErrorProps) => {
 
 const ContainerSC = styled("p")`
   color: ${ColorScheme.ERROR};
-  margin: 10px 0;
 `;
 
 export default React.memo(NewsError);

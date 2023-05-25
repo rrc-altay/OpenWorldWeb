@@ -39,6 +39,10 @@ const ContainerSC = styled("ul")`
   @media (max-width: ${Breakpoints.TABLE}px) {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  @media (max-width: ${Breakpoints.SMALL_TABLET}px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
 `;
 
 const ItemSC = styled("li")`
