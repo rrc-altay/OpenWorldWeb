@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { NewsModel } from "@/lib/models/NewsModel";
-import { BASE_URL_PROD } from "@/lib/constants";
+import { BASE_URL } from "@/lib/constants";
 import { useNewsItemStyles } from "@/components/News/NewsItem/NewsItem.styles";
 import { useSmallTablet } from "@/hooks/useAdaptive";
 import { getRusDate } from "@/lib/services/services";
@@ -30,7 +30,7 @@ const NewsItem = ({
       <WrapperSC>
         {previewImage?.src && (
           <ImageSC
-            src={`${BASE_URL_PROD}${previewImage.src}`}
+            src={`${BASE_URL}${previewImage.src}`}
             alt={`Превью фото новости ${title}`}
           />
         )}
