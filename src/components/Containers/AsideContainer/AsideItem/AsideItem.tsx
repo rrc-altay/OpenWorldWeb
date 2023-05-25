@@ -1,11 +1,10 @@
 import React from "react";
 import { CatalogModel } from "@/lib/models/Catalog/CatalogModel";
-import { styled, Typography } from "@mui/material";
 import AIApp from "@/components/Containers/AsideContainer/AsideItem/AIApp/AIApp";
 import AIPhone from "@/components/Containers/AsideContainer/AsideItem/AIPhone/AIPhone";
 import AIPartners from "@/components/Containers/AsideContainer/AsideItem/AIPartners/AIPartners";
 import AIElements from "@/components/Containers/AsideContainer/AsideItem/AIElements/AIElements";
-import { Breakpoints } from "@/styles/breakpoints";
+import { useAsideItemStyles } from "@/components/Containers/AsideContainer/AsideItem/AsideItem.styles";
 
 const AsideItem = ({ title, data }: CatalogModel) => {
   return (
@@ -19,20 +18,5 @@ const AsideItem = ({ title, data }: CatalogModel) => {
   );
 };
 
-const ContainerSC = styled("div")`
-  margin-bottom: 50px;
-
-  @media (max-width: ${Breakpoints.BIG_TABLET}px) {
-    margin-bottom: 10px;
-  }
-`;
-
-const TitleSC = styled(Typography)`
-  margin-bottom: 20px;
-
-  @media (max-width: ${Breakpoints.BIG_TABLET}px) {
-    display: none;
-  }
-`;
-
+const { ContainerSC, TitleSC } = useAsideItemStyles();
 export default React.memo(AsideItem);
