@@ -15,4 +15,6 @@ export const about = {
     { src: "telegram.png", name: "telegram icon", href: "" },
     { src: "vk.png", name: "vk icon", href: "" },
   ],
+
+  downloadAppLink: "https://1openworld.ru/media/build/file/app-release.apk",
 };

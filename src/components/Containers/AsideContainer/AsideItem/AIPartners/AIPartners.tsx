@@ -1,6 +1,7 @@
 import React from "react";
 import { PartnersModel } from "@/lib/models/Catalog/properties/PartnersModel";
 import { styled } from "@mui/material";
+import { Breakpoints } from "@/styles/breakpoints";
 
 interface AIPartnersProps {
   partners: PartnersModel[];
@@ -30,6 +31,14 @@ const ContainerSC = styled("ul")`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 16px;
+
+  @media (max-width: ${Breakpoints.BIG_TABLET}px) {
+    margin-top: 6px;
+  }
+
+  @media (max-width: ${Breakpoints.TABLE}px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 `;
 
 const ItemSC = styled("li")`

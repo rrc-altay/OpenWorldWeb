@@ -27,6 +27,10 @@ const ContainerSC = styled("ul")`
       padding-top: 0;
     }
   }
+
+  @media (max-width: ${Breakpoints.BIG_TABLET}px) {
+    margin-top: 6px;
+  }
 `;
 
 const ItemSC = styled("li")`
@@ -52,6 +56,12 @@ const ItemSC = styled("li")`
   @media (max-width: ${Breakpoints.NOTEBOOK}px) {
     font-size: 14px;
     line-height: 18px;
+  }
+
+  @media (max-width: ${Breakpoints.BIG_TABLET}px) {
+    font-size: 13.5px;
+    line-height: 16px;
+    padding-left: 20px;
   }
 `;
 

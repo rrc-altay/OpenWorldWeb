@@ -5,6 +5,7 @@ import AIApp from "@/components/Containers/AsideContainer/AsideItem/AIApp/AIApp"
 import AIPhone from "@/components/Containers/AsideContainer/AsideItem/AIPhone/AIPhone";
 import AIPartners from "@/components/Containers/AsideContainer/AsideItem/AIPartners/AIPartners";
 import AIElements from "@/components/Containers/AsideContainer/AsideItem/AIElements/AIElements";
+import { Breakpoints } from "@/styles/breakpoints";
 
 const AsideItem = ({ title, data }: CatalogModel) => {
   return (
@@ -24,6 +25,10 @@ const ContainerSC = styled("div")`
 
 const TitleSC = styled(Typography)`
   margin-bottom: 20px;
+
+  @media (max-width: ${Breakpoints.BIG_TABLET}px) {
+    display: none;
+  }
 `;
 
 export default React.memo(AsideItem);

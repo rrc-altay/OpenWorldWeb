@@ -46,6 +46,11 @@ const ContainerSC = styled("div")`
   border-radius: 20px;
 
   border: 1px solid ${ColorScheme.MAIN};
+
+  @media (max-width: ${Breakpoints.BIG_TABLET}px) {
+    padding: 13px 16px 13px 21px;
+    margin-top: 8px;
+  }
 `;
 
 const TelSC = styled("a")`
@@ -64,6 +69,11 @@ const TelSC = styled("a")`
   @media (max-width: ${Breakpoints.NOTEBOOK}px) {
     font-size: 18px;
   }
+
+  @media (max-width: ${Breakpoints.BIG_TABLET}px) {
+    font-size: 20px;
+    line-height: 24px;
+  }
 `;
 
 const InfoSC = styled("a")`
@@ -75,6 +85,8 @@ const InfoSC = styled("a")`
 
   width: 48px;
   height: 48px;
+
+  flex-shrink: 0;
 
   background-color: ${ColorScheme.MAIN};
   border-radius: 50%;
@@ -109,6 +121,10 @@ const WaveTwoContainerSC = styled("div")`
   z-index: ${zIndexes.DEFAULT};
 
   transform: translateX(-50%);
+
+  @media (max-width: ${Breakpoints.BIG_TABLET}px) {
+    top: -10px;
+  }
 `;
 
 export default React.memo(AIPhone);
