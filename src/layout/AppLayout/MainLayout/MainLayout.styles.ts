@@ -14,6 +14,10 @@ const ContainerSC = styled("div")`
     transform: translateY(0);
     margin-top: 32px;
   }
+
+  @media (max-width: ${Breakpoints.BIG_MOBILE}px) {
+    margin-top: 20px;
+  }
 `;
 
 export const useMainLayoutStyles = () => ({

@@ -4,5 +4,5 @@ export interface CatalogModel {
   title: string;
   slug: string;
   path: string;
-  data: CatalogItemModel[];
+  data: CatalogItemModel;
 }

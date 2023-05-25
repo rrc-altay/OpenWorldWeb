@@ -6,16 +6,14 @@ import AIPhone from "@/components/Containers/AsideContainer/AsideItem/AIPhone/AI
 import AIPartners from "@/components/Containers/AsideContainer/AsideItem/AIPartners/AIPartners";
 import AIElements from "@/components/Containers/AsideContainer/AsideItem/AIElements/AIElements";
 
-const AsideItem = ({ title, data = [] }: CatalogModel) => {
-  const currentData = data[0];
-
+const AsideItem = ({ title, data }: CatalogModel) => {
   return (
     <ContainerSC>
       <TitleSC variant="h2">{title}</TitleSC>
-      {currentData?.elements && <AIElements elements={currentData.elements} />}
-      {currentData?.partners && <AIPartners partners={currentData.partners} />}
-      {currentData?.app && <AIApp app={currentData.app} />}
-      {currentData?.phone && <AIPhone phone={currentData.phone} />}
+      {data?.elements && <AIElements elements={data.elements} />}
+      {data?.partners && <AIPartners partners={data.partners} />}
+      {data?.app && <AIApp app={data.app} />}
+      {data?.phone && <AIPhone phone={data.phone} />}
     </ContainerSC>
   );
 };
