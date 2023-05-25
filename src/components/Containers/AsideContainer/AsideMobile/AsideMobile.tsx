@@ -1,4 +1,4 @@
-import React, { useMemo } from "react";
+import React from "react";
 import { AsideContainerProps } from "@/components/Containers/AsideContainer/types";
 import { styled } from "@mui/material";
 import AccordionUI from "@/UI/AccordionUI/AccordionUI";
@@ -7,18 +7,7 @@ import { useAsideMobile } from "@/components/Containers/AsideContainer/AsideMobi
 import { Breakpoints } from "@/styles/breakpoints";
 
 const AsideMobile = ({ children, catalog }: AsideContainerProps) => {
-  const test = useMemo(
-    () => [
-      ...catalog,
-      catalog[0],
-      catalog[1],
-      catalog[2],
-      catalog[3],
-      catalog[1],
-    ],
-    [],
-  );
-  const { sections } = useAsideMobile(test);
+  const { sections } = useAsideMobile(catalog);
 
   return (
     <>
