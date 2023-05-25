@@ -1,10 +1,14 @@
 import { styled } from "@mui/material";
 import ColorScheme from "@/styles/theme/colorScheme";
 import { Breakpoints } from "@/styles/breakpoints";
+import Link from "next/link";
 
-const ContainerSC = styled("div")`
+const ContainerSC = styled(Link)`
   width: 100%;
   min-height: 240px;
+
+  display: flex;
+  flex-direction: column;
 
   padding: 14px 13px;
   margin-bottom: 30px;
@@ -30,6 +34,8 @@ const ContainerSC = styled("div")`
 `;
 
 const WrapperSC = styled("div")`
+  flex-grow: 1;
+
   display: flex;
   justify-content: center;
 
@@ -98,7 +104,7 @@ const TextContainerSC = styled("div")`
   }
 `;
 
-const TitleSC = styled("a")`
+const TitleSC = styled("h3")`
   display: block;
 
   color: ${ColorScheme.SECONDARY};
@@ -110,10 +116,6 @@ const TitleSC = styled("a")`
   line-height: 22px;
   text-align: center;
   text-transform: uppercase;
-
-  &:hover {
-    color: ${ColorScheme.SECONDARY_DARK};
-  }
 
   @media (max-width: ${Breakpoints.BIG_TABLET}px) {
     font-size: 15px;

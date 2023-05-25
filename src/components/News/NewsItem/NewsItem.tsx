@@ -22,18 +22,11 @@ const NewsItem = ({
     }
   }, [created_at]);
 
-  const Title = () => (
-    <TitleSC
-      href={`/news/${id}`}
-      target="_blank"
-      rel="noopener noreferrer">
-      {title}
-    </TitleSC>
-  );
-
   return (
-    <ContainerSC>
-      {isSmallTablet && <Title />}
+    <ContainerSC
+      href={`/news/${id}`}
+      target="_blank">
+      {isSmallTablet && <TitleSC>{title}</TitleSC>}
       <WrapperSC>
         {previewImage?.src && (
           <ImageSC
@@ -42,7 +35,7 @@ const NewsItem = ({
           />
         )}
         <TextContainerSC>
-          {!isSmallTablet && <Title />}
+          {!isSmallTablet && <TitleSC>{title}</TitleSC>}
           <DescContainerSC>
             <DescriptionSC>{description}</DescriptionSC>
           </DescContainerSC>

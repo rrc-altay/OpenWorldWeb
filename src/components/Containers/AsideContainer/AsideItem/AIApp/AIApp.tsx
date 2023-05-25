@@ -12,10 +12,14 @@ const AIApp = ({ app }: AIAppProps) => {
   return (
     <ContainerSC>
       <TopContainerSC>
-        <ImgSC
-          src={app.image}
-          alt={app.description}
-        />
+        <DownloadImgSC
+          href="https://1openworld.ru/media/build/file/app-release.apk  "
+          download>
+          <ImgSC
+            src={app.image}
+            alt={app.description}
+          />
+        </DownloadImgSC>
         <ImgTextSC>{app.description}</ImgTextSC>
       </TopContainerSC>
       <LinkSC
@@ -36,10 +40,18 @@ const TopContainerSC = styled("div")`
   margin-bottom: 15px;
 `;
 
-const ImgSC = styled("img")`
+const DownloadImgSC = styled("a")`
+  display: block;
+
   width: 81px;
   height: 81px;
   margin-right: 14px;
+  flex-shrink: 0;
+`;
+
+const ImgSC = styled("img")`
+  width: 100%;
+  height: 100%;
 `;
 
 const ImgTextSC = styled("p")`
@@ -57,7 +69,13 @@ const LinkSC = styled("a")`
   font-weight: 600;
   font-size: 14px;
   line-height: 17px;
+
   color: ${ColorScheme.SECONDARY_LIGHT};
+  transition: 0.2s all linear;
+
+  &:hover {
+    color: ${ColorScheme.SECONDARY_DARK};
+  }
 `;
 
 export default React.memo(AIApp);

@@ -1,6 +1,8 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useRouter } from "next/router";
 
 export const useHDrawer = () => {
+  const { pathname } = useRouter();
   const [isDrawer, setIsDrawer] = useState<boolean>(false);
 
   const handleChangeDrawer = (state: boolean) => {
@@ -8,6 +10,12 @@ export const useHDrawer = () => {
       setIsDrawer(state);
     };
   };
+
+  useEffect(() => {
+    if (pathname && isDrawer) {
+      setIsDrawer(false);
+    }
+  }, [pathname]);
 
   return {
     isDrawer,
