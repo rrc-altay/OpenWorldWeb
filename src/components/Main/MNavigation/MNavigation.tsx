@@ -9,7 +9,11 @@ const MNavigation = () => {
       <ListSC>
         {navigationMock.map((navigationItem) => (
           <ItemSC key={navigationItem.path}>
-            <Link href={navigationItem.path}>{navigationItem.title}</Link>
+            <Link
+              href={navigationItem.path}
+              target={navigationItem?.target}>
+              {navigationItem.title}
+            </Link>
           </ItemSC>
         ))}
       </ListSC>

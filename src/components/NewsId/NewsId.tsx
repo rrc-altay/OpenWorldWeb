@@ -10,7 +10,9 @@ const NewsId = ({ title, description, created_at, images }: NewsModel) => {
   console.log(images);
   return (
     <ContainerSC>
-      <BoxWrapper title={title}>
+      <BoxWrapper
+        title={title}
+        isPaddingBottom={false}>
         <WrapperSC>
           <ParagraphSC>{description}</ParagraphSC>
           {created_at && (

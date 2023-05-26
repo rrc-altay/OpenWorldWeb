@@ -4,7 +4,6 @@ export enum RoutesNamespace {
   MAP = "/karta",
   CONTACTS = "/kontakti",
   FEEDBACK = "/obratnaya-svyaz",
-  SURVEY = "/opros-grazhdan",
   NOT_FOUND = "/404",
   ERROR = "/500",
   NEWS = "/news",
@@ -19,7 +18,6 @@ export const RoutesNamespaceRU: {
   MAP: "Карта сайта",
   CONTACTS: "Контакты",
   FEEDBACK: "Обратная связь",
-  SURVEY: "Опрос граждан «Уровень доверия»",
   NOT_FOUND: "",
   ERROR: "",
 };

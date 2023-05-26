@@ -1,5 +1,7 @@
 import { createTheme } from "@mui/material/styles";
 import ColorScheme from "@/styles/theme/colorScheme";
+import CheckboxIcon from "@/assets/icons/CheckboxIcon.svg";
+import EmptyCheckboxIcon from "@/assets/icons/EmptyCheckboxIcon.svg";
 
 const theme = createTheme({
   customPalette: {
@@ -119,6 +121,21 @@ const theme = createTheme({
                 opacity: 0.5,
               },
             },
+          },
+        },
+      },
+    },
+    MuiCheckbox: {
+      defaultProps: {
+        icon: <EmptyCheckboxIcon />,
+        checkedIcon: <CheckboxIcon />,
+      },
+    },
+    MuiFormControlLabel: {
+      defaultProps: {
+        sx: {
+          "& .MuiButtonBase-root": {
+            marginRight: "7px",
           },
         },
       },

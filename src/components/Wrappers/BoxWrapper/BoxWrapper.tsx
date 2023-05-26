@@ -1,25 +1,38 @@
 import React from "react";
-import { styled, Typography } from "@mui/material";
+import { css, styled, Typography } from "@mui/material";
 import ColorScheme from "@/styles/theme/colorScheme";
 import { Children } from "@/types/types";
 import { Breakpoints } from "@/styles/breakpoints";
 
 interface BoxWrapperProps extends Children {
   title?: string;
+  isPaddingBottom?: boolean;
 }
-const BoxWrapper = ({ title, children }: BoxWrapperProps) => {
+const BoxWrapper = ({
+  title,
+  children,
+  isPaddingBottom = true,
+}: BoxWrapperProps) => {
   return (
-    <ContainerSC>
+    <ContainerSC isPaddingBottom={isPaddingBottom}>
       {title && <TitleSC variant="h1">{title}</TitleSC>}
       {children}
     </ContainerSC>
   );
 };
 
-const ContainerSC = styled("div")`
+const PaddingBottom = css`
+  padding-bottom: 36px;
+`;
+
+const ContainerSC = styled("div")<Pick<BoxWrapperProps, "isPaddingBottom">>`
   padding-top: 24px;
   padding-left: 36px;
   padding-right: 36px;
+
+  margin-bottom: 30px;
+
+  ${({ isPaddingBottom }) => isPaddingBottom && PaddingBottom};
 
   background: ${ColorScheme.MAIN};
   box-shadow: 0 0 10px ${ColorScheme.SHADOW};

@@ -55,7 +55,7 @@ const SwiperContainerSC = styled("div")`
 `;
 
 const ButtonSC = styled(Button)`
-  margin: 30px 0;
+  margin-bottom: 30px;
 `;
 
 export const useNEwsIdStyles = () => ({

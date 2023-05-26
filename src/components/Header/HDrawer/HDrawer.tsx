@@ -24,7 +24,11 @@ const HDrawer = () => {
           <DrawerWrapperSC>
             {navigationMock.map((item) => (
               <DrawerItemSC key={item.path}>
-                <Link href={item.path}>{item.title}</Link>
+                <Link
+                  href={item.path}
+                  target={item?.target}>
+                  {item.title}
+                </Link>
               </DrawerItemSC>
             ))}
           </DrawerWrapperSC>

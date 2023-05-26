@@ -9,21 +9,26 @@ import { CatalogProps } from "@/types/types";
 import { fetchGetNewById } from "@/lib/api/get/fetchGetNewById";
 import { NewsModel } from "@/lib/models/NewsModel";
 import { RoutesNamespace } from "@/lib/constants/routesNamespace";
+import TitleLayout from "@/layout/TitleLayout";
 
 type NewsIdProps = CatalogProps & { newsId: NewsModel };
 
 const Index = ({ catalog, newsId }: NewsIdProps) => {
+  const customBread = {
+    title: newsId.title,
+    href: `${RoutesNamespace.NEWS}/${newsId.id}`,
+  };
+
   return (
-    <MainContainer>
-      <PageContainer
-        catalog={catalog}
-        breadCrumbs={[
-          ...homeBreadCrumbs,
-          { title: newsId.title, href: `${RoutesNamespace.NEWS}/${newsId.id}` },
-        ]}>
-        <NewsId {...newsId} />
-      </PageContainer>
-    </MainContainer>
+    <TitleLayout title={newsId.title}>
+      <MainContainer>
+        <PageContainer
+          catalog={catalog}
+          breadCrumbs={[...homeBreadCrumbs, customBread]}>
+          <NewsId {...newsId} />
+        </PageContainer>
+      </MainContainer>
+    </TitleLayout>
   );
 };
 
