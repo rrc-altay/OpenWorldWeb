@@ -1,11 +1,16 @@
 import { styled, TextField } from "@mui/material";
 import ColorScheme from "@/styles/theme/colorScheme";
+import { Breakpoints } from "@/styles/breakpoints";
 
 export const TextFieldUI = styled(TextField)`
   width: 100%;
 
   & .MuiInputBase-root {
     border-radius: 20px;
+
+    @media (max-width: ${Breakpoints.BIG_TABLET}px) {
+      border-radius: 15px;
+    }
   }
 
   & .MuiInputBase-input {
@@ -15,6 +20,10 @@ export const TextFieldUI = styled(TextField)`
     font-size: 16px;
     font-weight: 600;
     line-height: 19px;
+
+    @media (max-width: ${Breakpoints.BIG_TABLET}px) {
+      padding: 10.5px 20px;
+    }
   }
 
   & .MuiOutlinedInput-notchedOutline {

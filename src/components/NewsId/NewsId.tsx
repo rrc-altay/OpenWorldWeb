@@ -7,7 +7,6 @@ import { useNEwsIdStyles } from "@/components/NewsId/NewsId.styles";
 import SwiperUI from "@/UI/SwiperUI/SwiperUI";
 
 const NewsId = ({ title, description, created_at, images }: NewsModel) => {
-  console.log(images);
   return (
     <ContainerSC>
       <BoxWrapper

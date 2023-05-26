@@ -9,6 +9,7 @@ import { CheckboxUI } from "@/UI/CheckboxUI/CheckboxUI";
 import { CircularProgress } from "@mui/material";
 import ModalUI from "@/UI/ModalUI/ModalUI";
 import { feedback } from "@/lib/mock/feedback";
+import { useBigTablet } from "@/hooks/useAdaptive";
 
 const Feedback = () => {
   const {
@@ -24,6 +25,8 @@ const Feedback = () => {
     onSubmit,
     handleChangeValue,
   } = useFeedback();
+
+  const isBigTablet = useBigTablet();
 
   return (
     <ContainerSC>
@@ -71,7 +74,7 @@ const Feedback = () => {
           </FormTopSC>
           <FormMiddleSC>
             <TextAreaUI
-              maxRows={7}
+              maxRows={isBigTablet ? 6 : 7}
               multiline={true}
               placeholder="Ваше сообщение *"
               value={message.field.value}

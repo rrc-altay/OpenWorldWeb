@@ -91,7 +91,6 @@ export const useFeedback = () => {
   };
 
   const onSubmit = handleSubmit(({ agree, ...sendData }) => {
-    // console.log(data.)
     if (!agree) {
       setHasError("Подтвердите согласие на обработку персональных данных");
       return;

@@ -23,6 +23,14 @@ const BoxWrapper = ({
 
 const PaddingBottom = css`
   padding-bottom: 36px;
+
+  @media (max-width: ${Breakpoints.BIG_TABLET}px) {
+    padding-bottom: 24px;
+  }
+
+  @media (max-width: ${Breakpoints.BIG_MOBILE}px) {
+    padding-bottom: 18px;
+  }
 `;
 
 const ContainerSC = styled("div")<Pick<BoxWrapperProps, "isPaddingBottom">>`
@@ -42,6 +50,12 @@ const ContainerSC = styled("div")<Pick<BoxWrapperProps, "isPaddingBottom">>`
     padding-top: 20px;
     padding-left: 24px;
     padding-right: 24px;
+  }
+
+  @media (max-width: ${Breakpoints.BIG_MOBILE}px) {
+    margin-bottom: 20px;
+    padding-left: 12px;
+    padding-right: 12px;
   }
 `;
 
