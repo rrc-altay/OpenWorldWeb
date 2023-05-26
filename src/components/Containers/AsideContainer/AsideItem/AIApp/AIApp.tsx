@@ -3,6 +3,7 @@ import { AppModel } from "@/lib/models/Catalog/properties/AppModel";
 import { about } from "@/lib/mock/about";
 import { useBigTablet } from "@/hooks/useAdaptive";
 import { useAIAppStyles } from "@/components/Containers/AsideContainer/AsideItem/AIApp/useAIApp.styles";
+import { BASE_URL } from "@/lib/constants";
 
 interface AIAppProps {
   app: AppModel;
@@ -18,7 +19,7 @@ const AIApp = ({ app }: AIAppProps) => {
           href={about.downloadAppLink}
           download>
           <ImgSC
-            src={app.image}
+            src={`${BASE_URL}${app.image}`}
             alt={app.description}
           />
         </DownloadImgSC>

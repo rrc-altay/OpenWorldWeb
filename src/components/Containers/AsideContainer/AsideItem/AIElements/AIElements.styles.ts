@@ -18,6 +18,7 @@ const ItemSC = styled("li")`
   max-width: 254px;
 
   font-size: 16px;
+  font-weight: 700;
   line-height: 19px;
 
   color: ${ColorScheme.GRAY_LIGHT};

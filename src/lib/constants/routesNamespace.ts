@@ -7,12 +7,14 @@ export enum RoutesNamespace {
   SURVEY = "/opros-grazhdan",
   NOT_FOUND = "/404",
   ERROR = "/500",
+  NEWS = "/news",
 }
 
 export const RoutesNamespaceRU: {
   [key in keyof typeof RoutesNamespace]: string;
 } = {
   HOME: "Главная",
+  NEWS: "Новости",
   GOS_TASK: "Государственное задание",
   MAP: "Карта сайта",
   CONTACTS: "Контакты",

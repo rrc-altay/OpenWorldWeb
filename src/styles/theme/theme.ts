@@ -24,7 +24,7 @@ const theme = createTheme({
     },
   },
   typography: {
-    fontFamily: "Late, sans-serif",
+    fontFamily: "Lato, sans-serif",
 
     fontWeightBold: "800",
     fontWeightMedium: "700",
@@ -73,7 +73,7 @@ const theme = createTheme({
 
           fontFamily: "inherit",
           fontSize: "16px",
-          fontWeight: 600,
+          fontWeight: 400,
           lineHeight: "16px",
           textTransform: "none",
 

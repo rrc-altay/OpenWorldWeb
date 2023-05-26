@@ -1,4 +1,5 @@
 import React from "react";
+import NewsId from "@/components/NewsId/NewsId";
 import MainContainer from "@/components/Containers/MainContainer/MainContainer";
 import PageContainer from "@/components/Containers/PageContainer/PageContainer";
 import { homeBreadCrumbs } from "@/lib/constants/breadCrumbs";
@@ -7,7 +8,6 @@ import { fetchGetCatalog } from "@/lib/api/get/fetchGetCatalog";
 import { CatalogProps } from "@/types/types";
 import { fetchGetNewById } from "@/lib/api/get/fetchGetNewById";
 import { NewsModel } from "@/lib/models/NewsModel";
-import NewsId from "@/components/NewsId/NewsId";
 
 type NewsIdProps = CatalogProps & { newsId: NewsModel };
 

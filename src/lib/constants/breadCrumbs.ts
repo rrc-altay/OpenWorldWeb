@@ -1,6 +1,9 @@
 import { BreadCrumbsArr } from "@/lib/models/BreadCrumbsModel";
-import { RoutesNamespace } from "@/lib/constants/routesNamespace";
+import {
+  RoutesNamespace,
+  RoutesNamespaceRU,
+} from "@/lib/constants/routesNamespace";
 
 export const homeBreadCrumbs: BreadCrumbsArr = [
-  { href: RoutesNamespace.HOME, title: "Новости" },
+  { href: RoutesNamespace.HOME, title: RoutesNamespaceRU.NEWS },
 ];

@@ -1,6 +1,7 @@
 import React from "react";
 import { useBreadCrumbsUIStyles } from "@/UI/BreadCrumbsUI/BreadCrumbsUI.styles";
 import { BreadCrumbsUIProps } from "@/UI/BreadCrumbsUI/types";
+import { RoutesNamespace } from "@/lib/constants/routesNamespace";
 
 const BreadCrumbsUI = ({ breadCrumbs }: BreadCrumbsUIProps) => {
   const lastIndex = breadCrumbs.length - 1;
@@ -9,7 +10,7 @@ const BreadCrumbsUI = ({ breadCrumbs }: BreadCrumbsUIProps) => {
     <ContainerSC>
       <ListSC>
         <LiSC isActive={false}>
-          <LinkSC href="/">Главная&nbsp;—</LinkSC>
+          <LinkSC href={RoutesNamespace.HOME}>Главная&nbsp;—</LinkSC>
         </LiSC>
         {breadCrumbs.map((breadItem, index) => {
           const isLast = index === lastIndex;

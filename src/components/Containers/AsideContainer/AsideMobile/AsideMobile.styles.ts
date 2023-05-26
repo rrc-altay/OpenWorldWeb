@@ -12,6 +12,10 @@ const ContainerSC = styled("section")`
   & > *:last-child > * {
     margin-right: 0;
   }
+
+  @media (max-width: ${Breakpoints.SMALL_TABLET}px) {
+    margin-bottom: 24px;
+  }
 `;
 
 const WrapperSC = styled("div")`

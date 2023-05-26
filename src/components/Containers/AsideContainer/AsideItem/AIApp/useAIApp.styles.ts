@@ -59,6 +59,7 @@ const ImgTextSC = styled("p")`
   @media (max-width: ${Breakpoints.BIG_TABLET}px) {
     font-size: 13.5px;
     line-height: 16px;
+    text-align: center;
     max-width: none;
   }
 `;
@@ -83,9 +84,14 @@ const LinkSC = styled("a")`
 `;
 
 const DownloadButtonSC = styled(Button)`
+  display: none;
+
   width: 100%;
   min-width: auto;
   max-height: 48px;
+  @media (max-width: ${Breakpoints.BIG_TABLET}px) {
+    display: block;
+  }
 `;
 
 export const useAIAppStyles = () => ({

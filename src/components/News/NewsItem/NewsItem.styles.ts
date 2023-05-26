@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const ContainerSC = styled(Link)`
   width: 100%;
-  min-height: 240px;
+  //min-height: 240px;
 
   display: flex;
   flex-direction: column;
@@ -154,16 +154,8 @@ const DescriptionSC = styled("p")`
   }
 `;
 
-const DateSC = styled("div")`
-  color: ${ColorScheme.GRAY_LIGHT};
-
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 14px;
-  text-align: right;
-
+const DateContainerSC = styled("div")`
   margin-top: 15px;
-
   @media (max-width: ${Breakpoints.BIG_TABLET}px) {
     margin-top: 16px;
   }
@@ -177,5 +169,5 @@ export const useNewsItemStyles = () => ({
   TitleSC,
   DescContainerSC,
   DescriptionSC,
-  DateSC,
+  DateContainerSC,
 });

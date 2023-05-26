@@ -3,6 +3,10 @@ import { Breakpoints } from "@/styles/breakpoints";
 
 const BreadCrumbContainerSC = styled("section")`
   margin-bottom: 30px;
+
+  @media (max-width: ${Breakpoints.SMALL_TABLET}px) {
+    margin-bottom: 15px;
+  }
 `;
 
 const ChildrenSC = styled("div")`

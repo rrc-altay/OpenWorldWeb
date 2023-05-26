@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { NewsModel } from "@/lib/models/NewsModel";
 import { BASE_URL } from "@/lib/constants";
 import { useNewsItemStyles } from "@/components/News/NewsItem/NewsItem.styles";
 import { useSmallTablet } from "@/hooks/useAdaptive";
-import { getRusDate } from "@/lib/services/services";
+import RusDateSSR from "@/components/RusDateSSR/RusDateSSR";
+import { RoutesNamespace } from "@/lib/constants/routesNamespace";
 
 const NewsItem = ({
   id,
@@ -12,19 +13,12 @@ const NewsItem = ({
   images,
   created_at,
 }: NewsModel) => {
-  const [date, setDate] = useState<string>("");
   const previewImage = images[0];
   const isSmallTablet = useSmallTablet();
 
-  useEffect(() => {
-    if (created_at) {
-      setDate(getRusDate(created_at));
-    }
-  }, [created_at]);
-
   return (
     <ContainerSC
-      href={`/news/${id}`}
+      href={`${RoutesNamespace.NEWS}/${id}`}
       target="_blank">
       {isSmallTablet && <TitleSC>{title}</TitleSC>}
       <WrapperSC>
@@ -39,7 +33,11 @@ const NewsItem = ({
           <DescContainerSC>
             <DescriptionSC>{description}</DescriptionSC>
           </DescContainerSC>
-          {date && <DateSC>Опубликовано: {date}</DateSC>}
+          {created_at && (
+            <DateContainerSC>
+              <RusDateSSR created_at={created_at} />
+            </DateContainerSC>
+          )}
         </TextContainerSC>
       </WrapperSC>
     </ContainerSC>
@@ -54,7 +52,7 @@ const {
   TitleSC,
   DescContainerSC,
   DescriptionSC,
-  DateSC,
+  DateContainerSC,
 } = useNewsItemStyles();
 
 export default React.memo(NewsItem);

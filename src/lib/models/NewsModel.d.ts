@@ -1,12 +1,10 @@
-export interface NewsImageModel {
-  id: number;
-  src: string;
-}
+import { ImageModel } from "@/lib/models/ImageModel";
+
 export interface NewsModel {
   readonly id: number;
   readonly title: string;
   readonly description: string;
-  readonly images: NewsImageModel[];
+  readonly images: ImageModel[];
   readonly created_at: string;
 }
 
