@@ -4,6 +4,7 @@ import BoxWrapper from "@/components/Wrappers/BoxWrapper/BoxWrapper";
 import RusDateSSR from "@/components/RusDateSSR/RusDateSSR";
 import { RoutesNamespace } from "@/lib/constants/routesNamespace";
 import { useNEwsIdStyles } from "@/components/NewsId/NewsId.styles";
+import SwiperUI from "@/UI/SwiperUI/SwiperUI";
 
 const NewsId = ({ title, description, created_at, images }: NewsModel) => {
   console.log(images);
@@ -17,11 +18,14 @@ const NewsId = ({ title, description, created_at, images }: NewsModel) => {
               <RusDateSSR created_at={created_at} />
             </DateContainerSC>
           )}
-          {/*{!!images.length && (*/}
-          {/*  <SwiperContainerSC>*/}
-          {/*    <SwiperUI data={images} />*/}
-          {/*  </SwiperContainerSC>*/}
-          {/*)}*/}
+          {!!images.length && (
+            <SwiperContainerSC>
+              <SwiperUI
+                title={title}
+                data={images}
+              />
+            </SwiperContainerSC>
+          )}
         </WrapperSC>
       </BoxWrapper>
       <ButtonSC href={RoutesNamespace.HOME}>
@@ -31,7 +35,13 @@ const NewsId = ({ title, description, created_at, images }: NewsModel) => {
   );
 };
 
-const { ContainerSC, WrapperSC, ParagraphSC, DateContainerSC, ButtonSC } =
-  useNEwsIdStyles();
+const {
+  ContainerSC,
+  WrapperSC,
+  ParagraphSC,
+  DateContainerSC,
+  ButtonSC,
+  SwiperContainerSC,
+} = useNEwsIdStyles();
 
 export default React.memo(NewsId);

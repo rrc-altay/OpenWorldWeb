@@ -8,6 +8,7 @@ import { fetchGetCatalog } from "@/lib/api/get/fetchGetCatalog";
 import { CatalogProps } from "@/types/types";
 import { fetchGetNewById } from "@/lib/api/get/fetchGetNewById";
 import { NewsModel } from "@/lib/models/NewsModel";
+import { RoutesNamespace } from "@/lib/constants/routesNamespace";
 
 type NewsIdProps = CatalogProps & { newsId: NewsModel };
 
@@ -16,7 +17,10 @@ const Index = ({ catalog, newsId }: NewsIdProps) => {
     <MainContainer>
       <PageContainer
         catalog={catalog}
-        breadCrumbs={homeBreadCrumbs}>
+        breadCrumbs={[
+          ...homeBreadCrumbs,
+          { title: newsId.title, href: `${RoutesNamespace.NEWS}/${newsId.id}` },
+        ]}>
         <NewsId {...newsId} />
       </PageContainer>
     </MainContainer>

@@ -5,11 +5,10 @@ import { Breakpoints } from "@/styles/breakpoints";
 
 const ContainerSC = styled("nav")``;
 
-const ListSC = styled("ul")`
-  display: flex;
-`;
+const ListSC = styled("ul")``;
 
 const LiSC = styled("li")<{ isActive: boolean }>`
+  display: inline;
   font-size: 16px;
   font-weight: 600;
   line-height: 19px;

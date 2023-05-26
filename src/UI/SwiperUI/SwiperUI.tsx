@@ -11,26 +11,32 @@ import SlideArrowRight from "@/assets/icons/SlideArrowRight.svg";
 import { Pagination } from "swiper";
 
 interface SwiperUIProps {
+  title: string;
   data: ImageModel[];
 }
 
-const SwiperUI = ({ data }: SwiperUIProps) => {
+const SwiperUI = ({ title, data }: SwiperUIProps) => {
   const { onSwiper, handlePressArrow } = useSwiperUI();
   const isArrow = data.length > 1;
 
   return (
     <SwiperSC
-      onSwiper={onSwiper}
+      autoHeight={true}
+      modules={[Pagination]}
       pagination={true}
-      modules={[Pagination]}>
+      slidesPerView="auto"
+      onSwiper={onSwiper}>
       {isArrow && (
         <PrevArrowSC onClick={handlePressArrow("prev")}>
           <SlideArrowLeft />
         </PrevArrowSC>
       )}
-      {data.map((imageItem) => (
+      {data.map((imageItem, index) => (
         <SwiperSlideSC key={imageItem.id}>
-          <ImgSC src={`${BASE_URL}/${imageItem.src}`} />
+          <ImgSC
+            src={`${BASE_URL}/${imageItem.src}`}
+            alt={`Картинка ${index} на тему ${title}`}
+          />
         </SwiperSlideSC>
       ))}
       {isArrow && (

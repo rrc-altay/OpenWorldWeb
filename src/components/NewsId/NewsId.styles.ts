@@ -44,6 +44,9 @@ const SwiperContainerSC = styled("div")`
 
   @media (max-width: ${Breakpoints.BIG_TABLET}px) {
     margin-top: 26px;
+
+    max-width: none;
+    max-height: none;
   }
 
   @media (max-width: ${Breakpoints.BIG_MOBILE}px) {

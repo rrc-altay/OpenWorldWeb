@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
 import "swiper/css/pagination";
+import { Breakpoints } from "@/styles/breakpoints";
 
 const SwiperSC = styled(Swiper)`
   position: relative;
@@ -11,18 +12,11 @@ const SwiperSC = styled(Swiper)`
   width: 100%;
   height: 100%;
 
-  max-width: 704px;
+  border-radius: 30px;
+  overflow: hidden;
 
-  & > .swiper-wrapper {
-    border-radius: 30px;
-
-    & > *:first-child > img {
-      border-radius: 30px 0 0 30px;
-    }
-
-    & > *:last-child > img {
-      border-radius: 0 30px 30px 0;
-    }
+  @media (max-width: ${Breakpoints.BIG_MOBILE}px) {
+    border-radius: 12px;
   }
 
   & > .swiper-pagination {
@@ -33,16 +27,30 @@ const SwiperSC = styled(Swiper)`
     align-items: center;
     justify-content: center;
 
+    @media (max-width: ${Breakpoints.BIG_MOBILE}px) {
+      margin-top: 16px;
+    }
+
     & > .swiper-pagination-bullet {
       width: 10px;
       height: 10px;
       opacity: 1;
       background-color: ${ColorScheme.GRAY_LIGHT};
+
+      @media (max-width: ${Breakpoints.BIG_MOBILE}px) {
+        width: 8px;
+        height: 8px;
+      }
     }
     & > .swiper-pagination-bullet-active {
       width: 14px;
       height: 14px;
       background-color: ${ColorScheme.PRIMARY};
+
+      @media (max-width: ${Breakpoints.BIG_MOBILE}px) {
+        width: 12px;
+        height: 12px;
+      }
     }
   }
 `;
@@ -55,7 +63,12 @@ const ImgSC = styled("img")`
 
   max-height: 504px;
 
+  border-radius: 30px;
   object-fit: cover;
+
+  @media (max-width: ${Breakpoints.BIG_MOBILE}px) {
+    border-radius: 12px;
+  }
 `;
 
 const PrevArrowSC = styled("button")`
@@ -74,6 +87,10 @@ const PrevArrowSC = styled("button")`
   background-color: transparent;
 
   transform: translateY(-50%);
+
+  @media (max-width: ${Breakpoints.BIG_TABLET}px) {
+    display: none;
+  }
 `;
 
 const NextArrowSC = styled(PrevArrowSC)`
