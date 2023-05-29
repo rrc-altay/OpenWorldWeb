@@ -1,6 +1,6 @@
 import React from "react";
 import { AppModel } from "@/lib/models/Catalog/properties/AppModel";
-import { about } from "@/lib/mock/about";
+import { aboutMock } from "@/lib/mock/aboutMock";
 import { useBigTablet } from "@/hooks/useAdaptive";
 import { useAIAppStyles } from "@/components/Containers/AsideContainer/AsideItem/AIApp/useAIApp.styles";
 import { BASE_URL } from "@/lib/constants";
@@ -16,7 +16,7 @@ const AIApp = ({ app }: AIAppProps) => {
     <ContainerSC>
       <TopContainerSC>
         <DownloadImgSC
-          href={about.downloadAppLink}
+          href={aboutMock.downloadAppLink}
           download>
           <ImgSC
             src={`${BASE_URL}${app.image}`}
@@ -29,7 +29,7 @@ const AIApp = ({ app }: AIAppProps) => {
       {!isBigTablet && <Link />}
       <DownloadButtonSC>
         <a
-          href={about.downloadAppLink}
+          href={aboutMock.downloadAppLink}
           download>
           Скачать
         </a>
@@ -40,10 +40,10 @@ const AIApp = ({ app }: AIAppProps) => {
 
 const Link = () => (
   <LinkSC
-    href={about.developerLink}
+    href={aboutMock.developerLink}
     target="_blank"
     rel="noreferrer noopener">
-    {about.developer}
+    {aboutMock.developer}
   </LinkSC>
 );
 

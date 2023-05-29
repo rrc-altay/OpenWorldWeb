@@ -3,7 +3,7 @@ import { FeedbackFormModel } from "@/lib/models/Forms/FeedbackFormModel";
 import { fetchPostFeedback } from "@/lib/api/post/fetchPostFeedback";
 import { ChangeEvent, useState } from "react";
 import { isAxiosError } from "axios";
-import { feedback } from "@/lib/mock/feedback";
+import { feedbackMock } from "@/lib/mock/feedbackMock";
 
 export const useFeedback = () => {
   const [isSuccess, setIsSuccess] = useState<boolean>(false);
@@ -125,11 +125,11 @@ export const useFeedback = () => {
 
           //? Error SMT Send
           if (errorData === false) {
-            setHasError(feedback.reject);
+            setHasError(feedbackMock.reject);
             return;
           }
         } else {
-          setHasError(feedback.reject);
+          setHasError(feedbackMock.reject);
         }
       })
       .finally(() => {

@@ -3,12 +3,13 @@ import ErrorIcon from "@/assets/icons/505.svg";
 import { useRouter } from "next/router";
 import TitleLayout from "@/layout/TitleLayout";
 import ErrorContent from "@/components/ErrorContent/ErrorContent";
+import { RoutesNamespaceRU } from "@/lib/constants/routesNamespace";
 
 const Index = () => {
   const router = useRouter();
 
   return (
-    <TitleLayout title="500">
+    <TitleLayout title={RoutesNamespaceRU.ERROR}>
       <ErrorContent
         Icon={ErrorIcon}
         title="500"

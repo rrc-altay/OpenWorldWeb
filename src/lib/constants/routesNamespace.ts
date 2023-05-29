@@ -18,6 +18,6 @@ export const RoutesNamespaceRU: {
   MAP: "Карта сайта",
   CONTACTS: "Контакты",
   FEEDBACK: "Обратная связь",
-  NOT_FOUND: "",
-  ERROR: "",
+  NOT_FOUND: "404",
+  ERROR: "500",
 };

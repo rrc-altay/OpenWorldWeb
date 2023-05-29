@@ -56,6 +56,7 @@ const ContainerSC = styled("div")<Pick<BoxWrapperProps, "isPaddingBottom">>`
     margin-bottom: 20px;
     padding-left: 12px;
     padding-right: 12px;
+    border-radius: 20px;
   }
 `;
 

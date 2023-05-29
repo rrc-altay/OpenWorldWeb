@@ -50,10 +50,11 @@ const theme = createTheme({
     },
 
     h3: {
-      color: ColorScheme.GRAY_LIGHT,
+      color: ColorScheme.GRAY,
       fontWeight: 700,
       fontSize: "16px",
       lineHeight: "19px",
+      textTransform: "uppercase",
     },
   },
   components: {

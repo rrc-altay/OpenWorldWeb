@@ -1,4 +1,4 @@
-export const about = {
+export const aboutMock = {
   developer: "Разработано студией INDEX",
   developerLink: "https://index-studio.ru",
 

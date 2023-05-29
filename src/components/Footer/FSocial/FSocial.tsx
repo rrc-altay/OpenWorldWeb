@@ -1,6 +1,6 @@
 import React from "react";
 import { FTitleSC } from "@/components/Footer/Footer.styles";
-import { about } from "@/lib/mock/about";
+import { aboutMock } from "@/lib/mock/aboutMock";
 import { useFSocialStyles } from "@/components/Footer/FSocial/FSocial.styles";
 
 const FSocial = () => {
@@ -8,7 +8,7 @@ const FSocial = () => {
     <ContainerSC>
       <FTitleSC variant="h2">Социальные сети</FTitleSC>
       <ListSC>
-        {about.social.map((socialItem) => (
+        {aboutMock.social.map((socialItem) => (
           <ItemSC key={socialItem.src}>
             <LinkSC
               href={socialItem.href}

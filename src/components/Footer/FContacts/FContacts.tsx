@@ -4,7 +4,7 @@ import FAItem from "@/components/Footer/FContacts/FCItem/FCItem";
 import PhoneIcon from "@/assets/icons/PhoneIcon.svg";
 import TimeIcon from "@/assets/icons/TimeIcon.svg";
 import PlaceIcon from "@/assets/icons/PlaceIcon.svg";
-import { about } from "@/lib/mock/about";
+import { aboutMock } from "@/lib/mock/aboutMock";
 import { useFContactsStyles } from "@/components/Footer/FContacts/FContacts.styles";
 
 const FContacts = () => {
@@ -14,16 +14,16 @@ const FContacts = () => {
       <ListSC>
         <FAItem
           Icon={PhoneIcon}
-          title={about.phone.formatPhone}
-          href={`tel:${about.phone.number}`}
+          title={aboutMock.phone.formatPhone}
+          href={`tel:${aboutMock.phone.number}`}
         />
         <FAItem
           Icon={TimeIcon}
-          title={about.time}
+          title={aboutMock.time}
         />
         <FAItem
           Icon={PlaceIcon}
-          title={about.place}
+          title={aboutMock.place}
         />
       </ListSC>
     </ContainerSC>

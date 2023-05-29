@@ -2,7 +2,6 @@ import React from "react";
 import TitleLayout from "@/layout/TitleLayout";
 import MainContainer from "@/components/Containers/MainContainer/MainContainer";
 import PageContainer from "@/components/Containers/PageContainer/PageContainer";
-import { homeBreadCrumbs } from "@/lib/constants/breadCrumbs";
 import {
   RoutesNamespace,
   RoutesNamespaceRU,
@@ -26,7 +25,7 @@ const ObratnayaSvyaz = ({ catalog }: ObratnayaSvyazProps) => {
       <MainContainer>
         <PageContainer
           catalog={catalog}
-          breadCrumbs={[...homeBreadCrumbs, customBread]}>
+          breadCrumbs={[customBread]}>
           <BoxWrapper title={RoutesNamespaceRU.FEEDBACK}>
             <Feedback />
           </BoxWrapper>

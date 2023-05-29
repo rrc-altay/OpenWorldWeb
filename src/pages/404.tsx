@@ -3,12 +3,13 @@ import NotFoundIcon from "@/assets/icons/404.svg";
 import { useRouter } from "next/router";
 import TitleLayout from "@/layout/TitleLayout";
 import ErrorContent from "@/components/ErrorContent/ErrorContent";
+import { RoutesNamespaceRU } from "@/lib/constants/routesNamespace";
 
 const Index = () => {
   const router = useRouter();
 
   return (
-    <TitleLayout title="404">
+    <TitleLayout title={RoutesNamespaceRU.NOT_FOUND}>
       <ErrorContent
         Icon={NotFoundIcon}
         title="404"

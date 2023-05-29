@@ -1,5 +1,5 @@
 import React from "react";
-import { about } from "@/lib/mock/about";
+import { aboutMock } from "@/lib/mock/aboutMock";
 import { styled } from "@mui/material";
 import { Breakpoints } from "@/styles/breakpoints";
 import ColorScheme from "@/styles/theme/colorScheme";
@@ -7,13 +7,13 @@ import ColorScheme from "@/styles/theme/colorScheme";
 const FAbout = () => {
   return (
     <DescriptionSC>
-      {about.desc}
+      {aboutMock.desc}
       {"\n"}
       <a
         target="_blank"
-        href={about.developerLink}
+        href={aboutMock.developerLink}
         rel="noopener noreferrer">
-        {about.developer}
+        {aboutMock.developer}
       </a>
     </DescriptionSC>
   );

@@ -1,5 +1,5 @@
 import React from "react";
-import { about } from "@/lib/mock/about";
+import { aboutMock } from "@/lib/mock/aboutMock";
 import { useFeedbackStyles } from "@/components/Feedback/Feedback.styles";
 import { useFeedback } from "@/components/Feedback/useFeedback";
 import { telephoneMask } from "@/lib/services/services";
@@ -8,7 +8,7 @@ import { TextFieldUI } from "@/UI/TextFieldUI/TextFieldUI";
 import { CheckboxUI } from "@/UI/CheckboxUI/CheckboxUI";
 import { CircularProgress } from "@mui/material";
 import ModalUI from "@/UI/ModalUI/ModalUI";
-import { feedback } from "@/lib/mock/feedback";
+import { feedbackMock } from "@/lib/mock/feedbackMock";
 import { useBigTablet } from "@/hooks/useAdaptive";
 
 const Feedback = () => {
@@ -30,8 +30,8 @@ const Feedback = () => {
 
   return (
     <ContainerSC>
-      <ParagraphSC>{about.place}</ParagraphSC>
-      <ParagraphSC>{about.phone.formatPhone}</ParagraphSC>
+      <ParagraphSC>{aboutMock.place}</ParagraphSC>
+      <ParagraphSC>{aboutMock.phone.formatPhone}</ParagraphSC>
       <FormSC onSubmit={onSubmit}>
         <FormFieldsSC>
           <FormTopSC>
@@ -110,7 +110,7 @@ const Feedback = () => {
       <ModalUI
         open={isSuccess}
         handleClose={() => setIsSuccess(false)}>
-        <ModalContentSC>{feedback.success}</ModalContentSC>
+        <ModalContentSC>{feedbackMock.success}</ModalContentSC>
       </ModalUI>
     </ContainerSC>
   );

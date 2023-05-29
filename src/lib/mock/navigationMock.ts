@@ -2,7 +2,7 @@ import {
   RoutesNamespace,
   RoutesNamespaceRU,
 } from "@/lib/constants/routesNamespace";
-import { about } from "@/lib/mock/about";
+import { aboutMock } from "@/lib/mock/aboutMock";
 
 export const navigationMock = [
   { title: RoutesNamespaceRU.HOME, path: RoutesNamespace.HOME },
@@ -12,7 +12,7 @@ export const navigationMock = [
   { title: RoutesNamespaceRU.FEEDBACK, path: RoutesNamespace.FEEDBACK },
   {
     title: "Опрос граждан «Уровень доверия",
-    path: about.yandexForm,
+    path: aboutMock.yandexForm,
     target: "_blank",
   },
 ];
