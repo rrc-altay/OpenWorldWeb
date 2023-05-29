@@ -6,7 +6,7 @@ import Link from "next/link";
 import { useHDrawerStyles } from "@/components/Header/HDrawer/HDrawer.styles";
 
 const HDrawer = () => {
-  const { isDrawer, handleChangeDrawer } = useHDrawer();
+  const { isDrawer, handleClick, handleChangeDrawer } = useHDrawer();
 
   return (
     <>
@@ -23,7 +23,9 @@ const HDrawer = () => {
         <nav>
           <DrawerWrapperSC>
             {navigationMock.map((item) => (
-              <DrawerItemSC key={item.path}>
+              <DrawerItemSC
+                key={item.path}
+                onClick={handleClick(item.path)}>
                 <Link
                   href={item.path}
                   target={item?.target}>

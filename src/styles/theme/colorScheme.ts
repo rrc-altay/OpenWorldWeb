@@ -14,6 +14,7 @@ enum ColorScheme {
   GRAY_LIGHT = "#6A7881",
 
   SHADOW = "rgba(32, 43, 109, 0.1)",
+  SHADOW_ADAPTIVE = "rgba(32, 43, 109, 0.3)",
 
   ERROR = "red",
   BACKDOOR = "rgba(0, 0, 0, 0.4)",

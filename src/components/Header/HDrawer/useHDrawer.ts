@@ -11,6 +11,15 @@ export const useHDrawer = () => {
     };
   };
 
+  const handleClick = (path: string) => {
+    return () => {
+      if (path === pathname) {
+        setIsDrawer(false);
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+    };
+  };
+
   useEffect(() => {
     if (pathname && isDrawer) {
       setIsDrawer(false);
@@ -19,6 +28,7 @@ export const useHDrawer = () => {
 
   return {
     isDrawer,
+    handleClick,
     handleChangeDrawer,
   };
 };
