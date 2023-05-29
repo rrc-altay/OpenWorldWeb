@@ -3,6 +3,7 @@ import { useWMSItemStyles } from "@/components/WebsiteMap/WMSItem/WMSItem.styles
 import { ElementsModel } from "@/lib/models/Catalog/properties/ElementsModel";
 
 export type WMSItemProps = ElementsModel & {
+  target?: string;
   isPrefix?: boolean;
   isHorizontalPadding?: boolean;
 };
@@ -11,6 +12,7 @@ const WMSItem = ({
   slug,
   path,
   title,
+  target = "",
   isPrefix = true,
   isHorizontalPadding = true,
 }: WMSItemProps) => {
@@ -18,7 +20,9 @@ const WMSItem = ({
     <ItemSC
       key={slug}
       isHorizontalPadding={isHorizontalPadding}>
-      <LinkSC href={path}>
+      <LinkSC
+        href={path}
+        target={target}>
         {isPrefix && <span>—&nbsp;</span>}
         {title}
       </LinkSC>

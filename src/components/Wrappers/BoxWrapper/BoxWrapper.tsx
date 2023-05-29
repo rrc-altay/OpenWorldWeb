@@ -65,9 +65,12 @@ const TitleSC = styled(Typography)`
   margin-bottom: 24px;
 
   @media (max-width: ${Breakpoints.BIG_TABLET}px) {
+    margin-bottom: 20px;
+  }
+
+  @media (max-width: ${Breakpoints.BIG_MOBILE}px) {
     font-size: 15px;
     line-height: 18px;
-    margin-bottom: 20px;
   }
 `;
 export default React.memo(BoxWrapper);

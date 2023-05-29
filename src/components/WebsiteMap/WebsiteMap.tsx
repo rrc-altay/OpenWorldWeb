@@ -28,6 +28,7 @@ const WebsiteMap = ({ catalog }: CatalogProps) => {
             slug={navigationItem.title}
             path={navigationItem.path}
             title={navigationItem.title.toUpperCase()}
+            target={navigationItem?.target || ""}
             isPrefix={false}
             isHorizontalPadding={false}
           />

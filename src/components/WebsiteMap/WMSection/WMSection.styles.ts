@@ -3,6 +3,10 @@ import { Breakpoints } from "@/styles/breakpoints";
 
 const ContainerSC = styled("div")`
   margin-bottom: 40px;
+
+  @media (max-width: ${Breakpoints.SMALL_TABLET}px) {
+    margin-bottom: 20px;
+  }
 `;
 
 const TitleSC = styled(Typography)`
