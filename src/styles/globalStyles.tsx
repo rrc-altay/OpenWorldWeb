@@ -8,6 +8,11 @@ const container = css`
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
+
+  @media (max-width: ${Breakpoints.SMALL_MOBILE}px) {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 `;
 
 export const GlobalStyles = createGlobalStyle`
@@ -71,8 +76,12 @@ export const GlobalStyles = createGlobalStyle`
     ${container};
       
     @media(max-width: ${Breakpoints.BIG_TABLET}px) {
-        padding: 0 15px
-    }  
+      padding: 0 15px
+    }
+
+    @media(max-width: ${Breakpoints.SMALL_MOBILE}px) {
+      padding: 0 10px
+    }
   }
 
   .container-main-two {

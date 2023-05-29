@@ -5,5 +5,5 @@ export enum Breakpoints {
   SMALL_TABLET = 600,
   BIG_MOBILE = 500,
   MOBILE = 375,
-  SMALL_MOBILE = 350,
+  SMALL_MOBILE = 360,
 }

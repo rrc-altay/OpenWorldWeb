@@ -22,7 +22,7 @@ const WrapperSC = styled("section")`
 
   @media (max-width: ${Breakpoints.BIG_TABLET}px) {
     flex-direction: column;
-    padding: 24px 15px 20px !important;
+    padding: 24px 0 20px;
   }
 `;
 export const useFooterStyles = () => ({

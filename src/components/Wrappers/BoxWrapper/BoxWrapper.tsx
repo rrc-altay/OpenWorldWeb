@@ -58,6 +58,11 @@ const ContainerSC = styled("div")<Pick<BoxWrapperProps, "isPaddingBottom">>`
     padding-right: 12px;
     border-radius: 20px;
   }
+
+  @media (max-width: ${Breakpoints.MOBILE}px) {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
 `;
 
 const TitleSC = styled(Typography)`
