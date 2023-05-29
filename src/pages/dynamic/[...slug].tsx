@@ -1,20 +1,18 @@
 import React from "react";
-import TitleLayout from "@/layout/TitleLayout";
+import { GetServerSideProps } from "next";
+import { fetchGetCatalog } from "@/lib/api/get/fetchGetCatalog";
+import { CatalogProps } from "@/types/types";
 import {
   RoutesNamespace,
   RoutesNamespaceRU,
 } from "@/lib/constants/routesNamespace";
+import TitleLayout from "@/layout/TitleLayout";
 import MainContainer from "@/components/Containers/MainContainer/MainContainer";
 import PageContainer from "@/components/Containers/PageContainer/PageContainer";
-import BoxWrapper from "@/components/Wrappers/BoxWrapper/BoxWrapper";
-import { GetServerSideProps } from "next";
-import { fetchGetCatalog } from "@/lib/api/get/fetchGetCatalog";
-import { CatalogProps } from "@/types/types";
-import WebsiteMap from "@/components/WebsiteMap/WebsiteMap";
 
-type KartaProps = CatalogProps;
+type DynamicProps = CatalogProps;
 
-const Karta = ({ catalog }: KartaProps) => {
+const Index = ({ catalog }: DynamicProps) => {
   const customBread = {
     title: RoutesNamespaceRU.MAP,
     href: RoutesNamespace.MAP,
@@ -26,16 +24,14 @@ const Karta = ({ catalog }: KartaProps) => {
         <PageContainer
           catalog={catalog}
           breadCrumbs={[customBread]}>
-          <BoxWrapper title={RoutesNamespaceRU.MAP}>
-            <WebsiteMap catalog={catalog} />
-          </BoxWrapper>
+          <h1>ok</h1>
         </PageContainer>
       </MainContainer>
     </TitleLayout>
   );
 };
 
-export const getServerSideProps: GetServerSideProps<KartaProps> = async (
+export const getServerSideProps: GetServerSideProps<DynamicProps> = async (
   context,
 ) => {
   const catalog = await fetchGetCatalog(context);
@@ -43,4 +39,4 @@ export const getServerSideProps: GetServerSideProps<KartaProps> = async (
   return { props: { catalog: catalog.data } };
 };
 
-export default React.memo(Karta);
+export default React.memo(Index);

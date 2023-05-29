@@ -14,7 +14,7 @@ import Feedback from "@/components/Feedback/Feedback";
 
 type ObratnayaSvyazProps = CatalogProps;
 
-const ObratnayaSvyaz = ({ catalog }: ObratnayaSvyazProps) => {
+const Index = ({ catalog }: ObratnayaSvyazProps) => {
   const customBread = {
     title: RoutesNamespaceRU.FEEDBACK,
     href: RoutesNamespace.FEEDBACK,
@@ -43,4 +43,4 @@ export const getServerSideProps: GetServerSideProps<
   return { props: { catalog: catalog.data } };
 };
 
-export default React.memo(ObratnayaSvyaz);
+export default React.memo(Index);

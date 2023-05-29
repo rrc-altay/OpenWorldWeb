@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { ElementsModel } from "@/lib/models/Catalog/properties/ElementsModel";
 import { useAIElementsStyles } from "@/components/Containers/AsideContainer/AsideItem/AIElements/AIElements.styles";
-import { BASE_URL } from "@/lib/constants";
+import { RoutesNamespace } from "@/lib/constants/routesNamespace";
 
 interface AIElementsProps {
   elements: ElementsModel[];
@@ -13,7 +13,7 @@ const AIElements = ({ elements }: AIElementsProps) => {
     <ContainerSC>
       {elements.map((elementsItem) => (
         <ItemSC key={elementsItem.path}>
-          <Link href={`${BASE_URL}/${elementsItem.path}`}>
+          <Link href={`${RoutesNamespace.DYNAMIC}/${elementsItem.path}`}>
             {elementsItem.title}
           </Link>
         </ItemSC>

@@ -13,7 +13,7 @@ import { CatalogProps } from "@/types/types";
 
 type KontaktiProps = CatalogProps;
 
-const Kontakti = ({ catalog }: KontaktiProps) => {
+const Index = ({ catalog }: KontaktiProps) => {
   const customBread = {
     title: RoutesNamespaceRU.CONTACTS,
     href: RoutesNamespace.CONTACTS,
@@ -42,4 +42,4 @@ export const getServerSideProps: GetServerSideProps<KontaktiProps> = async (
   return { props: { catalog: catalog.data } };
 };
 
-export default React.memo(Kontakti);
+export default React.memo(Index);

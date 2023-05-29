@@ -31,6 +31,7 @@ const WebsiteMap = ({ catalog }: CatalogProps) => {
             target={navigationItem?.target || ""}
             isPrefix={false}
             isHorizontalPadding={false}
+            isDynamic={false}
           />
         ))}
       </ListSC>
