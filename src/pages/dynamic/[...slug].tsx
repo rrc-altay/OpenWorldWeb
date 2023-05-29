@@ -1,7 +1,7 @@
 import React from "react";
 import { GetServerSideProps } from "next";
 import { fetchGetCatalog } from "@/lib/api/get/fetchGetCatalog";
-import { CatalogProps } from "@/types/types";
+import { CatalogProps, ContentProps } from "@/types/types";
 import {
   RoutesNamespace,
   RoutesNamespaceRU,
@@ -10,14 +10,18 @@ import TitleLayout from "@/layout/TitleLayout";
 import MainContainer from "@/components/Containers/MainContainer/MainContainer";
 import PageContainer from "@/components/Containers/PageContainer/PageContainer";
 import { fetchGetDynamicPage } from "@/lib/api/get/fetchGetDynamicPage";
+import BoxWrapper from "@/components/Wrappers/BoxWrapper/BoxWrapper";
+import Pdf from "@/components/PdfViewer/Pdf";
 
-type DynamicProps = CatalogProps;
+type DynamicProps = CatalogProps & ContentProps;
 
-const Index = ({ catalog }: DynamicProps) => {
+const Index = ({ catalog, content }: DynamicProps) => {
   const customBread = {
     title: RoutesNamespaceRU.MAP,
     href: RoutesNamespace.MAP,
   };
+
+  console.log(content.content);
 
   return (
     <TitleLayout title={RoutesNamespaceRU.MAP}>
@@ -25,7 +29,9 @@ const Index = ({ catalog }: DynamicProps) => {
         <PageContainer
           catalog={catalog}
           breadCrumbs={[customBread]}>
-          <h1>ok</h1>
+          <BoxWrapper title="qwe">
+            <Pdf />
+          </BoxWrapper>
         </PageContainer>
       </MainContainer>
     </TitleLayout>
@@ -39,9 +45,7 @@ export const getServerSideProps: GetServerSideProps<DynamicProps> = async (
   const catalog = await fetchGetCatalog(context);
   const content = await fetchGetDynamicPage(path);
 
-  console.log(content.data);
-
-  return { props: { catalog: catalog.data } };
+  return { props: { catalog: catalog.data, content: content.data } };
 };
 
 export default React.memo(Index);
