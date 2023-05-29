@@ -1,4 +1,4 @@
 export interface AppModel {
-  description: string;
-  image: string;
+  readonly description: string;
+  readonly image: string;
 }

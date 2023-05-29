@@ -1,4 +1,4 @@
 export interface PartnersModel {
-  link: string;
-  src: string;
+  readonly link: string;
+  readonly src: string;
 }

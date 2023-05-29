@@ -1,6 +1,6 @@
 export interface DjangoResModel<T> {
-  count: number;
-  next: null | string;
-  previous: null | string;
-  results: T[];
+  readonly count: number;
+  readonly next: null | string;
+  readonly previous: null | string;
+  readonly results: T[];
 }

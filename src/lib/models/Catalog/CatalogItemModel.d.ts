@@ -4,9 +4,9 @@ import { PartnersModel } from "@/lib/models/Catalog/properties/PartnersModel";
 import { ElementsModel } from "@/lib/models/Catalog/properties/ElementsModel";
 
 export interface CatalogItemModel {
-  app: AppModel | null;
-  phone: PhoneModel | null;
-  partners: PartnersModel[] | null;
+  readonly app: AppModel | null;
+  readonly phone: PhoneModel | null;
+  readonly partners: PartnersModel[] | null;
 
-  elements: ElementsModel[] | null;
+  readonly elements: ElementsModel[] | null;
 }

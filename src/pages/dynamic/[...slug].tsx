@@ -9,6 +9,7 @@ import {
 import TitleLayout from "@/layout/TitleLayout";
 import MainContainer from "@/components/Containers/MainContainer/MainContainer";
 import PageContainer from "@/components/Containers/PageContainer/PageContainer";
+import { fetchGetDynamicPage } from "@/lib/api/get/fetchGetDynamicPage";
 
 type DynamicProps = CatalogProps;
 
@@ -34,7 +35,11 @@ const Index = ({ catalog }: DynamicProps) => {
 export const getServerSideProps: GetServerSideProps<DynamicProps> = async (
   context,
 ) => {
+  const path = ((context.query?.slug as string[]) || []).join("/");
   const catalog = await fetchGetCatalog(context);
+  const content = await fetchGetDynamicPage(path);
+
+  console.log(content.data);
 
   return { props: { catalog: catalog.data } };
 };

@@ -1,6 +1,6 @@
 export interface BreadCrumbsModel {
-  href: string;
-  title: string;
+  readonly href: string;
+  readonly title: string;
 }
 
 export type BreadCrumbsArr = BreadCrumbsModel[];

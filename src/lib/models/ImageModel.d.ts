@@ -1,4 +1,4 @@
 export interface ImageModel {
-  id: number;
-  src: string;
+  readonly id: number;
+  readonly src: string;
 }

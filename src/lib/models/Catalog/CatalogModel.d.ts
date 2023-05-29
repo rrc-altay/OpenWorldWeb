@@ -1,10 +1,10 @@
 import { CatalogItemModel } from "@/lib/models/Catalog/CatalogItemModel";
 
 export interface CatalogModel {
-  title: string;
-  slug: string;
-  path: string;
-  data: CatalogItemModel;
+  readonly title: string;
+  readonly slug: string;
+  readonly path: string;
+  readonly data: CatalogItemModel;
 }
 
 export type CatalogModelArr = CatalogModel[];

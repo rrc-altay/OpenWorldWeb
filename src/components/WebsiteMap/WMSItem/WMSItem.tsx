@@ -19,7 +19,6 @@ const WMSItem = ({
   isPrefix = true,
   isHorizontalPadding = true,
 }: WMSItemProps) => {
-  console.log(path);
   return (
     <ItemSC
       key={slug}

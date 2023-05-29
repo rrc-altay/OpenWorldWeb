@@ -1,5 +1,5 @@
 export interface PhoneModel {
-  formatNumber: string;
-  phoneNumber: number;
-  link: string;
+  readonly formatNumber: string;
+  readonly phoneNumber: number;
+  readonly link: string;
 }

@@ -1,7 +1,7 @@
 export interface FeedbackFormModel {
-  name: string;
-  email: string;
-  phone: string;
-  message: string;
-  agree: boolean;
+  readonly name: string;
+  readonly email: string;
+  readonly phone: string;
+  readonly message: string;
+  readonly agree: boolean;
 }
