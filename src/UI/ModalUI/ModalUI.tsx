@@ -4,12 +4,14 @@ import { useModalUIStyles } from "@/UI/ModalUI/ModalUI.styles";
 import { Children } from "@/types/types";
 import CloseIcon from "@/assets/icons/CloseIcon.svg";
 
-type ModalUIProps = DialogProps & Children;
+type ModalUIProps = DialogProps & Children & { handleClose: () => void };
 
-const ModalUI = ({ children, ...dialogProps }: ModalUIProps) => {
+const ModalUI = ({ children, handleClose, ...dialogProps }: ModalUIProps) => {
   return (
-    <DialogSC {...dialogProps}>
-      <CloseButtonSC onClick={() => dialogProps.onClose || undefined}>
+    <DialogSC
+      {...dialogProps}
+      onClose={handleClose}>
+      <CloseButtonSC onClick={handleClose}>
         <CloseIcon />
       </CloseButtonSC>
       <WrapperSC>{children}</WrapperSC>

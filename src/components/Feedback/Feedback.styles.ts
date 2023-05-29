@@ -179,6 +179,10 @@ const ErrorSC = styled(Typography)`
 
 const ModalContentSC = styled("div")`
   min-width: 316px;
+  @media (max-width: ${Breakpoints.BIG_MOBILE}px) {
+    min-width: 200px;
+    white-space: normal;
+  }
 `;
 
 export const useFeedbackStyles = () => ({

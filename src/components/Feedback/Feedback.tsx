@@ -109,7 +109,7 @@ const Feedback = () => {
       <ErrorSC>{hasError}</ErrorSC>
       <ModalUI
         open={isSuccess}
-        onClose={() => setIsSuccess(false)}>
+        handleClose={() => setIsSuccess(false)}>
         <ModalContentSC>{feedback.success}</ModalContentSC>
       </ModalUI>
     </ContainerSC>
