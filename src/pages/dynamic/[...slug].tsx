@@ -11,17 +11,15 @@ import MainContainer from "@/components/Containers/MainContainer/MainContainer";
 import PageContainer from "@/components/Containers/PageContainer/PageContainer";
 import { fetchGetDynamicPage } from "@/lib/api/get/fetchGetDynamicPage";
 import BoxWrapper from "@/components/Wrappers/BoxWrapper/BoxWrapper";
-import Pdf from "@/components/PdfViewer/Pdf";
+import DynamicContent from "@/components/DynamicContent/DynamicContent";
 
 type DynamicProps = CatalogProps & ContentProps;
 
-const Index = ({ catalog, content }: DynamicProps) => {
+const Index = ({ catalog }: DynamicProps) => {
   const customBread = {
     title: RoutesNamespaceRU.MAP,
     href: RoutesNamespace.MAP,
   };
-
-  console.log(content.content);
 
   return (
     <TitleLayout title={RoutesNamespaceRU.MAP}>
@@ -30,7 +28,7 @@ const Index = ({ catalog, content }: DynamicProps) => {
           catalog={catalog}
           breadCrumbs={[customBread]}>
           <BoxWrapper title="qwe">
-            <Pdf />
+            <DynamicContent />
           </BoxWrapper>
         </PageContainer>
       </MainContainer>
