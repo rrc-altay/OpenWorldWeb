@@ -44,6 +44,11 @@ const ItemSC = styled("li")`
     font-size: 13.5px;
     line-height: 16px;
     padding-left: 20px;
+    max-width: none;
+  }
+
+  @media (max-width: ${Breakpoints.SMALL_TABLET}px) {
+    padding-left: 15px;
   }
 `;
 

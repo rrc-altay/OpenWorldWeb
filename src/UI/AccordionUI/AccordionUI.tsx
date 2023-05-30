@@ -2,6 +2,7 @@ import React from "react";
 import { Accordion, AccordionSummary, styled, Typography } from "@mui/material";
 import { Children } from "@/types/types";
 import AccordionIcon from "@/assets/icons/AccordionIcon.svg";
+import { Breakpoints } from "@/styles/breakpoints";
 
 interface AccordionUIProps extends Children {
   title: string;
@@ -38,6 +39,10 @@ const AccordionSC = styled(Accordion)`
 
   & > .MuiCollapse-root {
     //padding-top: 16px;
+  }
+
+  @media (max-width: ${Breakpoints.SMALL_TABLET}px) {
+    padding: 0;
   }
 `;
 

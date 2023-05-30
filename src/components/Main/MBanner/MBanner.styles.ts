@@ -31,6 +31,10 @@ const AccessibilityContainerSC = styled("div")`
     top: 10px;
     right: 15px;
   }
+
+  @media (max-width: ${Breakpoints.SMALL_MOBILE}px) {
+    right: 10px;
+  }
 }
 `;
 

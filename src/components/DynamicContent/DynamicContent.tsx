@@ -12,8 +12,6 @@ interface DynamicContentProps {
 const DynamicContent = ({ content }: DynamicContentProps) => {
   const isEmpty = !content.length;
 
-  console.log(content);
-
   return (
     <ContainerSC>
       {isEmpty && (
