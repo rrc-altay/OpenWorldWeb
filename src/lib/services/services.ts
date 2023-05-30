@@ -1,3 +1,5 @@
+import { RoutesNamespace } from "@/lib/constants/routesNamespace";
+
 export const getRusDate = (date: string) =>
   new Date(date).toLocaleString("ru-RU", {
     dateStyle: "medium",
@@ -32,4 +34,12 @@ export const telephoneMask = (state: string) => {
     return formattedInputValue;
   }
   return formattedInputValue;
+};
+
+export const getDynamicPath = (path: string, isDynamic = true) => {
+  //? Исключаемые rotes, которые приходят с api каталога, но жестко забиты в page
+  if (path === RoutesNamespace.HOME || path === RoutesNamespace.GOS_TASK) {
+    return path;
+  }
+  return `${isDynamic ? RoutesNamespace.DYNAMIC + "/" : ""}${path}`;
 };

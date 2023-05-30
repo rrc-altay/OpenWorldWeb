@@ -6,7 +6,7 @@ import { BASE_URL } from "@/lib/constants";
 const DCImg = ({ alt, url }: ContentImgModel) => {
   return (
     <ImageWrapperSC
-      src={`${BASE_URL}${url}`}
+      src={`${BASE_URL}/${url}`}
       alt={alt}
     />
   );

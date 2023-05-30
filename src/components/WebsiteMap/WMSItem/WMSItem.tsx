@@ -1,7 +1,7 @@
 import React from "react";
 import { useWMSItemStyles } from "@/components/WebsiteMap/WMSItem/WMSItem.styles";
 import { ElementsModel } from "@/lib/models/Catalog/properties/ElementsModel";
-import { RoutesNamespace } from "@/lib/constants/routesNamespace";
+import { getDynamicPath } from "@/lib/services/services";
 
 export type WMSItemProps = ElementsModel & {
   target?: string;
@@ -24,7 +24,7 @@ const WMSItem = ({
       key={slug}
       isHorizontalPadding={isHorizontalPadding}>
       <LinkSC
-        href={`${isDynamic ? RoutesNamespace.DYNAMIC + "/" : ""}${path}`}
+        href={getDynamicPath(path, isDynamic)}
         target={target}>
         {isPrefix && <span>—&nbsp;</span>}
         {title}

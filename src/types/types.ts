@@ -1,6 +1,6 @@
 import { FC, ReactNode, SVGProps } from "react";
 import { CatalogModelArr } from "@/lib/models/Catalog/CatalogModel";
-import { ContentModel } from "@/lib/models/DynamicContent/ContentModel";
+import { DynamicElementModel } from "@/lib/models/DynamicContent/DynamicElementModel";
 
 export type Children = {
   children: ReactNode;
@@ -16,6 +16,6 @@ export interface CatalogProps {
   catalog: CatalogModelArr;
 }
 
-export interface ContentProps {
-  content: ContentModel;
+export interface DynamicElementProps {
+  dynamicPage: DynamicElementModel;
 }

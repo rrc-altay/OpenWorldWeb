@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { ElementsModel } from "@/lib/models/Catalog/properties/ElementsModel";
 import { useAIElementsStyles } from "@/components/Containers/AsideContainer/AsideItem/AIElements/AIElements.styles";
-import { RoutesNamespace } from "@/lib/constants/routesNamespace";
+import { getDynamicPath } from "@/lib/services/services";
 
 interface AIElementsProps {
   elements: ElementsModel[];
@@ -11,11 +11,9 @@ interface AIElementsProps {
 const AIElements = ({ elements }: AIElementsProps) => {
   return (
     <ContainerSC>
-      {elements.map((elementsItem) => (
-        <ItemSC key={elementsItem.path}>
-          <Link href={`${RoutesNamespace.DYNAMIC}/${elementsItem.path}`}>
-            {elementsItem.title}
-          </Link>
+      {elements.map(({ path, title }) => (
+        <ItemSC key={path}>
+          <Link href={getDynamicPath(path)}>{title}</Link>
         </ItemSC>
       ))}
     </ContainerSC>

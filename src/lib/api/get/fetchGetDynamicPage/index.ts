@@ -1,6 +1,6 @@
 import axiosProject from "@/lib/http";
-import { ContentModel } from "@/lib/models/DynamicContent/ContentModel";
+import { DynamicElementModel } from "@/lib/models/DynamicContent/DynamicElementModel";
 
 export const fetchGetDynamicPage = async (path: string) => {
-  return await axiosProject.get<ContentModel>(`/catalog/page/${path}/`);
+  return await axiosProject.get<DynamicElementModel>(`/page/${path}/`);
 };
