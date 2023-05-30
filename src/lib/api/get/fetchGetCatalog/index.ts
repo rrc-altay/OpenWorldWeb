@@ -8,5 +8,5 @@ export const fetchGetCatalog = async (context: GetServerSidePropsContext) => {
     "public, s-maxage=10, stale-while-revalidate=59",
   );
 
-  return await axiosProject.get<CatalogModel[]>("/catalog");
+  return await axiosProject.get<CatalogModel[]>("/catalog/");
 };

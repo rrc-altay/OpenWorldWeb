@@ -2,12 +2,10 @@ import React from "react";
 import { ContentPdfModel } from "@/lib/models/DynamicContent/properties/ContentPdfModel";
 import { usePdfStyles } from "@/components/Pdf/Pdf.styles";
 import { usePdf } from "@/components/Pdf/usePdf";
+import { BASE_URL } from "@/lib/constants";
+import SpinnerUI from "@/UI/SpinnerUI/SpinnerUI";
 
-const Pdf = ({
-  name = "Государственное (муниципальное) задание №2 на 2023 год и на плановый период 2024 и на 2025 годов.",
-  link = "https://www.orimi.com/pdf-test.pdf",
-  autoOpen,
-}: ContentPdfModel) => {
+const Pdf = ({ name, link, autoOpen }: ContentPdfModel) => {
   const { isVisible, handleChangeVisible } = usePdf(autoOpen);
 
   return (
@@ -19,17 +17,31 @@ const Pdf = ({
       <CollapseSC
         in={isVisible}
         visible={isVisible}>
-        <FrameSC
-          width="100px"
-          height="100px"
-          src={`https://docs.google.com/viewer?url=${link}&hl=ru&embedded=true`}
-          frameBorder="0"
-        />
+        <PdfContainerSC>
+          <PdfWrapperSC>
+            <FrameSC
+              src={`https://docs.google.com/viewer?url=${BASE_URL}${link}&embedded=true`}
+              frameBorder="0"
+            />
+          </PdfWrapperSC>
+          <LoadingSC>
+            <SpinnerUI />
+          </LoadingSC>
+        </PdfContainerSC>
       </CollapseSC>
     </ContainerSC>
   );
 };
 
-const { ContainerSC, TextSC, ButtonSC, CollapseSC, FrameSC } = usePdfStyles();
+const {
+  ContainerSC,
+  TextSC,
+  ButtonSC,
+  CollapseSC,
+  PdfContainerSC,
+  PdfWrapperSC,
+  FrameSC,
+  LoadingSC,
+} = usePdfStyles();
 
 export default React.memo(Pdf);

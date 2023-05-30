@@ -45,11 +45,42 @@ const CollapseSC = styled(Collapse)<{ visible: boolean }>`
   margin-top: ${({ visible }) => visible && ActiveCollapseCSS};
 `;
 
-const FrameSC = styled("iframe")`
+const PdfContainerSC = styled("div")`
+  position: relative;
+
   width: 100%;
   height: 419px;
 
   border-radius: 30px;
+  overflow: hidden;
+`;
+
+const PdfWrapperSC = styled("div")`
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+
+  z-index: 1;
+`;
+
+const FrameSC = styled("iframe")`
+  width: 100%;
+  height: 100%;
+`;
+
+const LoadingSC = styled("div")`
+  width: 100%;
+  height: 100%;
+
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 export const usePdfStyles = () => ({
@@ -57,5 +88,8 @@ export const usePdfStyles = () => ({
   TextSC,
   ButtonSC,
   CollapseSC,
+  PdfContainerSC,
+  PdfWrapperSC,
   FrameSC,
+  LoadingSC,
 });

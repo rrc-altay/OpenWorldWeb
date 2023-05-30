@@ -8,7 +8,7 @@ const DCItem = (props: ContentItemModel) => {
 };
 
 const HiddenContainerSC = styled("div")`
-  display: none;
+  visibility: hidden;
 `;
 
 export default React.memo(DCItemHOC(DCItem));

@@ -1,5 +1,5 @@
 import React from "react";
-import { styled } from "@mui/material";
+import { styled, Typography } from "@mui/material";
 import { Breakpoints } from "@/styles/breakpoints";
 import { ContentItemModel } from "@/lib/models/DynamicContent/ContentItemModel";
 import { getUUID } from "@/lib/modules/uuid";
@@ -10,8 +10,17 @@ interface DynamicContentProps {
 }
 
 const DynamicContent = ({ content }: DynamicContentProps) => {
+  const isEmpty = !content.length;
+
+  console.log(content);
+
   return (
     <ContainerSC>
+      {isEmpty && (
+        <Typography sx={{ textAlign: "center" }}>
+          Пусто. Попробуйте позже или обновите страницу
+        </Typography>
+      )}
       {content.map((contentItem) => (
         <WrapperSC key={getUUID()}>
           <DCItem {...contentItem} />

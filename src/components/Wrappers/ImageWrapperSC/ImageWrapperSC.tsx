@@ -6,7 +6,7 @@ const ImageWrapperSC = styled("img")`
 
   max-height: 627px;
 
-  object-fit: cover;
+  object-fit: contain;
 `;
 
 export default ImageWrapperSC;

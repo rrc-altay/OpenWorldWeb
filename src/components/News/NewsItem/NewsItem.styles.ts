@@ -52,7 +52,7 @@ const ImageSC = styled("img")`
   object-fit: cover;
 
   flex-shrink: 0;
-  border-radius: 49px 49px 49px 43px;
+  border-radius: 40px;
 
   @media (max-width: ${Breakpoints.NOTEBOOK}px) {
     max-width: 180px;
