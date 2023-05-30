@@ -1,16 +1,17 @@
 import React from "react";
-import { getUUID } from "@/lib/modules/uuid";
-import { useTableUIStyles } from "@/UI/TableUI/TableUI.styles";
 import { TableUIProps } from "@/UI/TableUI/types";
+import { useTableUIStyles } from "@/UI/TableUI/TableUI.styles";
+import { getUUID } from "@/lib/modules/uuid";
 import { tableMock } from "@/lib/mock/tableMock";
 import { checkIsOdd } from "@/lib/services/services";
-const TableContacts = ({ rows }: TableUIProps) => {
+
+const TableOrganization = ({ rows }: TableUIProps) => {
   return (
     <ContainerSC>
       <TableSC>
         <TBodySC isOdd={checkIsOdd(rows.length)}>
           <tr>
-            {tableMock.contacts.map((headerItem) => (
+            {tableMock.organizations.map((headerItem) => (
               <ThSC key={getUUID()}>{headerItem}</ThSC>
             ))}
           </tr>
@@ -28,4 +29,5 @@ const TableContacts = ({ rows }: TableUIProps) => {
 };
 
 const { ContainerSC, TableSC, TBodySC, ThSC, TdSC } = useTableUIStyles();
-export default React.memo(TableContacts);
+
+export default React.memo(TableOrganization);

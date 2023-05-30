@@ -3,11 +3,12 @@ import { useTableUIStyles } from "@/UI/TableUI/TableUI.styles";
 import { tableMock } from "@/lib/mock/tableMock";
 import { getUUID } from "@/lib/modules/uuid";
 import { TableUIProps } from "@/UI/TableUI/types";
+import { checkIsOdd } from "@/lib/services/services";
 
 const TableWorkTime = ({ rows }: TableUIProps) => {
   return (
     <TableSC>
-      <TBodySC isOdd={!rows.length}>
+      <TBodySC isOdd={checkIsOdd(rows.length)}>
         <tr>
           <ThSC colSpan={2}>{tableMock.workTime}</ThSC>
         </tr>

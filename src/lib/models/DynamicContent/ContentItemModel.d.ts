@@ -1,6 +1,6 @@
 import { ContentPdfModel } from "@/lib/models/DynamicContent/properties/ContentPdfModel";
 import { ContentImgModel } from "@/lib/models/DynamicContent/properties/ContentImgModel";
-import { ContentTabelModel } from "@/lib/models/DynamicContent/properties/ContentTabelModel";
+import { TableModelArr } from "@/lib/models/TableModel";
 
 export type ContentUnionType =
   | "text"
@@ -15,6 +15,6 @@ export interface ContentItemModel {
   readonly text: string | null;
   readonly pdf: ContentPdfModel | null;
   readonly img: ContentImgModel | null;
-  readonly table_vertical: ContentTabelModel[] | null;
-  readonly table_horizontal: ContentTabelModel[] | null;
+  readonly table_vertical: TableModelArr | null;
+  readonly table_horizontal: TableModelArr | null;
 }

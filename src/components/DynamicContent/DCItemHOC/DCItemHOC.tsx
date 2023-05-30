@@ -6,6 +6,9 @@ import { ContentImgModel } from "@/lib/models/DynamicContent/properties/ContentI
 import DCMap from "@/components/DynamicContent/DCMap/DCMap";
 import { ContentPdfModel } from "@/lib/models/DynamicContent/properties/ContentPdfModel";
 import Pdf from "@/components/Pdf/Pdf";
+import TableOrganization from "@/UI/TableUI/TableOrganization/TableOrganization";
+import TableAboutCenter from "@/UI/TableUI/TableAboutCenter/TableAboutCenter";
+import { TableModelArr } from "@/lib/models/TableModel";
 
 const DCItemHOC = (DefaultComponent: FC<ContentItemModel>) => {
   return function Content(props: ContentItemModel) {
@@ -21,9 +24,11 @@ const DCItemHOC = (DefaultComponent: FC<ContentItemModel>) => {
       case "map":
         return <DCMap />;
       case "table_vertical":
-        return <DCImg {...(props.img as ContentImgModel)} />;
+        return (
+          <TableOrganization rows={props.table_vertical as TableModelArr} />
+        );
       case "table_horizontal":
-        return <DCImg {...(props.img as ContentImgModel)} />;
+        return <TableAboutCenter />;
       default:
         return <DefaultComponent {...props} />;
     }

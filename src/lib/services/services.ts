@@ -43,3 +43,7 @@ export const getDynamicPath = (path: string, isDynamic = true) => {
   }
   return `${isDynamic ? RoutesNamespace.DYNAMIC + "/" : ""}${path}`;
 };
+
+export const checkIsOdd = (length: number) => {
+  return length % 2 == 0;
+};
