@@ -27,7 +27,12 @@ const Index = ({ catalog }: DynamicProps) => {
         <PageContainer
           catalog={catalog}
           breadCrumbs={[customBread]}>
-          <BoxWrapper title="qwe">
+          <BoxWrapper
+            title="qwe"
+            button={{
+              href: RoutesNamespace.HOME,
+              children: "Вернутся на главную",
+            }}>
             <DynamicContent />
           </BoxWrapper>
         </PageContainer>

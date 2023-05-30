@@ -2,6 +2,9 @@ import { createTheme } from "@mui/material/styles";
 import ColorScheme from "@/styles/theme/colorScheme";
 import CheckboxIcon from "@/assets/icons/CheckboxIcon.svg";
 import EmptyCheckboxIcon from "@/assets/icons/EmptyCheckboxIcon.svg";
+import { Breakpoints } from "@/styles/breakpoints";
+
+const B500 = `@media(max-width: ${Breakpoints.BIG_MOBILE}px)`;
 
 const theme = createTheme({
   customPalette: {
@@ -55,6 +58,23 @@ const theme = createTheme({
       fontSize: "16px",
       lineHeight: "19px",
       textTransform: "uppercase",
+    },
+    body1: {
+      width: "100%",
+      height: "100%",
+
+      whiteSpace: "pre-wrap",
+      fontFamily: "inherit",
+      fontSize: "16px",
+      fontWeight: "600",
+      lineHeight: "19px",
+
+      color: ColorScheme.GRAY,
+
+      [B500]: {
+        fontSize: "13.5px",
+        lineHeight: "16px",
+      },
     },
   },
   components: {

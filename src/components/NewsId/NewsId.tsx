@@ -2,18 +2,27 @@ import React from "react";
 import { NewsModel } from "@/lib/models/NewsModel";
 import BoxWrapper from "@/components/Wrappers/BoxWrapper/BoxWrapper";
 import RusDateSSR from "@/components/RusDateSSR/RusDateSSR";
-import { RoutesNamespace } from "@/lib/constants/routesNamespace";
 import { useNEwsIdStyles } from "@/components/NewsId/NewsId.styles";
 import SwiperUI from "@/UI/SwiperUI/SwiperUI";
+import { Typography } from "@mui/material";
+import { RoutesNamespace } from "@/lib/constants/routesNamespace";
 
 const NewsId = ({ title, description, created_at, images }: NewsModel) => {
   return (
     <ContainerSC>
       <BoxWrapper
         title={title}
-        isPaddingBottom={false}>
+        isPaddingBottom={false}
+        button={{
+          href: RoutesNamespace.HOME,
+          children: "Вернуться ко всем новостям",
+        }}>
         <WrapperSC>
-          <ParagraphSC>{description}</ParagraphSC>
+          <Typography
+            variant="body1"
+            component="pre">
+            {description}
+          </Typography>
           {created_at && (
             <DateContainerSC>
               <RusDateSSR created_at={created_at} />
@@ -29,20 +38,11 @@ const NewsId = ({ title, description, created_at, images }: NewsModel) => {
           )}
         </WrapperSC>
       </BoxWrapper>
-      <ButtonSC href={RoutesNamespace.HOME}>
-        Вернуться ко всем новостям
-      </ButtonSC>
     </ContainerSC>
   );
 };
 
-const {
-  ContainerSC,
-  WrapperSC,
-  ParagraphSC,
-  DateContainerSC,
-  ButtonSC,
-  SwiperContainerSC,
-} = useNEwsIdStyles();
+const { ContainerSC, WrapperSC, DateContainerSC, SwiperContainerSC } =
+  useNEwsIdStyles();
 
 export default React.memo(NewsId);
