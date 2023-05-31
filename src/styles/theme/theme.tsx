@@ -60,14 +60,10 @@ const theme = createTheme({
       textTransform: "uppercase",
     },
     body1: {
-      width: "100%",
-      height: "100%",
-
-      whiteSpace: "pre-wrap",
-      fontFamily: "inherit",
       fontSize: "16px",
       fontWeight: "600",
       lineHeight: "19px",
+      whiteSpace: "pre-wrap",
 
       color: ColorScheme.GRAY,
 

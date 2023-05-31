@@ -1,3 +1,5 @@
+import React from "react";
+import News from "@/components/News/News";
 import PageContainer from "@/components/Containers/PageContainer/PageContainer";
 import MainContainer from "@/components/Containers/MainContainer/MainContainer";
 import { GetServerSideProps } from "next";
@@ -6,7 +8,6 @@ import { CatalogProps } from "@/types/types";
 import { homeBreadCrumbs } from "@/lib/constants/breadCrumbs";
 import { fetchGetNews } from "@/lib/api/get/fetchGetNews";
 import { NewsModelArr } from "@/lib/models/NewsModel";
-import News from "@/components/News/News";
 
 type HomeProps = CatalogProps & { news: NewsModelArr };
 
