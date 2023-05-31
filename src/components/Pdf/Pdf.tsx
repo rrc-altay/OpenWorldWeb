@@ -2,11 +2,15 @@ import React from "react";
 import { ContentPdfModel } from "@/lib/models/DynamicContent/properties/ContentPdfModel";
 import { usePdfStyles } from "@/components/Pdf/Pdf.styles";
 import { usePdf } from "@/components/Pdf/usePdf";
-import { BASE_URL } from "@/lib/constants";
 import SpinnerUI from "@/UI/SpinnerUI/SpinnerUI";
+import { BASE_URL } from "@/lib/constants";
 
 const Pdf = ({ name, link, autoOpen }: ContentPdfModel) => {
-  const { isVisible, handleChangeVisible } = usePdf(autoOpen);
+  const { ref, isRender, isLoading, isVisible, handleChangeVisible } = usePdf({
+    autoOpen,
+  });
+
+  const pdfLink = `https://docs.google.com/gview?url=${BASE_URL}${link}&embedded=true`;
 
   return (
     <ContainerSC>
@@ -19,16 +23,21 @@ const Pdf = ({ name, link, autoOpen }: ContentPdfModel) => {
         visible={isVisible}>
         <PdfContainerSC>
           <PdfWrapperSC>
-            <iframe
-              width="100%"
-              height="100%"
-              src={`https://docs.google.com/viewer?url=${BASE_URL}${link}&embedded=true`}
-              frameBorder="0"
-            />
+            {isRender && (
+              <iframe
+                ref={ref}
+                width="100%"
+                height="100%"
+                src={pdfLink}
+                frameBorder="0"
+              />
+            )}
           </PdfWrapperSC>
-          <LoadingSC>
-            <SpinnerUI />
-          </LoadingSC>
+          {isLoading && (
+            <LoadingSC>
+              <SpinnerUI />
+            </LoadingSC>
+          )}
         </PdfContainerSC>
       </CollapseSC>
     </ContainerSC>

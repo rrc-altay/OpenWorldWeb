@@ -24,8 +24,6 @@ const Index = ({ catalog, tasks }: GosudarstvennoeZadanieProps) => {
     href: RoutesNamespace.GOS_TASK,
   };
 
-  console.log(tasks);
-
   return (
     <TitleLayout title={RoutesNamespaceRU.GOS_TASK}>
       <MainContainer>
