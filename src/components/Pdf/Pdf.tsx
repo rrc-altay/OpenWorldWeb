@@ -19,7 +19,9 @@ const Pdf = ({ name, link, autoOpen }: ContentPdfModel) => {
         visible={isVisible}>
         <PdfContainerSC>
           <PdfWrapperSC>
-            <FrameSC
+            <iframe
+              width="100%"
+              height="100%"
               src={`https://docs.google.com/viewer?url=${BASE_URL}${link}&embedded=true`}
               frameBorder="0"
             />
@@ -40,7 +42,6 @@ const {
   CollapseSC,
   PdfContainerSC,
   PdfWrapperSC,
-  FrameSC,
   LoadingSC,
 } = usePdfStyles();
 

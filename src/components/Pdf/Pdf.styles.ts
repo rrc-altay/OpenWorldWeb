@@ -64,11 +64,6 @@ const PdfWrapperSC = styled("div")`
   z-index: 1;
 `;
 
-const FrameSC = styled("iframe")`
-  width: 100%;
-  height: 100%;
-`;
-
 const LoadingSC = styled("div")`
   width: 100%;
   height: 100%;
@@ -90,6 +85,5 @@ export const usePdfStyles = () => ({
   CollapseSC,
   PdfContainerSC,
   PdfWrapperSC,
-  FrameSC,
   LoadingSC,
 });
