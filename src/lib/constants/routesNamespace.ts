@@ -8,6 +8,7 @@ export enum RoutesNamespace {
   ERROR = "/500",
   NEWS = "/news",
   DYNAMIC = "/dynamic",
+  SEARCH = "/search",
 }
 
 export const RoutesNamespaceRU: {
@@ -22,4 +23,5 @@ export const RoutesNamespaceRU: {
   NOT_FOUND: "404",
   ERROR: "500",
   DYNAMIC: "",
+  SEARCH: "Результаты поиска для:",
 };

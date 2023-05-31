@@ -2,16 +2,22 @@ import React from "react";
 import SearchUI from "@/UI/SearchUI/SearchUI";
 import { styled } from "@mui/material";
 import { Breakpoints } from "@/styles/breakpoints";
+import { useSearch } from "@/hooks/useSearch";
 
 const HSearch = () => {
+  const { value, handleSubmit, handleChangeValue } = useSearch();
+
   return (
-    <ContainerSC>
-      <SearchUI />
+    <ContainerSC onSubmit={handleSubmit(true)}>
+      <SearchUI
+        value={value}
+        onChange={handleChangeValue}
+      />
     </ContainerSC>
   );
 };
 
-const ContainerSC = styled("div")`
+const ContainerSC = styled("form")`
   flex: 1;
   margin-right: 50px;
 
