@@ -4,6 +4,7 @@ import { ThemeProvider } from "@mui/material";
 import theme from "@/styles/theme/theme";
 import Header from "@/components/Header/Header";
 import { GlobalStyles } from "@/styles/globalStyles";
+import FontFace from "@/styles/fontFace";
 
 const AppLayout = ({ children }: Children) => {
   return (
@@ -11,6 +12,7 @@ const AppLayout = ({ children }: Children) => {
       <Header />
       {children}
       <GlobalStyles />
+      <FontFace />
     </ThemeProvider>
   );
 };

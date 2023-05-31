@@ -1,6 +1,5 @@
 import { createGlobalStyle, css } from "styled-components";
 import ColorScheme from "@/styles/theme/colorScheme";
-import fontFace from "@/styles/fontFace";
 import { Breakpoints } from "@/styles/breakpoints";
 
 const container = css`
@@ -20,7 +19,7 @@ export const GlobalStyles = createGlobalStyle`
     background-color: ${ColorScheme.MAIN};
     color: ${ColorScheme.GRAY};
     
-    font-family: Lato, sans-serif;
+    font-family: "Lato";
     font-size: 14px;
     font-weight: 600;
   }
@@ -97,5 +96,4 @@ export const GlobalStyles = createGlobalStyle`
     padding: 0;
   }
   
-  ${fontFace}
 `;

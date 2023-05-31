@@ -16,7 +16,7 @@ const DialogSC = styled(Dialog)`
     box-shadow: 0 0 10px rgba(32, 43, 109, 0.1);
     border-radius: 35px;
 
-    font-family: Lato, sans-serif;
+    font-family: inherit;
     font-size: 16px;
     font-weight: 400;
     line-height: 19px;
