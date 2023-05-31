@@ -8,7 +8,7 @@ import { ContentPdfModel } from "@/lib/models/DynamicContent/properties/ContentP
 import Pdf from "@/components/Pdf/Pdf";
 import TableOrganization from "@/UI/TableUI/TableOrganization/TableOrganization";
 import TableAboutCenter from "@/UI/TableUI/TableAboutCenter/TableAboutCenter";
-import { TableModelArr } from "@/lib/models/TableModel";
+import { TableModel, TableModelArr } from "@/lib/models/TableModel";
 
 const DCItemHOC = (DefaultComponent: FC<ContentItemModel>) => {
   return function Content(props: ContentItemModel) {
@@ -28,7 +28,7 @@ const DCItemHOC = (DefaultComponent: FC<ContentItemModel>) => {
           <TableOrganization rows={props.table_vertical as TableModelArr} />
         );
       case "table_horizontal":
-        return <TableAboutCenter />;
+        return <TableAboutCenter {...(props.table_horizontal as TableModel)} />;
       default:
         return <DefaultComponent {...props} />;
     }
