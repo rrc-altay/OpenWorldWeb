@@ -43,7 +43,7 @@ const ItemSC = styled("li")`
   @media (max-width: ${Breakpoints.BIG_TABLET}px) {
     font-size: 13.5px;
     line-height: 16px;
-    padding-left: 20px;
+    padding-left: 16px;
     max-width: none;
   }
 

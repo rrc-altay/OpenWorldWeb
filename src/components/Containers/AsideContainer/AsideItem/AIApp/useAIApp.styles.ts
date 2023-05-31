@@ -11,7 +11,7 @@ const ContainerSC = styled("div")`
 const TopContainerSC = styled("div")`
   display: flex;
   align-items: center;
-  margin-bottom: 15px;
+  margin-bottom: 14px;
 
   @media (max-width: ${Breakpoints.BIG_TABLET}px) {
     flex-direction: column;
@@ -84,13 +84,13 @@ const LinkSC = styled("a")`
 `;
 
 const DownloadButtonSC = styled(Button)`
+  width: 100%;
   display: none;
 
-  width: 100%;
   min-width: auto;
-  max-height: 48px;
   @media (max-width: ${Breakpoints.BIG_TABLET}px) {
     display: block;
+    padding: 14px 0;
   }
 `;
 
