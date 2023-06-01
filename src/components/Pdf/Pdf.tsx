@@ -10,14 +10,24 @@ const Pdf = ({ name, link, autoOpen }: ContentPdfModel) => {
     autoOpen,
   });
 
-  const pdfLink = `https://docs.google.com/gview?url=${BASE_URL}${link}&embedded=true`;
+  const pdfLink = `${BASE_URL}${link}`;
+  const viewLink = `https://docs.google.com/gview?url=${pdfLink}&embedded=true`;
 
   return (
     <ContainerSC>
       <TextSC>{name}</TextSC>
-      <ButtonSC onClick={handleChangeVisible}>
-        {isVisible ? "Скрыть документ" : "Показать документ"}
-      </ButtonSC>
+      <ButtonContainerSC>
+        <ButtonSC onClick={handleChangeVisible}>
+          {isVisible ? "Скрыть документ" : "Показать документ"}
+        </ButtonSC>
+        <ButtonSC>
+          <a
+            href={pdfLink}
+            download={true}>
+            Скачать документ
+          </a>
+        </ButtonSC>
+      </ButtonContainerSC>
       <CollapseSC
         in={isVisible}
         visible={isVisible}>
@@ -28,7 +38,7 @@ const Pdf = ({ name, link, autoOpen }: ContentPdfModel) => {
                 ref={ref}
                 width="100%"
                 height="100%"
-                src={pdfLink}
+                src={viewLink}
                 frameBorder="0"
               />
             )}
@@ -47,6 +57,7 @@ const Pdf = ({ name, link, autoOpen }: ContentPdfModel) => {
 const {
   ContainerSC,
   TextSC,
+  ButtonContainerSC,
   ButtonSC,
   CollapseSC,
   PdfContainerSC,

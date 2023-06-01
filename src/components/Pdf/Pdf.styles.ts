@@ -25,6 +25,15 @@ const TextSC = styled("p")`
   }
 `;
 
+const ButtonContainerSC = styled("div")`
+  display: flex;
+  justify-content: space-between;
+
+  & > *:first-child {
+    margin-right: 10px;
+  }
+`;
+
 const ButtonSC = styled("button")`
   padding: 16px 0;
 
@@ -81,6 +90,7 @@ const LoadingSC = styled("div")`
 export const usePdfStyles = () => ({
   ContainerSC,
   TextSC,
+  ButtonContainerSC,
   ButtonSC,
   CollapseSC,
   PdfContainerSC,
