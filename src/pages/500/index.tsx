@@ -3,7 +3,10 @@ import ErrorIcon from "@/assets/icons/505.svg";
 import { useRouter } from "next/router";
 import TitleLayout from "@/layout/TitleLayout";
 import ErrorContent from "@/components/ErrorContent/ErrorContent";
-import { RoutesNamespaceRU } from "@/lib/constants/routesNamespace";
+import {
+  RoutesNamespace,
+  RoutesNamespaceRU,
+} from "@/lib/constants/routesNamespace";
 
 const Index = () => {
   const router = useRouter();
@@ -19,6 +22,10 @@ const Index = () => {
         button={{
           text: "Перезагрузить",
           onClick: () => router.reload(),
+        }}
+        buttonTwo={{
+          text: "Вернуться на главную",
+          onClick: () => router.push(RoutesNamespace.HOME),
         }}
       />
     </TitleLayout>

@@ -21,6 +21,7 @@ const SwiperUI = ({ title, data }: SwiperUIProps) => {
 
   return (
     <SwiperSC
+      loop={true}
       autoHeight={true}
       modules={[Pagination]}
       pagination={true}

@@ -12,6 +12,10 @@ interface ErrorPageProps {
     text: string;
     onClick: () => void;
   };
+  buttonTwo?: {
+    text: string;
+    onClick: () => void;
+  };
 }
 
 const ErrorContent = ({
@@ -20,6 +24,7 @@ const ErrorContent = ({
   subtitle,
   description,
   button,
+  buttonTwo,
 }: ErrorPageProps) => {
   const isBigMobile = useBigMobile();
 
@@ -35,6 +40,13 @@ const ErrorContent = ({
           <SubtitleSC>{subtitle}</SubtitleSC>
           <DescriptionSC>{description}</DescriptionSC>
           <ButtonSC onClick={button.onClick}>{button.text}</ButtonSC>
+          {buttonTwo && (
+            <ButtonSC
+              sx={{ marginTop: "10px" }}
+              onClick={buttonTwo.onClick}>
+              {buttonTwo.text}
+            </ButtonSC>
+          )}
         </WrapperSC>
       </AccessibilityWrapper>
     </ContainerSC>

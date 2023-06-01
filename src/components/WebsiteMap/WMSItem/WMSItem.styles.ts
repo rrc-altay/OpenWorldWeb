@@ -42,6 +42,12 @@ const LinkSC = styled(Link)`
 
   color: ${ColorScheme.PRIMARY};
 
+  transition: 0.2s all linear;
+
+  &:hover {
+    color: ${ColorScheme.PRIMARY_TWO};
+  }
+
   @media (max-width: ${Breakpoints.SMALL_TABLET}px) {
     font-size: 13.5px;
     line-height: 16px;
