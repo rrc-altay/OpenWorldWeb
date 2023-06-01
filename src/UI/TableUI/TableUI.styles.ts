@@ -62,8 +62,12 @@ const TBodySC = styled("tbody")<{ isOdd: boolean }>`
     }
   }
 
-  & > tr:nth-of-type(${({ isOdd }) => (isOdd ? "odd" : "even")}) {
-    background-color: ${ColorScheme.MAIN_TWO};
+  & > tr:nth-of-type(n + 2) {
+    &:nth-of-type(${({ isOdd }) => (isOdd ? "odd" : "even")}) {
+      & > * {
+        background-color: ${ColorScheme.MAIN_TWO};
+      }
+    }
   }
 `;
 
