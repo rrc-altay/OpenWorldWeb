@@ -23,6 +23,11 @@ const ContainerSC = styled("div")`
     padding: 13px 16px 13px 21px;
     margin-top: 8px;
   }
+
+  @media (max-width: ${Breakpoints.BIG_MOBILE}px) {
+    margin-top: 0;
+    min-height: 88px;
+  }
 `;
 
 const TelSC = styled("a")`
@@ -45,6 +50,11 @@ const TelSC = styled("a")`
   @media (max-width: ${Breakpoints.BIG_TABLET}px) {
     font-size: 20px;
     line-height: 24px;
+  }
+
+  @media (max-width: ${Breakpoints.BIG_MOBILE}px) {
+    flex: 1;
+    text-align: center;
   }
 `;
 

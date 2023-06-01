@@ -17,6 +17,11 @@ const ContainerSC = styled("ul")`
   @media (max-width: ${Breakpoints.SMALL_TABLET}px) {
     grid-template-columns: repeat(3, 1fr);
   }
+
+  @media (max-width: ${Breakpoints.BIG_MOBILE}px) {
+    margin-top: 0;
+    gap: 18px;
+  }
 `;
 
 const ItemSC = styled("li")`
@@ -27,6 +32,11 @@ const ItemSC = styled("li")`
   max-height: 88px;
 
   overflow: hidden;
+
+  @media (max-width: ${Breakpoints.BIG_MOBILE}px) {
+    max-width: 102px;
+    max-height: 93px;
+  }
 `;
 
 const LinkSC = styled("a")`

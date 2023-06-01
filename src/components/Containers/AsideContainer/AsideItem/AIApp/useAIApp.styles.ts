@@ -6,6 +6,10 @@ const ContainerSC = styled("div")`
   @media (max-width: ${Breakpoints.BIG_TABLET}px) {
     max-width: 250px;
   }
+
+  @media (max-width: ${Breakpoints.BIG_MOBILE}px) {
+    max-width: none;
+  }
 `;
 
 const TopContainerSC = styled("div")`

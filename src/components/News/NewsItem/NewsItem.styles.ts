@@ -16,6 +16,16 @@ const ContainerSC = styled(Link)`
   border-radius: 50px;
   box-shadow: 0 0 10px ${ColorScheme.SHADOW};
 
+  transition: 0.2s all linear;
+
+  &:hover {
+    box-shadow: 0 0 10px ${ColorScheme.SHADOW_ACTIVE};
+
+    & h3 {
+      color: ${ColorScheme.SECONDARY_DARK};
+    }
+  }
+
   @media (max-width: ${Breakpoints.BIG_TABLET}px) {
     min-height: 203px;
 
