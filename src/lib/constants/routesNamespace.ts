@@ -23,5 +23,5 @@ export const RoutesNamespaceRU: {
   NOT_FOUND: "404",
   ERROR: "500",
   DYNAMIC: "",
-  SEARCH: "Результаты поиска для:",
+  SEARCH: "Поиск",
 };

@@ -15,6 +15,9 @@ const SearchUI = (props: TextFieldProps) => {
       variant="standard"
       placeholder="Поиск по сайту"
       {...props}
+      inputProps={{
+        maxLength: 256,
+      }}
       InputProps={{
         startAdornment: (
           <InputAdornment position="start">
@@ -23,6 +26,7 @@ const SearchUI = (props: TextFieldProps) => {
         ),
         ...props.InputProps,
       }}
+      required
     />
   );
 };

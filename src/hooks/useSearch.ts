@@ -1,9 +1,9 @@
-import { ChangeEvent, FormEvent, useState } from "react";
+import { ChangeEvent, FormEvent, useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import { RoutesNamespace } from "@/lib/constants/routesNamespace";
 
-export const useSearch = () => {
-  const [value, setValue] = useState<string>("");
+export const useSearch = (initialValue = "") => {
+  const [value, setValue] = useState<string>(initialValue);
 
   const { push } = useRouter();
 
@@ -29,9 +29,14 @@ export const useSearch = () => {
     };
   };
 
+  useEffect(() => {
+    if (initialValue !== value) {
+      setValue(initialValue);
+    }
+  }, [initialValue]);
+
   return {
     value,
-    handlePush,
     handleSubmit,
     handleChangeValue,
   };

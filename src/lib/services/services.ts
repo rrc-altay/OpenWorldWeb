@@ -47,3 +47,5 @@ export const getDynamicPath = (path: string, isDynamic = true) => {
 export const checkIsOdd = (length: number) => {
   return length % 2 == 0;
 };
+
+export const getSearch = (find: string) => `🔎 : ${find}`;

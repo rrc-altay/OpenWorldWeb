@@ -9,30 +9,29 @@ import PageContainer from "@/components/Containers/PageContainer/PageContainer";
 import BoxWrapper from "@/components/Wrappers/BoxWrapper/BoxWrapper";
 import { GetServerSideProps } from "next";
 import { fetchGetCatalog } from "@/lib/api/get/fetchGetCatalog";
-import { CatalogProps } from "@/types/types";
+import { CatalogProps, SearchProps } from "@/types/types";
 import { fetchPostSearch } from "@/lib/api/post/fetchPostSearch";
-import { SearchModel } from "@/lib/models/Search/SearchModel";
 import Search from "@/components/Search/Search";
+import { getSearch } from "@/lib/services/services";
 
-type SearchProps = CatalogProps & { find: string; search: SearchModel };
+type SearchPageProps = CatalogProps & SearchProps;
 
-const Index = ({ catalog, find, search }: SearchProps) => {
+const Index = ({ catalog, ...searchProps }: SearchPageProps) => {
+  const { find } = searchProps;
+
   const customBread = {
     title: RoutesNamespaceRU.SEARCH,
     href: RoutesNamespace.SEARCH,
   };
 
-  console.log(search);
-
   return (
-    <TitleLayout title={find}>
+    <TitleLayout title={getSearch(find)}>
       <MainContainer>
         <PageContainer
           catalog={catalog}
           breadCrumbs={[customBread]}>
-          <BoxWrapper title={RoutesNamespaceRU.SEARCH}>
-            <h1>ok</h1>
-            <Search />
+          <BoxWrapper>
+            <Search {...searchProps} />
           </BoxWrapper>
         </PageContainer>
       </MainContainer>
@@ -40,7 +39,7 @@ const Index = ({ catalog, find, search }: SearchProps) => {
   );
 };
 
-export const getServerSideProps: GetServerSideProps<SearchProps> = async (
+export const getServerSideProps: GetServerSideProps<SearchPageProps> = async (
   context,
 ) => {
   const find = (context.query.find as string) || "";
