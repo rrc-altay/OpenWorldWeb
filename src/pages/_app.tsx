@@ -1,11 +1,10 @@
 import React from "react";
 import AppLayout from "@/layout/AppLayout/AppLayout";
 import HTMLLayout from "@/layout/Default/HTMLLayout";
+import ErrorBoundary from "@/layout/ErrorBoundary";
 
 import type { AppProps } from "next/app";
 import "normalize.css";
-import "@/styles/globalStyles";
-import ErrorBoundary from "@/layout/ErrorBoundary";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (

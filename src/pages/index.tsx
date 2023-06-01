@@ -8,6 +8,7 @@ import { CatalogProps } from "@/types/types";
 import { homeBreadCrumbs } from "@/lib/constants/breadCrumbs";
 import { fetchGetNews } from "@/lib/api/get/fetchGetNews";
 import { NewsModelArr } from "@/lib/models/NewsModel";
+import GosUslugi from "@/components/GosUslugi";
 
 type HomeProps = CatalogProps & { news: NewsModelArr };
 
@@ -19,6 +20,7 @@ const Index = ({ catalog, news }: HomeProps) => {
         breadCrumbs={homeBreadCrumbs}>
         <News initialNews={news} />
       </PageContainer>
+      <GosUslugi />
     </MainContainer>
   );
 };
