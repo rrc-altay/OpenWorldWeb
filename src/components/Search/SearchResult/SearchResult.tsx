@@ -29,8 +29,8 @@ const SearchResult = ({ news, page }: SearchResultProps) => {
               Найдено {searchCount} соответствий
             </Typography>
           </ContainerSC>
-          <SearchPage page={page} />
-          <SearchNews news={news} />
+          {!!page.length && <SearchPage page={page} />}
+          {!!news.length && <SearchNews news={news} />}
         </>
       )}
     </>
