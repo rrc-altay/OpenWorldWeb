@@ -88,6 +88,14 @@ const PrevArrowSC = styled("button")`
 
   transform: translateY(-50%);
 
+  transition: 0.2s all linear;
+
+  &:hover {
+    & > svg > path {
+      fill: rgba(66, 149, 193, 0.8);
+    }
+  }
+
   @media (max-width: ${Breakpoints.BIG_TABLET}px) {
     display: none;
   }

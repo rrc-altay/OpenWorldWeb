@@ -58,6 +58,10 @@ const CloseButtonSC = styled("button")`
     width: 36px;
     height: 36px;
   }
+
+  @media (max-width: ${Breakpoints.MOBILE}px) {
+    right: 10px;
+  }
 `;
 
 const DrawerWrapperSC = styled("ul")`

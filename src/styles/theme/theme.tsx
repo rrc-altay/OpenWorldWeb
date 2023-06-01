@@ -103,6 +103,10 @@ const theme = createTheme({
           "&:hover": {
             boxShadow: 0,
           },
+          "&:disabled": {
+            color: "rgba(106, 120, 129, 0.5)",
+            borderColor: ColorScheme.GRAY_DISABLED,
+          },
         },
       },
     },

@@ -15,13 +15,9 @@ const HeaderSC = styled("header")`
     position: sticky;
     top: 0;
 
-    padding: 10px 0;
+    padding: 5px 0;
 
     box-shadow: 0 0 10px ${ColorScheme.SHADOW_ADAPTIVE};
-  }
-
-  @media (max-width: ${Breakpoints.BIG_MOBILE}px) {
-    padding: 15px 0;
   }
 `;
 

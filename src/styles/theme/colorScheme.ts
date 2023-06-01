@@ -12,6 +12,7 @@ enum ColorScheme {
   SECONDARY_DARK = "#3A626F",
   GRAY = "#404040",
   GRAY_LIGHT = "#6A7881",
+  GRAY_DISABLED = "#E0E0E0",
 
   SHADOW = "rgba(32, 43, 109, 0.1)",
   SHADOW_ACTIVE = "rgba(32, 43, 109, 0.25)",

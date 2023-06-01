@@ -1,4 +1,4 @@
-import { styled } from "@mui/material";
+import { css, styled } from "@mui/material";
 import ColorScheme from "@/styles/theme/colorScheme";
 import Link from "next/link";
 import { Breakpoints } from "@/styles/breakpoints";
@@ -15,6 +15,16 @@ const LiSC = styled("li")<{ isActive: boolean }>`
 
   color: ${({ isActive }) =>
     isActive ? ColorScheme.PRIMARY : ColorScheme.GRAY_LIGHT};
+
+  transition: 0.2s all linear;
+
+  ${({ isActive }) =>
+    !isActive &&
+    css`
+      &:hover {
+        color: ${ColorScheme.PRIMARY_DARK};
+      }
+    `}
 
   @media (max-width: ${Breakpoints.BIG_TABLET}px) {
     font-size: 14px;
