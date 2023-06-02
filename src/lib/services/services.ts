@@ -49,3 +49,16 @@ export const checkIsOdd = (length: number) => {
 };
 
 export const getSearch = (find: string) => `🔎 : ${find}`;
+
+export const loadScript = (src: string) => {
+  return new Promise(function (resolve, reject) {
+    const script = document.createElement("script");
+    script.src = src;
+    script.id = "loadScript";
+
+    script.onload = () => resolve({ load: "success", script: src });
+    script.onerror = () => reject({ load: "error", script: src });
+
+    document.body.appendChild(script);
+  });
+};

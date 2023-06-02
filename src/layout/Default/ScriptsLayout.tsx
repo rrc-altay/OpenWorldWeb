@@ -1,18 +1,32 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useRouter } from "next/router";
+import { scriptsMock } from "@/lib/mock/scriptsMock";
+import { loadScript } from "@/lib/services/services";
+
+const loadAllScripts = async () => {
+  try {
+    await loadScript(scriptsMock.jQuery);
+    await loadScript(scriptsMock.visible);
+  } catch (e) {
+    throw new Error("ошибка загрузки скриптов");
+  }
+};
 
 const ScriptsLayout = () => {
-  return (
-    <>
-      <script
-        defer
-        src="https://lidrekon.ru/slep/js/jquery.js"
-      />
-      <script
-        defer
-        src="https://lidrekon.ru/slep/js/uhpv-full.min.js"
-      />
-    </>
-  );
+  const router = useRouter();
+
+  useEffect(() => {
+    loadAllScripts().then();
+
+    return () => {
+      const loadScripts = document.querySelectorAll("#loadScript");
+      for (let i = 0; i < loadScripts.length; i++) {
+        document.body.removeChild(loadScripts[i]);
+      }
+    };
+  }, [router.pathname]);
+
+  return null;
 };
 
 export default React.memo(ScriptsLayout);

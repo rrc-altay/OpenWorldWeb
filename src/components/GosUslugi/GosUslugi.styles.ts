@@ -1,4 +1,6 @@
 import { createGlobalStyle } from "styled-components";
+import { Breakpoints } from "@/styles/breakpoints";
+
 export const GosUslugiStyles = createGlobalStyle`
   :root {
     --pos-banner-fluid-2_grid-template-columns: 100%;
@@ -16,6 +18,14 @@ export const GosUslugiStyles = createGlobalStyle`
     --pos-banner-fluid-2logo-wrap-top: 0;
     --pos-banner-fluid-2logo-wrap-bottom: initial;
     --pos-banner-fluid-2logo-wrap-border-radius: 0 0 0 80px;
+  }
+
+  @media(max-width: ${Breakpoints.BIG_TABLET}px) {
+    :root {
+      --pos-banner-fluid-2grid-template-rows: 110px auto;
+      --pos-banner-fluid-2bg-url: none;
+      --pos-banner-fluid-2logo-wrap-padding: 25px;
+    }
   }
   
   
