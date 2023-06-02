@@ -4,6 +4,7 @@ import AccordionUI from "@/UI/AccordionUI/AccordionUI";
 import AsideItem from "@/components/Containers/AsideContainer/AsideItem/AsideItem";
 import { useAsideMobile } from "@/components/Containers/AsideContainer/AsideMobile/useAsideMobile";
 import { useAsideMobileStyles } from "@/components/Containers/AsideContainer/AsideMobile/AsideMobile.styles";
+import GosUslugi from "@/components/GosUslugi/GosUslugi";
 
 const AsideMobile = ({ children, catalog }: AsideContainerProps) => {
   const { sections } = useAsideMobile(catalog);
@@ -11,25 +12,30 @@ const AsideMobile = ({ children, catalog }: AsideContainerProps) => {
   return (
     <>
       <ContainerSC>
-        {sections.map((sectionItem, index) => (
-          <WrapperSC key={index}>
-            {sectionItem.map((catalogItem) => (
-              <ItemSC key={catalogItem.path}>
-                <AccordionUI
-                  key={catalogItem.path}
-                  title={catalogItem.title}>
-                  <AsideItem {...catalogItem} />
-                </AccordionUI>
-              </ItemSC>
-            ))}
-          </WrapperSC>
-        ))}
+        <ListSC>
+          {sections.map((sectionItem, index) => (
+            <WrapperSC key={index}>
+              {sectionItem.map((catalogItem) => (
+                <ItemSC key={catalogItem.path}>
+                  <AccordionUI
+                    key={catalogItem.path}
+                    title={catalogItem.title}>
+                    <AsideItem {...catalogItem} />
+                  </AccordionUI>
+                </ItemSC>
+              ))}
+            </WrapperSC>
+          ))}
+        </ListSC>
+        <AccordionUI title="гос услуги">
+          <GosUslugi />
+        </AccordionUI>
       </ContainerSC>
       {children}
     </>
   );
 };
 
-const { ContainerSC, WrapperSC, ItemSC } = useAsideMobileStyles();
+const { ContainerSC, ListSC, WrapperSC, ItemSC } = useAsideMobileStyles();
 
 export default React.memo(AsideMobile);

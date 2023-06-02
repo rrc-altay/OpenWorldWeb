@@ -7,7 +7,7 @@ export const GosUslugiStyles = createGlobalStyle`
     align-items: center;
     justify-content: center;
     width: 100%;
-    min-width: 293px;
+    min-width: 200px;
     max-width: 100%;
     background: linear-gradient(138.4deg, #38bafe 26.49%, #2d73bc 79.45%);
     color: #fff;

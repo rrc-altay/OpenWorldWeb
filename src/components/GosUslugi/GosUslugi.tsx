@@ -7,7 +7,7 @@ import { useGosUslugi } from "@/components/GosUslugi/useGosUslugi";
 // 2 - Верстка находится в этом файле
 // 3 - Стили находятся в GosUslugi.styles.ts (и подключаются на 14 сроке)
 // 4 - Логика находится в useGosUslugi
-// 5 - Используется store для получения window.Widget
+// 5 - Используется widgetStore для получения window.Widget
 
 const GosUslugi = () => {
   useGosUslugi();

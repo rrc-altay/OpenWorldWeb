@@ -2,19 +2,21 @@ import { styled } from "@mui/material";
 import { Breakpoints } from "@/styles/breakpoints";
 
 const ContainerSC = styled("section")`
+  margin-bottom: 33px;
+
+  @media (max-width: ${Breakpoints.SMALL_TABLET}px) {
+    margin-bottom: 24px;
+  }
+`;
+
+const ListSC = styled("div")`
   display: flex;
   justify-content: space-between;
 
   flex-wrap: wrap;
 
-  margin-bottom: 33px;
-
   & > *:last-child > * {
     margin-right: 0;
-  }
-
-  @media (max-width: ${Breakpoints.SMALL_TABLET}px) {
-    margin-bottom: 24px;
   }
 `;
 
@@ -40,6 +42,7 @@ const ItemSC = styled("div")`
 export const useAsideMobileStyles = () => {
   return {
     ContainerSC,
+    ListSC,
     WrapperSC,
     ItemSC,
   };

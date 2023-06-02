@@ -2,8 +2,11 @@
 // @ts-nocheck
 
 import { useEffect } from "react";
+import useWidgetsStore from "@/components/GosUslugi/widgetsStore";
 
 export const useGosUslugi = () => {
+  const isLoadGosUslugi = useWidgetsStore((state) => state.isLoadGosUslugi);
+
   useEffect(() => {
     (function () {
       "use strict";
@@ -119,8 +122,8 @@ export const useGosUslugi = () => {
         });
     })();
 
-    // window.Widget("https://pos.gosuslugi.ru/form", 235629);
+    if (!isLoadGosUslugi) return;
 
-    console.log(window);
-  }, []);
+    window.Widget("https://pos.gosuslugi.ru/form", 235629);
+  }, [isLoadGosUslugi]);
 };

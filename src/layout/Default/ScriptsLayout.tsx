@@ -2,19 +2,26 @@ import React, { useEffect } from "react";
 import { useRouter } from "next/router";
 import { scriptsMock } from "@/lib/mock/scriptsMock";
 import { loadScript } from "@/lib/services/services";
-
-const loadAllScripts = async () => {
-  try {
-    await loadScript(scriptsMock.jQuery);
-    await loadScript(scriptsMock.visible);
-    await loadScript(scriptsMock.gosUslugi);
-  } catch (e) {
-    throw new Error("ошибка загрузки скриптов");
-  }
-};
+import useWidgetsStore from "@/components/GosUslugi/widgetsStore";
 
 const ScriptsLayout = () => {
   const router = useRouter();
+
+  const changeLoadGosUslugi = useWidgetsStore(
+    (state) => state.changeLoadGosUslugi,
+  );
+
+  const loadAllScripts = async () => {
+    try {
+      await loadScript(scriptsMock.jQuery);
+      await loadScript(scriptsMock.visible);
+      await loadScript(scriptsMock.gosUslugi).then(() => {
+        changeLoadGosUslugi(true);
+      });
+    } catch (e) {
+      throw new Error("ошибка загрузки скриптов");
+    }
+  };
 
   useEffect(() => {
     loadAllScripts().then();
