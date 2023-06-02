@@ -35,6 +35,14 @@ const WrapperSC = styled("div")`
   }
 `;
 
+const GUContainerSC = styled("div")`
+  margin-top: 12px;
+
+  @media (max-width: ${Breakpoints.SMALL_TABLET}px) {
+    margin-top: 4px;
+  }
+`;
+
 const ItemSC = styled("div")`
   margin-right: 15px;
 `;
@@ -44,6 +52,7 @@ export const useAsideMobileStyles = () => {
     ContainerSC,
     ListSC,
     WrapperSC,
+    GUContainerSC,
     ItemSC,
   };
 };

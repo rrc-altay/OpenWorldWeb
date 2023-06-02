@@ -30,7 +30,9 @@ const AsideMobile = ({ children, catalog }: AsideContainerProps) => {
         <AccordionUI
           title="гос услуги"
           nativeProps={{ defaultExpanded: false }}>
-          <GosUslugi />
+          <GUContainerSC>
+            <GosUslugi />
+          </GUContainerSC>
         </AccordionUI>
       </ContainerSC>
       {children}
@@ -38,6 +40,7 @@ const AsideMobile = ({ children, catalog }: AsideContainerProps) => {
   );
 };
 
-const { ContainerSC, ListSC, WrapperSC, ItemSC } = useAsideMobileStyles();
+const { ContainerSC, ListSC, WrapperSC, GUContainerSC, ItemSC } =
+  useAsideMobileStyles();
 
 export default React.memo(AsideMobile);

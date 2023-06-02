@@ -1,7 +1,11 @@
 import { createGlobalStyle } from "styled-components";
+import { Breakpoints } from "@/styles/breakpoints";
 
 export const GosUslugiStyles = createGlobalStyle`
   #js-show-iframe-wrapper {
+    border-radius: 15px;
+    overflow: hidden;
+    
     position: relative;
     display: flex;
     align-items: center;
@@ -12,6 +16,10 @@ export const GosUslugiStyles = createGlobalStyle`
     background: linear-gradient(138.4deg, #38bafe 26.49%, #2d73bc 79.45%);
     color: #fff;
     cursor: pointer;
+    
+    @media(max-width: ${Breakpoints.BIG_TABLET}px) {
+      border-radius: 30px;
+    }
   }
   #js-show-iframe-wrapper .pos-banner-fluid * {
     box-sizing: border-box;
