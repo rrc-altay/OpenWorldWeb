@@ -11,7 +11,7 @@ const BreadCrumbContainerSC = styled("section")`
 
 const ChildrenSC = styled("div")`
   flex-grow: 1;
-  min-width: 550px;
+  min-width: 500px;
   margin: 0 35px !important;
 
   @media (max-width: ${Breakpoints.NOTEBOOK}px) {

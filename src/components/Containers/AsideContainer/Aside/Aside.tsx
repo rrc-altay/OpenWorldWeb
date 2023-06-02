@@ -3,8 +3,15 @@ import { styled } from "@mui/material";
 import { CatalogProps } from "@/types/types";
 import AsideItem from "@/components/Containers/AsideContainer/AsideItem/AsideItem";
 import { Breakpoints } from "@/styles/breakpoints";
+import GosUslugi from "@/components/GosUslugi/GosUslugi";
 
-const Aside = ({ catalog }: CatalogProps) => {
+interface AsideProps extends CatalogProps {
+  position: "left" | "right";
+}
+
+const Aside = ({ catalog, position }: AsideProps) => {
+  const isRight = position === "right";
+
   return (
     <ContainerSC>
       {catalog.map((catalogItem) => (
@@ -13,6 +20,7 @@ const Aside = ({ catalog }: CatalogProps) => {
           {...catalogItem}
         />
       ))}
+      {isRight && <GosUslugi />}
     </ContainerSC>
   );
 };

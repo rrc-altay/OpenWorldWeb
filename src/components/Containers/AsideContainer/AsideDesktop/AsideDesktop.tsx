@@ -9,9 +9,15 @@ const AsideDesktop = ({ catalog, children }: AsideContainerProps) => {
 
   return (
     <ContainerSC>
-      <Aside catalog={leftAside} />
+      <Aside
+        position="left"
+        catalog={leftAside}
+      />
       {children}
-      <Aside catalog={rightAside} />
+      <Aside
+        position="right"
+        catalog={rightAside}
+      />
     </ContainerSC>
   );
 };
