@@ -1,21 +1,21 @@
 import { createGlobalStyle } from "styled-components";
 export const GosUslugiStyles = createGlobalStyle`
   :root {
-    --pos-banner-fluid-2__grid-template-columns: 100%;
-    --pos-banner-fluid-2__grid-template-rows: 310px auto;
-    --pos-banner-fluid-2__decor-grid-column: initial;
-    --pos-banner-fluid-2__decor-grid-row: initial;
-    --pos-banner-fluid-2__decor-padding: 30px 30px 0 30px;
-    --pos-banner-fluid-2__bg-url: url(https://pos.gosuslugi.ru/bin/banner-fluid/2/banner-fluid-bg-2-small.svg);
-    --pos-banner-fluid-2__bg-position: calc(10% + 64px) calc(100% - 20px);
-    --pos-banner-fluid-2__bg-size: cover;
-    --pos-banner-fluid-2__content-padding: 0 30px 30px 30px;
-    --pos-banner-fluid-2__slogan-font-size: 20px;
-    --pos-banner-fluid-2__slogan-line-height: 32px;
-    --pos-banner-fluid-2__logo-wrap-padding: 20px 30px 30px 40px;
-    --pos-banner-fluid-2__logo-wrap-top: 0;
-    --pos-banner-fluid-2__logo-wrap-bottom: initial;
-    --pos-banner-fluid-2__logo-wrap-border-radius: 0 0 0 80px;
+    --pos-banner-fluid-2_grid-template-columns: 100%;
+    --pos-banner-fluid-2grid-template-rows: 310px auto;
+    --pos-banner-fluid-2decor-grid-column: initial;
+    --pos-banner-fluid-2decor-grid-row: initial;
+    --pos-banner-fluid-2decor-padding: 30px 30px 0 30px;
+    --pos-banner-fluid-2bg-url: url(https://pos.gosuslugi.ru/bin/banner-fluid/2/banner-fluid-bg-2-small.svg);
+    --pos-banner-fluid-2bg-position: calc(10% + 64px) calc(100% - 20px);
+    --pos-banner-fluid-2bg-size: cover;
+    --pos-banner-fluid-2content-padding: 0 30px 30px 30px;
+    --pos-banner-fluid-2slogan-font-size: 20px;
+    --pos-banner-fluid-2slogan-line-height: 32px;
+    --pos-banner-fluid-2logo-wrap-padding: 20px 30px 30px 40px;
+    --pos-banner-fluid-2logo-wrap-top: 0;
+    --pos-banner-fluid-2logo-wrap-bottom: initial;
+    --pos-banner-fluid-2logo-wrap-border-radius: 0 0 0 80px;
   }
   
   
@@ -207,7 +207,7 @@ export const GosUslugiStyles = createGlobalStyle`
     font-family: LatoWeb, sans-serif;
     box-sizing: border-box;
   }
-  #js-show-iframe-wrapper .bf-2decor {
+  #js-show-iframe-wrapper .bf-2__decor {
     grid-column: var(--pos-banner-fluid-2decor-grid-column);
     grid-row: var(--pos-banner-fluid-2decor-grid-row);
     padding: var(--pos-banner-fluid-2decor-padding);
@@ -215,7 +215,7 @@ export const GosUslugiStyles = createGlobalStyle`
       var(--pos-banner-fluid-2bg-position) no-repeat;
     background-size: var(--pos-banner-fluid-2bg-size);
   }
-  #js-show-iframe-wrapper .bf-2logo-wrap {
+  #js-show-iframe-wrapper .bf-2__logo-wrap {
     position: absolute;
     top: var(--pos-banner-fluid-2logo-wrap-top);
     bottom: var(--pos-banner-fluid-2logo-wrap-bottom);
@@ -227,37 +227,37 @@ export const GosUslugiStyles = createGlobalStyle`
     background: #2d73bc;
     border-radius: var(--pos-banner-fluid-2logo-wrap-border-radius);
   }
-  #js-show-iframe-wrapper .bf-2logo {
+  #js-show-iframe-wrapper .bf-2__logo {
     width: 128px;
   }
-  #js-show-iframe-wrapper .bf-2slogan {
+  #js-show-iframe-wrapper .bf-2__slogan {
     font-family: LatoWebBold, sans-serif;
     font-size: var(--pos-banner-fluid-2slogan-font-size);
     line-height: var(--pos-banner-fluid-2slogan-line-height);
     color: #fff;
   }
-  #js-show-iframe-wrapper .bf-2content {
+  #js-show-iframe-wrapper .bf-2__content {
     padding: var(--pos-banner-fluid-2content-padding);
   }
-  #js-show-iframe-wrapper .bf-2description {
+  #js-show-iframe-wrapper .bf-2__description {
     display: flex;
     flex-direction: column;
     margin-bottom: 24px;
   }
-  #js-show-iframe-wrapper .bf-2text {
+  #js-show-iframe-wrapper .bf-2__text {
     margin-bottom: 12px;
     font-size: 24px;
     line-height: 32px;
     font-family: LatoWebBold, sans-serif;
     color: #fff;
   }
-  #js-show-iframe-wrapper .bf-2text_small {
+  #js-show-iframe-wrapper .bf-2_text_small {
     margin-bottom: 0;
     font-size: 16px;
     line-height: 24px;
     font-family: LatoWeb, sans-serif;
   }
-  #js-show-iframe-wrapper .bf-2_btn-wrap {
+  #js-show-iframe-wrapper .bf-2__btn-wrap {
     display: flex;
     align-items: center;
     justify-content: center;

@@ -28,7 +28,7 @@ const GosUslugi = () => {
               <span className="bf-2__text">
                 Не убран мусор, яма на дороге, не горит фонарь?
               </span>
-              <span className="bf-2_text bf-2_text_small">
+              <span className="bf-2__text bf-2_text_small">
                 Столкнулись с проблемой&nbsp;— сообщите о ней!
               </span>
             </div>
