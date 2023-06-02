@@ -16,13 +16,15 @@ const ContainerSC = styled("footer")`
 `;
 
 const WrapperSC = styled("section")`
-  padding: 62px 0 67px;
+  padding-top: 62px;
+  padding-bottom: 67px;
   display: flex;
   justify-content: space-between;
 
   @media (max-width: ${Breakpoints.BIG_TABLET}px) {
     flex-direction: column;
-    padding: 24px 0 20px;
+    padding-top: 24px;
+    padding-bottom: 20px;
   }
 `;
 export const useFooterStyles = () => ({
