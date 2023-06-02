@@ -1,41 +1,13 @@
 import { createGlobalStyle } from "styled-components";
-import { Breakpoints } from "@/styles/breakpoints";
 
 export const GosUslugiStyles = createGlobalStyle`
-  :root {
-    --pos-banner-fluid-2_grid-template-columns: 100%;
-    --pos-banner-fluid-2grid-template-rows: 310px auto;
-    --pos-banner-fluid-2decor-grid-column: initial;
-    --pos-banner-fluid-2decor-grid-row: initial;
-    --pos-banner-fluid-2decor-padding: 30px 30px 0 30px;
-    --pos-banner-fluid-2bg-url: url(https://pos.gosuslugi.ru/bin/banner-fluid/2/banner-fluid-bg-2-small.svg);
-    --pos-banner-fluid-2bg-position: calc(10% + 64px) calc(100% - 20px);
-    --pos-banner-fluid-2bg-size: cover;
-    --pos-banner-fluid-2content-padding: 0 30px 30px 30px;
-    --pos-banner-fluid-2slogan-font-size: 20px;
-    --pos-banner-fluid-2slogan-line-height: 32px;
-    --pos-banner-fluid-2logo-wrap-padding: 20px 30px 30px 40px;
-    --pos-banner-fluid-2logo-wrap-top: 0;
-    --pos-banner-fluid-2logo-wrap-bottom: initial;
-    --pos-banner-fluid-2logo-wrap-border-radius: 0 0 0 80px;
-  }
-
-  @media(max-width: ${Breakpoints.BIG_TABLET}px) {
-    :root {
-      --pos-banner-fluid-2grid-template-rows: 110px auto;
-      --pos-banner-fluid-2bg-url: none;
-      --pos-banner-fluid-2logo-wrap-padding: 25px;
-    }
-  }
-  
-  
   #js-show-iframe-wrapper {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
-    min-width: 200px;
+    min-width: 293px;
     max-width: 100%;
     background: linear-gradient(138.4deg, #38bafe 26.49%, #2d73bc 79.45%);
     color: #fff;
@@ -97,88 +69,88 @@ export const GosUslugiStyles = createGlobalStyle`
   @font-face {
     font-family: LatoWebLight;
     src: url(https://pos.gosuslugi.ru/bin/fonts/Lato/fonts/Lato-Light.woff2)
-        format("woff2"),
-      url(https://pos.gosuslugi.ru/bin/fonts/Lato/fonts/Lato-Light.woff)
-        format("woff"),
-      url(https://pos.gosuslugi.ru/bin/fonts/Lato/fonts/Lato-Light.ttf)
-        format("truetype");
+    format("woff2"),
+    url(https://pos.gosuslugi.ru/bin/fonts/Lato/fonts/Lato-Light.woff)
+    format("woff"),
+    url(https://pos.gosuslugi.ru/bin/fonts/Lato/fonts/Lato-Light.ttf)
+    format("truetype");
     font-style: normal;
     font-weight: 400;
   }
   @font-face {
     font-family: LatoWeb;
     src: url(https://pos.gosuslugi.ru/bin/fonts/Lato/fonts/Lato-Regular.woff2)
-        format("woff2"),
-      url(https://pos.gosuslugi.ru/bin/fonts/Lato/fonts/Lato-Regular.woff)
-        format("woff"),
-      url(https://pos.gosuslugi.ru/bin/fonts/Lato/fonts/Lato-Regular.ttf)
-        format("truetype");
+    format("woff2"),
+    url(https://pos.gosuslugi.ru/bin/fonts/Lato/fonts/Lato-Regular.woff)
+    format("woff"),
+    url(https://pos.gosuslugi.ru/bin/fonts/Lato/fonts/Lato-Regular.ttf)
+    format("truetype");
     font-style: normal;
     font-weight: 400;
   }
   @font-face {
     font-family: LatoWebBold;
     src: url(https://pos.gosuslugi.ru/bin/fonts/Lato/fonts/Lato-Bold.woff2)
-        format("woff2"),
-      url(https://pos.gosuslugi.ru/bin/fonts/Lato/fonts/Lato-Bold.woff)
-        format("woff"),
-      url(https://pos.gosuslugi.ru/bin/fonts/Lato/fonts/Lato-Bold.ttf)
-        format("truetype");
+    format("woff2"),
+    url(https://pos.gosuslugi.ru/bin/fonts/Lato/fonts/Lato-Bold.woff)
+    format("woff"),
+    url(https://pos.gosuslugi.ru/bin/fonts/Lato/fonts/Lato-Bold.ttf)
+    format("truetype");
     font-style: normal;
     font-weight: 400;
   }
   @font-face {
     font-family: RobotoWebLight;
     src: url(https://pos.gosuslugi.ru/bin/fonts/Roboto/Roboto-Light.woff2)
-        format("woff2"),
-      url(https://pos.gosuslugi.ru/bin/fonts/Roboto/Roboto-Light.woff)
-        format("woff"),
-      url(https://pos.gosuslugi.ru/bin/fonts/Roboto/Roboto-Light.ttf)
-        format("truetype");
+    format("woff2"),
+    url(https://pos.gosuslugi.ru/bin/fonts/Roboto/Roboto-Light.woff)
+    format("woff"),
+    url(https://pos.gosuslugi.ru/bin/fonts/Roboto/Roboto-Light.ttf)
+    format("truetype");
     font-style: normal;
     font-weight: 400;
   }
   @font-face {
     font-family: RobotoWebRegular;
     src: url(https://pos.gosuslugi.ru/bin/fonts/Roboto/Roboto-Regular.woff2)
-        format("woff2"),
-      url(https://pos.gosuslugi.ru/bin/fonts/Roboto/Roboto-Regular.woff)
-        format("woff"),
-      url(https://pos.gosuslugi.ru/bin/fonts/Roboto/Roboto-Regular.ttf)
-        format("truetype");
+    format("woff2"),
+    url(https://pos.gosuslugi.ru/bin/fonts/Roboto/Roboto-Regular.woff)
+    format("woff"),
+    url(https://pos.gosuslugi.ru/bin/fonts/Roboto/Roboto-Regular.ttf)
+    format("truetype");
     font-style: normal;
     font-weight: 400;
   }
   @font-face {
     font-family: RobotoWebBold;
     src: url(https://pos.gosuslugi.ru/bin/fonts/Roboto/Roboto-Bold.woff2)
-        format("woff2"),
-      url(https://pos.gosuslugi.ru/bin/fonts/Roboto/Roboto-Bold.woff)
-        format("woff"),
-      url(https://pos.gosuslugi.ru/bin/fonts/Roboto/Roboto-Bold.ttf)
-        format("truetype");
+    format("woff2"),
+    url(https://pos.gosuslugi.ru/bin/fonts/Roboto/Roboto-Bold.woff)
+    format("woff"),
+    url(https://pos.gosuslugi.ru/bin/fonts/Roboto/Roboto-Bold.ttf)
+    format("truetype");
     font-style: normal;
     font-weight: 400;
   }
   @font-face {
     font-family: ScadaWebRegular;
     src: url(https://pos.gosuslugi.ru/bin/fonts/Scada/Scada-Regular.woff2)
-        format("woff2"),
-      url(https://pos.gosuslugi.ru/bin/fonts/Scada/Scada-Regular.woff)
-        format("woff"),
-      url(https://pos.gosuslugi.ru/bin/fonts/Scada/Scada-Regular.ttf)
-        format("truetype");
+    format("woff2"),
+    url(https://pos.gosuslugi.ru/bin/fonts/Scada/Scada-Regular.woff)
+    format("woff"),
+    url(https://pos.gosuslugi.ru/bin/fonts/Scada/Scada-Regular.ttf)
+    format("truetype");
     font-style: normal;
     font-weight: 400;
   }
   @font-face {
     font-family: ScadaWebBold;
     src: url(https://pos.gosuslugi.ru/bin/fonts/Scada/Scada-Bold.woff2)
-        format("woff2"),
-      url(https://pos.gosuslugi.ru/bin/fonts/Scada/Scada-Bold.woff)
-        format("woff"),
-      url(https://pos.gosuslugi.ru/bin/fonts/Scada/Scada-Bold.ttf)
-        format("truetype");
+    format("woff2"),
+    url(https://pos.gosuslugi.ru/bin/fonts/Scada/Scada-Bold.woff)
+    format("woff"),
+    url(https://pos.gosuslugi.ru/bin/fonts/Scada/Scada-Bold.ttf)
+    format("truetype");
     font-style: normal;
     font-weight: 400;
   }
@@ -186,11 +158,11 @@ export const GosUslugiStyles = createGlobalStyle`
     font-family: Geometria;
     src: url(https://pos.gosuslugi.ru/bin/fonts/Geometria/Geometria.eot);
     src: url(https://pos.gosuslugi.ru/bin/fonts/Geometria/Geometria.eot?#iefix)
-        format("embedded-opentype"),
-      url(https://pos.gosuslugi.ru/bin/fonts/Geometria/Geometria.woff)
-        format("woff"),
-      url(https://pos.gosuslugi.ru/bin/fonts/Geometria/Geometria.ttf)
-        format("truetype");
+    format("embedded-opentype"),
+    url(https://pos.gosuslugi.ru/bin/fonts/Geometria/Geometria.woff)
+    format("woff"),
+    url(https://pos.gosuslugi.ru/bin/fonts/Geometria/Geometria.ttf)
+    format("truetype");
     font-weight: 400;
     font-style: normal;
   }
@@ -198,56 +170,55 @@ export const GosUslugiStyles = createGlobalStyle`
     font-family: Geometria-ExtraBold;
     src: url(https://pos.gosuslugi.ru/bin/fonts/Geometria/Geometria-ExtraBold.eot);
     src: url(https://pos.gosuslugi.ru/bin/fonts/Geometria/Geometria-ExtraBold.eot?#iefix)
-        format("embedded-opentype"),
-      url(https://pos.gosuslugi.ru/bin/fonts/Geometria/Geometria-ExtraBold.woff)
-        format("woff"),
-      url(https://pos.gosuslugi.ru/bin/fonts/Geometria/Geometria-ExtraBold.ttf)
-        format("truetype");
+    format("embedded-opentype"),
+    url(https://pos.gosuslugi.ru/bin/fonts/Geometria/Geometria-ExtraBold.woff)
+    format("woff"),
+    url(https://pos.gosuslugi.ru/bin/fonts/Geometria/Geometria-ExtraBold.ttf)
+    format("truetype");
     font-weight: 900;
     font-style: normal;
   }
-
   #js-show-iframe-wrapper .bf-2 {
     position: relative;
     display: grid;
     grid-template-columns: var(--pos-banner-fluid-2_grid-template-columns);
-    grid-template-rows: var(--pos-banner-fluid-2grid-template-rows);
+    grid-template-rows: var(--pos-banner-fluid-2_grid-template-rows);
     width: 100%;
     max-width: 1060px;
     font-family: LatoWeb, sans-serif;
     box-sizing: border-box;
   }
   #js-show-iframe-wrapper .bf-2__decor {
-    grid-column: var(--pos-banner-fluid-2decor-grid-column);
-    grid-row: var(--pos-banner-fluid-2decor-grid-row);
-    padding: var(--pos-banner-fluid-2decor-padding);
-    background: var(--pos-banner-fluid-2bg-url)
-      var(--pos-banner-fluid-2bg-position) no-repeat;
-    background-size: var(--pos-banner-fluid-2bg-size);
+    grid-column: var(--pos-banner-fluid-2_decor-grid-column);
+    grid-row: var(--pos-banner-fluid-2_decor-grid-row);
+    padding: var(--pos-banner-fluid-2_decor-padding);
+    background: var(--pos-banner-fluid-2_bg-url)
+    var(--pos-banner-fluid-2_bg-position) no-repeat;
+    background-size: var(--pos-banner-fluid-2_bg-size);
   }
   #js-show-iframe-wrapper .bf-2__logo-wrap {
     position: absolute;
-    top: var(--pos-banner-fluid-2logo-wrap-top);
-    bottom: var(--pos-banner-fluid-2logo-wrap-bottom);
+    top: var(--pos-banner-fluid-2_logo-wrap-top);
+    bottom: var(--pos-banner-fluid-2_logo-wrap-bottom);
     right: 0;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    padding: var(--pos-banner-fluid-2logo-wrap-padding);
+    padding: var(--pos-banner-fluid-2_logo-wrap-padding);
     background: #2d73bc;
-    border-radius: var(--pos-banner-fluid-2logo-wrap-border-radius);
+    border-radius: var(--pos-banner-fluid-2_logo-wrap-border-radius);
   }
   #js-show-iframe-wrapper .bf-2__logo {
     width: 128px;
   }
   #js-show-iframe-wrapper .bf-2__slogan {
     font-family: LatoWebBold, sans-serif;
-    font-size: var(--pos-banner-fluid-2slogan-font-size);
-    line-height: var(--pos-banner-fluid-2slogan-line-height);
+    font-size: var(--pos-banner-fluid-2_slogan-font-size);
+    line-height: var(--pos-banner-fluid-2_slogan-line-height);
     color: #fff;
   }
   #js-show-iframe-wrapper .bf-2__content {
-    padding: var(--pos-banner-fluid-2content-padding);
+    padding: var(--pos-banner-fluid-2_content-padding);
   }
   #js-show-iframe-wrapper .bf-2__description {
     display: flex;

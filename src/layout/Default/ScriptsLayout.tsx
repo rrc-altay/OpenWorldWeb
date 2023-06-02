@@ -7,6 +7,7 @@ const loadAllScripts = async () => {
   try {
     await loadScript(scriptsMock.jQuery);
     await loadScript(scriptsMock.visible);
+    await loadScript(scriptsMock.gosUslugi);
   } catch (e) {
     throw new Error("ошибка загрузки скриптов");
   }

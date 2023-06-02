@@ -1,14 +1,19 @@
 import React from "react";
 import { GosUslugiStyles } from "@/components/GosUslugi/GosUslugi.styles";
-import gosUslugiScript from "@/components/GosUslugi/gosUslugiScript";
+import { useGosUslugi } from "@/components/GosUslugi/useGosUslugi";
 
-// TODO: Менять порядок тегов запрещено
+// TODO: Виджет разбит на 4 части
+// 1 - Внешний скрипт подключается в файле ScriptsLayout.tsx
+// 2 - Верстка находится в этом файле
+// 3 - Стили находятся в GosUslugi.styles.ts (и подключаются на 14 сроке)
+// 4 - Логика находится в useGosUslugi
+// 5 - Используется store для получения window.Widget
 
 const GosUslugi = () => {
+  useGosUslugi();
+
   return (
-    <>
-      {/* eslint-disable-next-line @next/next/no-sync-scripts */}
-      <script src="https://pos.gosuslugi.ru/bin/script.min.js" />
+    <div id="gos-uslugi-widget">
       <GosUslugiStyles />
       <div id="js-show-iframe-wrapper">
         <div className="pos-banner-fluid bf-2">
@@ -28,13 +33,12 @@ const GosUslugi = () => {
               <span className="bf-2__text">
                 Не убран мусор, яма на дороге, не горит фонарь?
               </span>
-              <span className="bf-2__text bf-2_text_small">
+              <span className="bf-2_text bf-2_text_small">
                 Столкнулись с проблемой&nbsp;— сообщите о ней!
               </span>
             </div>
 
             <div className="bf-2__btn-wrap">
-              {/* pos-banner-btn_2 не удалять; другие классы не добавлять */}
               <button
                 className="pos-banner-btn_2"
                 type="button">
@@ -44,8 +48,7 @@ const GosUslugi = () => {
           </div>
         </div>
       </div>
-      <div dangerouslySetInnerHTML={{ __html: gosUslugiScript }} />
-    </>
+    </div>
   );
 };
 
