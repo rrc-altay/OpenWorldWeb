@@ -1,16 +1,23 @@
 import React from "react";
-import { Accordion, AccordionSummary, styled, Typography } from "@mui/material";
+import {
+  Accordion,
+  AccordionProps,
+  AccordionSummary,
+  styled,
+  Typography,
+} from "@mui/material";
 import { Children } from "@/types/types";
 import AccordionIcon from "@/assets/icons/AccordionIcon.svg";
 import { Breakpoints } from "@/styles/breakpoints";
 
 interface AccordionUIProps extends Children {
   title: string;
+  nativeProps?: Partial<AccordionProps>;
 }
 
-const AccordionUI = ({ title, children }: AccordionUIProps) => {
+const AccordionUI = ({ title, children, nativeProps }: AccordionUIProps) => {
   return (
-    <AccordionSC>
+    <AccordionSC {...nativeProps}>
       <AccordionSummarySC
         expandIcon={<AccordionIconSC />}
         aria-controls="panel1a-content"

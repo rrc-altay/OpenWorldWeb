@@ -27,7 +27,9 @@ const AsideMobile = ({ children, catalog }: AsideContainerProps) => {
             </WrapperSC>
           ))}
         </ListSC>
-        <AccordionUI title="гос услуги">
+        <AccordionUI
+          title="гос услуги"
+          nativeProps={{ defaultExpanded: false }}>
           <GosUslugi />
         </AccordionUI>
       </ContainerSC>
