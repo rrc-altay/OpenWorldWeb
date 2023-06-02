@@ -62,6 +62,9 @@ const TitleSC = styled("h1")`
     font-size: 51px;
     line-height: 65px;
     margin-bottom: 16px;
+    & > span {
+      display: none;
+    }
   }
 `;
 const SubtitleSC = styled("h2")`

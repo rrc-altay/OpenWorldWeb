@@ -10,7 +10,7 @@ const AsideMobile = ({ children, catalog }: AsideContainerProps) => {
   const { sections } = useAsideMobile(catalog);
 
   return (
-    <>
+    <div>
       <ContainerSC>
         <ListSC>
           {sections.map((sectionItem, index) => (
@@ -36,7 +36,7 @@ const AsideMobile = ({ children, catalog }: AsideContainerProps) => {
         </AccordionUI>
       </ContainerSC>
       {children}
-    </>
+    </div>
   );
 };
 

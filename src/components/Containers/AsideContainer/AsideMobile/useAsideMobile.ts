@@ -1,14 +1,21 @@
 import { CatalogModelArr } from "@/lib/models/Catalog/CatalogModel";
 import { useEffect, useMemo, useState } from "react";
-import { useSmallTablet, useTablet } from "@/hooks/useAdaptive";
+import { useMediaQuery } from "@mui/material";
+import { Breakpoints } from "@/styles/breakpoints";
 
 type SectionState = CatalogModelArr[];
 
 export const useAsideMobile = (catalog: CatalogModelArr) => {
   const [sections, setSections] = useState<SectionState>([]);
 
-  const isTable = useTablet();
-  const isSmallTable = useSmallTablet();
+  const isTable = useMediaQuery(`(max-width: ${Breakpoints.TABLE}px)`, {
+    noSsr: true,
+  });
+
+  const isSmallTable = useMediaQuery(
+    `(max-width: ${Breakpoints.SMALL_TABLET}px)`,
+    { noSsr: true },
+  );
 
   const catalogLength = catalog.length;
 

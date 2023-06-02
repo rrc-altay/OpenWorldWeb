@@ -132,10 +132,19 @@ const TitleSC = styled("h3")`
   }
 
   @media (max-width: ${Breakpoints.SMALL_TABLET}px) {
+    display: none;
     font-size: 15px;
     font-weight: 700;
     line-height: 20px;
     text-align: center;
+  }
+`;
+
+const MobileTitleSC = styled(TitleSC)`
+  display: none;
+
+  @media (max-width: ${Breakpoints.SMALL_TABLET}px) {
+    display: block;
   }
 `;
 
@@ -176,6 +185,7 @@ export const useNewsItemStyles = () => ({
   ImageSC,
   TextContainerSC,
   TitleSC,
+  MobileTitleSC,
   DescContainerSC,
   DescriptionSC,
   DateContainerSC,

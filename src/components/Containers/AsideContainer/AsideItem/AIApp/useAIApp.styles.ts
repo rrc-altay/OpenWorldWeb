@@ -82,8 +82,16 @@ const LinkSC = styled("a")`
   }
 
   @media (max-width: ${Breakpoints.BIG_TABLET}px) {
+    display: none;
     text-align: center;
     margin-bottom: 16px;
+  }
+`;
+
+const LinkMobileSC = styled(LinkSC)`
+  display: none;
+  @media (max-width: ${Breakpoints.BIG_TABLET}px) {
+    display: block;
   }
 `;
 
@@ -105,5 +113,6 @@ export const useAIAppStyles = () => ({
   ImgSC,
   ImgTextSC,
   LinkSC,
+  LinkMobileSC,
   DownloadButtonSC,
 });

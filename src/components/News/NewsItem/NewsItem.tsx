@@ -2,7 +2,6 @@ import React from "react";
 import { NewsModel } from "@/lib/models/NewsModel";
 import { BASE_URL } from "@/lib/constants";
 import { useNewsItemStyles } from "@/components/News/NewsItem/NewsItem.styles";
-import { useSmallTablet } from "@/hooks/useAdaptive";
 import RusDateSSR from "@/components/RusDateSSR/RusDateSSR";
 import { RoutesNamespace } from "@/lib/constants/routesNamespace";
 
@@ -14,13 +13,12 @@ const NewsItem = ({
   created_at,
 }: NewsModel) => {
   const previewImage = images[0];
-  const isSmallTablet = useSmallTablet();
 
   return (
     <ContainerSC
       href={`${RoutesNamespace.NEWS}/${id}`}
       target="_blank">
-      {isSmallTablet && <TitleSC>{title}</TitleSC>}
+      <MobileTitleSC>{title}</MobileTitleSC>
       <WrapperSC>
         {previewImage?.src && (
           <ImageSC
@@ -29,7 +27,7 @@ const NewsItem = ({
           />
         )}
         <TextContainerSC>
-          {!isSmallTablet && <TitleSC>{title}</TitleSC>}
+          <TitleSC>{title}</TitleSC>
           <DescContainerSC>
             <DescriptionSC>{description}</DescriptionSC>
           </DescContainerSC>
@@ -50,6 +48,7 @@ const {
   ImageSC,
   TextContainerSC,
   TitleSC,
+  MobileTitleSC,
   DescContainerSC,
   DescriptionSC,
   DateContainerSC,

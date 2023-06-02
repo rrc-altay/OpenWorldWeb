@@ -1,7 +1,6 @@
 import React from "react";
 import { AppModel } from "@/lib/models/Catalog/properties/AppModel";
 import { aboutMock } from "@/lib/mock/aboutMock";
-import { useBigTablet } from "@/hooks/useAdaptive";
 import { useAIAppStyles } from "@/components/Containers/AsideContainer/AsideItem/AIApp/useAIApp.styles";
 import { BASE_URL } from "@/lib/constants";
 
@@ -9,9 +8,13 @@ interface AIAppProps {
   app: AppModel;
 }
 
-const AIApp = ({ app }: AIAppProps) => {
-  const isBigTablet = useBigTablet();
+const linkProps = {
+  href: aboutMock.developerLink,
+  target: "_blank",
+  rel: "noreferrer noopener",
+};
 
+const AIApp = ({ app }: AIAppProps) => {
   return (
     <ContainerSC>
       <TopContainerSC>
@@ -23,10 +26,10 @@ const AIApp = ({ app }: AIAppProps) => {
             alt={app.description}
           />
         </DownloadImgSC>
-        {isBigTablet && <Link />}
+        <LinkMobileSC {...linkProps}>{aboutMock.developer}</LinkMobileSC>
         <ImgTextSC>{app.description}</ImgTextSC>
       </TopContainerSC>
-      {!isBigTablet && <Link />}
+      <LinkSC {...linkProps}>{aboutMock.developer}</LinkSC>
       <DownloadButtonSC>
         <a
           href={aboutMock.downloadAppLink}
@@ -38,15 +41,6 @@ const AIApp = ({ app }: AIAppProps) => {
   );
 };
 
-const Link = () => (
-  <LinkSC
-    href={aboutMock.developerLink}
-    target="_blank"
-    rel="noreferrer noopener">
-    {aboutMock.developer}
-  </LinkSC>
-);
-
 const {
   ContainerSC,
   TopContainerSC,
@@ -55,6 +49,7 @@ const {
   ImgTextSC,
   DownloadButtonSC,
   LinkSC,
+  LinkMobileSC,
 } = useAIAppStyles();
 
 export default React.memo(AIApp);

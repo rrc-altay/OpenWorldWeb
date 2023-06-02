@@ -1,6 +1,5 @@
 import React, { FC } from "react";
 import { useErrorContentStyles } from "@/components/ErrorContent/ErrorContent.styles";
-import { useBigMobile } from "@/hooks/useAdaptive";
 import AccessibilityWrapper from "@/components/Wrappers/AccessibilityWrapper/AccessibilityWrapper";
 
 interface ErrorPageProps {
@@ -26,8 +25,6 @@ const ErrorContent = ({
   button,
   buttonTwo,
 }: ErrorPageProps) => {
-  const isBigMobile = useBigMobile();
-
   return (
     <ContainerSC>
       <AccessibilityWrapper>
@@ -36,7 +33,9 @@ const ErrorContent = ({
             <Icon />
           </IconContainerSC>
           <MobileTitleSC>{title}</MobileTitleSC>
-          <TitleSC>ОШИБКА {isBigMobile ? "" : title}</TitleSC>
+          <TitleSC>
+            ОШИБКА <span>{title}</span>
+          </TitleSC>
           <SubtitleSC>{subtitle}</SubtitleSC>
           <DescriptionSC>{description}</DescriptionSC>
           <ButtonSC onClick={button.onClick}>{button.text}</ButtonSC>
