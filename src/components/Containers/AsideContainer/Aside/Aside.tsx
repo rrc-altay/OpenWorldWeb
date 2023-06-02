@@ -4,6 +4,7 @@ import { CatalogProps } from "@/types/types";
 import AsideItem from "@/components/Containers/AsideContainer/AsideItem/AsideItem";
 import { Breakpoints } from "@/styles/breakpoints";
 import GosUslugi from "@/components/GosUslugi/GosUslugi";
+import { useBigTablet } from "@/hooks/useAdaptive";
 
 interface AsideProps extends CatalogProps {
   position: "left" | "right";
@@ -11,6 +12,7 @@ interface AsideProps extends CatalogProps {
 
 const Aside = ({ catalog, position }: AsideProps) => {
   const isRight = position === "right";
+  const isBigTable = useBigTablet();
 
   return (
     <ContainerSC>
@@ -20,7 +22,7 @@ const Aside = ({ catalog, position }: AsideProps) => {
           {...catalogItem}
         />
       ))}
-      {isRight && <GosUslugi />}
+      {isRight && !isBigTable && <GosUslugi />}
     </ContainerSC>
   );
 };

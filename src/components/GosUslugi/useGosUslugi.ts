@@ -1,11 +1,12 @@
 /* eslint-disable */
 // @ts-nocheck
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import useWidgetsStore from "@/components/GosUslugi/widgetsStore";
 
 export const useGosUslugi = () => {
   const isLoadGosUslugi = useWidgetsStore((state) => state.isLoadGosUslugi);
+  const [isLoadingStyles, setIsLoadingStyles] = useState<boolean>(false);
 
   useEffect(() => {
     (function () {
@@ -122,8 +123,15 @@ export const useGosUslugi = () => {
         });
     })();
 
+    // ПОСЛЕ ИНИЦИАЛИЗАЦИИ ВСЕХ CSS КОНСТАНТ
+    setIsLoadingStyles(true);
+
     if (!isLoadGosUslugi) return;
 
     window.Widget("https://pos.gosuslugi.ru/form", 235629);
   }, [isLoadGosUslugi]);
+
+  return {
+    isLoadingStyles,
+  };
 };
