@@ -43,8 +43,9 @@ const TextFieldSC = styled(TextField)`
   }
 
   & .MuiInputBase-input {
-    padding-bottom: 8px;
-    padding-right: 5px;
+    padding-bottom: 14px;
+    padding-right: 10px;
+    min-height: 37px;
   }
 
   @media (max-width: ${Breakpoints.BIG_TABLET}px) {

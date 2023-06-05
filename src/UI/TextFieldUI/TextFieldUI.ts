@@ -14,7 +14,8 @@ export const TextFieldUI = styled(TextField)`
   }
 
   & .MuiInputBase-input {
-    padding: 7px 20px;
+    padding: 13px 20px;
+    min-height: 37px;
 
     font-family: inherit;
     font-size: 16px;
