@@ -3,7 +3,7 @@ import { useAccessibilityButtonStyles } from "@/components/AccessibilityButton/A
 
 const AccessibilityButton = () => {
   return (
-    <ButtonSC id="specialButton">
+    <ButtonSC className="bvi-open">
       <IconSC />
       <span>Версия для слабовидящих</span>
     </ButtonSC>
