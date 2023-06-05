@@ -17,8 +17,6 @@ const ScriptsLayout = () => {
       await loadScript(scriptsMock.gosUslugi).then(() => {
         changeLoadGosUslugi(true);
       });
-      // await loadScript(scriptsMock.jQuery);
-      // await loadScript(scriptsMock.visible);
     } catch (e) {
       throw new Error("ошибка загрузки скриптов");
     }
