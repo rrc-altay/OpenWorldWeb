@@ -1,6 +1,5 @@
 import React, { FC } from "react";
 import { useErrorContentStyles } from "@/components/ErrorContent/ErrorContent.styles";
-import AccessibilityWrapper from "@/components/Wrappers/AccessibilityWrapper/AccessibilityWrapper";
 
 interface ErrorPageProps {
   Icon: FC;
@@ -27,27 +26,25 @@ const ErrorContent = ({
 }: ErrorPageProps) => {
   return (
     <ContainerSC>
-      <AccessibilityWrapper>
-        <WrapperSC>
-          <IconContainerSC>
-            <Icon />
-          </IconContainerSC>
-          <MobileTitleSC>{title}</MobileTitleSC>
-          <TitleSC>
-            ОШИБКА <span>{title}</span>
-          </TitleSC>
-          <SubtitleSC>{subtitle}</SubtitleSC>
-          <DescriptionSC>{description}</DescriptionSC>
-          <ButtonSC onClick={button.onClick}>{button.text}</ButtonSC>
-          {buttonTwo && (
-            <ButtonSC
-              sx={{ marginTop: "10px" }}
-              onClick={buttonTwo.onClick}>
-              {buttonTwo.text}
-            </ButtonSC>
-          )}
-        </WrapperSC>
-      </AccessibilityWrapper>
+      <WrapperSC>
+        <IconContainerSC>
+          <Icon />
+        </IconContainerSC>
+        <MobileTitleSC>{title}</MobileTitleSC>
+        <TitleSC>
+          ОШИБКА <span>{title}</span>
+        </TitleSC>
+        <SubtitleSC>{subtitle}</SubtitleSC>
+        <DescriptionSC>{description}</DescriptionSC>
+        <ButtonSC onClick={button.onClick}>{button.text}</ButtonSC>
+        {buttonTwo && (
+          <ButtonSC
+            sx={{ marginTop: "10px" }}
+            onClick={buttonTwo.onClick}>
+            {buttonTwo.text}
+          </ButtonSC>
+        )}
+      </WrapperSC>
     </ContainerSC>
   );
 };

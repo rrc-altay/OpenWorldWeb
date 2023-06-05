@@ -64,6 +64,8 @@ const theme = createTheme({
       fontWeight: "600",
       lineHeight: "19px",
       whiteSpace: "pre-wrap",
+      textAlign: "justify",
+      textIndent: "30px",
 
       color: ColorScheme.GRAY,
 
