@@ -1,7 +1,10 @@
 import React from "react";
 import { useAccessibilityButtonStyles } from "@/components/AccessibilityButton/AccessibilityButton.styles";
+import { useAccessibilityButton } from "@/components/AccessibilityButton/useAccessibilityButton";
 
 const AccessibilityButton = () => {
+  useAccessibilityButton();
+
   return (
     <ButtonSC className="bvi-open">
       <IconSC />

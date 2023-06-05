@@ -16,9 +16,6 @@ function MyDocument() {
       <body>
         <Main />
         <NextScript />
-        {/* eslint-disable-next-line @next/next/no-sync-scripts */}
-        <script src="/assets/modules/bvi/js/bvi.js"></script>
-        <script>new isvek.Bvi();</script>
       </body>
     </Html>
   );
