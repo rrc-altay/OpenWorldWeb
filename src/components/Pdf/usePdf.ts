@@ -42,7 +42,7 @@ export const usePdf = ({ autoOpen }: Pick<ContentPdfModel, "autoOpen">) => {
       setTimeout(() => {
         setIsRender(true);
       }, 1000);
-    }, 5000);
+    }, 60000);
 
     return () => {
       clearInterval(interval);
