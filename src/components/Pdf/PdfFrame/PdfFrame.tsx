@@ -1,5 +1,5 @@
-import React from "react";
-import { Viewer } from "@react-pdf-viewer/core";
+import React, { useState } from "react";
+import { DocumentLoadEvent, Viewer } from "@react-pdf-viewer/core";
 
 type PdfFrameProps = {
   src: string;
@@ -13,6 +13,8 @@ import ColorScheme from "@/styles/theme/colorScheme";
 import { pageNavigationPlugin } from "@react-pdf-viewer/page-navigation";
 
 const PdfFrame = ({ src }: PdfFrameProps) => {
+  const [document, setDocument] = useState<DocumentLoadEvent | null>(null);
+
   const zoomPluginInstance = zoomPlugin();
   const printPluginInstance = printPlugin();
   const getFilePluginInstance = getFilePlugin();
@@ -25,30 +27,35 @@ const PdfFrame = ({ src }: PdfFrameProps) => {
 
   return (
     <>
-      <ControlButtonSC>
+      {document?.doc.numPages && (
         <ControlButtonSC>
-          <ZoomIn />
-          <ZoomOut />
+          <ControlButtonSC>
+            <ZoomIn />
+            <ZoomOut />
+          </ControlButtonSC>
+          <ControlButtonSC>
+            <CurrentPageLabel /> /
+            <NumberOfPages />
+          </ControlButtonSC>
+          <ControlButtonSC>
+            <Download />
+            <Print />
+          </ControlButtonSC>
         </ControlButtonSC>
-        <ControlButtonSC>
-          <CurrentPageLabel /> /
-          <NumberOfPages />
-        </ControlButtonSC>
-        <ControlButtonSC>
-          <Download />
-          <Print />
-        </ControlButtonSC>
-      </ControlButtonSC>
-      <Viewer
-        fileUrl={src}
-        plugins={[
-          zoomPluginInstance,
-          printPluginInstance,
-          getFilePluginInstance,
-          pageNavigationPluginInstance,
-        ]}
-        theme="dark"
-      />
+      )}
+      <ViewContainerSC>
+        <Viewer
+          fileUrl={src}
+          onDocumentLoad={(e) => setDocument(e)}
+          plugins={[
+            zoomPluginInstance,
+            printPluginInstance,
+            getFilePluginInstance,
+            pageNavigationPluginInstance,
+          ]}
+          theme="dark"
+        />
+      </ViewContainerSC>
     </>
   );
 };
@@ -57,7 +64,17 @@ const ControlButtonSC = styled("div")`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  // background-color: ${ColorScheme.PRIMARY};
+
+  background-color: #1a1a1a;
+  color: ${ColorScheme.MAIN};
+
+  & > * > * {
+    color: inherit !important;
+  }
+`;
+
+const ViewContainerSC = styled("div")`
+  height: calc(100% - 32px);
 `;
 
 export default React.memo(PdfFrame);

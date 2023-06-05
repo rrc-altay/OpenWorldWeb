@@ -1,0 +1,14 @@
+{
+  "download": {
+    "download": "Скачать"
+  },
+  "print": {
+    "cancel": "Отмена",
+    "preparingDocument": "Загружаем...",
+    "print": "Распечатать"
+  },
+  "zoom": {
+    "zoomIn": "Увеличить",
+    "zoomOut": "Уменьшить"
+  }
+}
