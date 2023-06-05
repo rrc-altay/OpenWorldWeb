@@ -3,9 +3,9 @@ import { Breakpoints } from "@/styles/breakpoints";
 import ColorScheme from "@/styles/theme/colorScheme";
 
 const ContainerSC = styled("nav")`
-  position: sticky;
-  top: 54px;
-  z-index: 1;
+  //position: sticky;
+  //top: 54px;
+  //z-index: 1;
 
   transform: translateY(-50%);
 
