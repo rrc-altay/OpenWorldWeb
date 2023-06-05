@@ -4,10 +4,9 @@ import { usePdfStyles } from "@/components/Pdf/Pdf.styles";
 import { usePdf } from "@/components/Pdf/usePdf";
 import { BASE_URL } from "@/lib/constants";
 import PdfFrame from "@/components/Pdf/PdfFrame/PdfFrame";
-import SpinnerUI from "@/UI/SpinnerUI/SpinnerUI";
 
 const Pdf = ({ name, link, autoOpen }: ContentPdfModel) => {
-  const { isVisible, isLoading, handleChangeVisible } = usePdf({
+  const { isVisible, handleChangeVisible } = usePdf({
     autoOpen,
   });
 
@@ -35,11 +34,6 @@ const Pdf = ({ name, link, autoOpen }: ContentPdfModel) => {
           <PdfWrapperSC>
             <PdfFrame src={pdfLink} />
           </PdfWrapperSC>
-          {isLoading && (
-            <LoadingSC>
-              <SpinnerUI />
-            </LoadingSC>
-          )}
         </PdfContainerSC>
       </CollapseSC>
     </ContainerSC>
@@ -54,7 +48,6 @@ const {
   CollapseSC,
   PdfContainerSC,
   PdfWrapperSC,
-  LoadingSC,
 } = usePdfStyles();
 
 export default React.memo(Pdf);

@@ -59,9 +59,6 @@ const PdfContainerSC = styled("div")`
 
   width: 100%;
   height: 419px;
-
-  border-radius: 30px;
-  overflow: hidden;
 `;
 
 const PdfWrapperSC = styled("div")`
@@ -73,20 +70,6 @@ const PdfWrapperSC = styled("div")`
   z-index: 1;
 `;
 
-const LoadingSC = styled("div")`
-  width: 100%;
-  height: 100%;
-
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: 0;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`;
-
 export const usePdfStyles = () => ({
   ContainerSC,
   TextSC,
@@ -95,5 +78,4 @@ export const usePdfStyles = () => ({
   CollapseSC,
   PdfContainerSC,
   PdfWrapperSC,
-  LoadingSC,
 });
