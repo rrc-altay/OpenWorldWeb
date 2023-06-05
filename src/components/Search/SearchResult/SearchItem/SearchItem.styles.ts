@@ -9,10 +9,7 @@ const ContainerSC = styled("li")`
   font-weight: 600;
   font-size: 16px;
   line-height: 19px;
-
-  &::marker {
-    color: ${ColorScheme.SECONDARY};
-  }
+  color: ${ColorScheme.SECONDARY};
 
   @media (max-width: ${Breakpoints.BIG_TABLET}px) {
     margin-bottom: 20px;
@@ -32,6 +29,7 @@ const TitleSC = styled(Typography)`
 `;
 
 const DescriptionSC = styled(TitleSC)`
+  text-indent: 0;
   display: -webkit-box;
   overflow: hidden;
   -webkit-line-clamp: 2;

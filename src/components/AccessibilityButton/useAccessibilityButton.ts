@@ -28,7 +28,12 @@ export const useAccessibilityButton = () => {
       // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       //@ts-ignore
       const { isvek } = window;
-      new isvek.Bvi();
+      new isvek.Bvi({
+        reload: true,
+        speech: false,
+        panelHide: true,
+        panelFixed: true,
+      });
     }
   }, [isLoadAccessibility]);
 
