@@ -41,8 +41,8 @@ export const useAccessibilityButton = () => {
       setTimeout(() => {
         new isvek.Bvi({
           speech: false,
-          panelHide: true,
-          panelFixed: true,
+          panelHide: false,
+          panelFixed: false,
         });
         changeBody("1", "scroll");
       }, 2000);
