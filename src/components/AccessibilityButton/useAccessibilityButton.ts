@@ -40,7 +40,6 @@ export const useAccessibilityButton = () => {
 
       setTimeout(() => {
         new isvek.Bvi({
-          reload: true,
           speech: false,
           panelHide: true,
           panelFixed: true,

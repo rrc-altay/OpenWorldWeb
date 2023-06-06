@@ -13,6 +13,11 @@ export const TextFieldUI = styled(TextField)`
     }
   }
 
+  & > div > fieldset {
+    text-indent: 0;
+    background-color: transparent !important;
+  }
+
   & .MuiInputBase-input {
     padding: 13px 20px;
     min-height: 37px;

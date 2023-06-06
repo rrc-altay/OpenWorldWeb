@@ -25,7 +25,9 @@ const SearchResult = ({ news, page }: SearchResultProps) => {
       {!isEmpty && (
         <>
           <ContainerSC>
-            <Typography variant="body1">
+            <Typography
+              variant="body1"
+              sx={{ textIndent: "0px" }}>
               Найдено {searchCount} соответствий
             </Typography>
           </ContainerSC>

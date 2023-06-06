@@ -134,10 +134,13 @@ const FormBottomSC = styled("div")`
 
 const LabelSC = styled(FormControlLabel)`
   padding-left: 2px;
+
   & .MuiTypography-root {
     font-size: 16px;
     font-weight: 600;
     line-height: 19px;
+    text-indent: 0;
+    text-align: left;
 
     color: ${ColorScheme.GRAY};
 
