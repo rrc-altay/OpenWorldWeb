@@ -109,6 +109,7 @@ const Feedback = () => {
       <ErrorSC>{hasError}</ErrorSC>
       <ModalUI
         open={isSuccess}
+        disablePortal={true}
         handleClose={() => setIsSuccess(false)}>
         <ModalContentSC>{feedbackMock.success}</ModalContentSC>
       </ModalUI>

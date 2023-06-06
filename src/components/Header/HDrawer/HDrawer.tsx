@@ -16,6 +16,7 @@ const HDrawer = () => {
       <DrawerSC
         anchor="left"
         open={isDrawer}
+        disablePortal={true}
         onClose={handleChangeDrawer(false)}>
         <CloseButtonSC onClick={handleChangeDrawer(false)}>
           <CloseIcon />

@@ -150,8 +150,14 @@ const theme = createTheme({
     },
     MuiCheckbox: {
       defaultProps: {
-        icon: <EmptyCheckboxIcon />,
-        checkedIcon: <CheckboxIcon />,
+        disableTouchRipple: true,
+        icon: <EmptyCheckboxIcon id="checkbox-not-active" />,
+        checkedIcon: <CheckboxIcon id="checkbox-active" />,
+        sx: {
+          "& .MuiTouchRipple-root": {
+            display: "none",
+          },
+        },
       },
     },
     MuiFormControlLabel: {
