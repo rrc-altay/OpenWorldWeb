@@ -11,6 +11,7 @@ import { getFilePlugin } from "@react-pdf-viewer/get-file";
 import { styled } from "@mui/material";
 import ColorScheme from "@/styles/theme/colorScheme";
 import { pageNavigationPlugin } from "@react-pdf-viewer/page-navigation";
+import { useBigTablet } from "@/hooks/useAdaptive";
 
 const PdfFrame = ({ src }: PdfFrameProps) => {
   const [document, setDocument] = useState<DocumentLoadEvent | null>(null);
@@ -25,6 +26,8 @@ const PdfFrame = ({ src }: PdfFrameProps) => {
   const { Download } = getFilePluginInstance;
   const { CurrentPageLabel, NumberOfPages } = pageNavigationPluginInstance;
 
+  const isBigTablet = useBigTablet();
+
   return (
     <>
       {document?.doc.numPages && (
@@ -37,7 +40,7 @@ const PdfFrame = ({ src }: PdfFrameProps) => {
             <CurrentPageLabel /> /
             <NumberOfPages />
           </ControlButtonSC>
-          <ControlButtonSC>
+          <ControlButtonSC sx={{ visibility: isBigTablet ? "hidden" : "" }}>
             <Download />
             <Print />
           </ControlButtonSC>
