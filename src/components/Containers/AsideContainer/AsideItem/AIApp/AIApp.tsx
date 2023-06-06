@@ -3,6 +3,7 @@ import { AppModel } from "@/lib/models/Catalog/properties/AppModel";
 import { aboutMock } from "@/lib/mock/aboutMock";
 import { useAIAppStyles } from "@/components/Containers/AsideContainer/AsideItem/AIApp/useAIApp.styles";
 import { BASE_URL } from "@/lib/constants";
+import { bviNoStyle } from "@/lib/constants/bvi";
 
 interface AIAppProps {
   app: AppModel;
@@ -32,6 +33,7 @@ const AIApp = ({ app }: AIAppProps) => {
       <LinkSC {...linkProps}>{aboutMock.developer}</LinkSC>
       <DownloadButtonSC>
         <a
+          {...bviNoStyle}
           href={aboutMock.downloadAppLink}
           download>
           Скачать

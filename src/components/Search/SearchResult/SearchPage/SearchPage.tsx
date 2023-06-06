@@ -6,7 +6,6 @@ import { getDynamicPath } from "@/lib/services/services";
 import { styled } from "@mui/material";
 
 const SearchPage = ({ page }: SearchModel[0]) => {
-  console.log(page);
   return (
     <ContainerSC>
       <ContentTitleSC variant="h2">

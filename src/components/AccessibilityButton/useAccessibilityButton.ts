@@ -1,5 +1,6 @@
 import useAccessibilityStore from "@/components/AccessibilityButton/accessibilityStore";
 import { useEffect } from "react";
+import { useRouter } from "next/router";
 
 const removeAttributes = (element: Element) => {
   for (let i = 0; i < element.attributes.length; i++) {
@@ -7,7 +8,14 @@ const removeAttributes = (element: Element) => {
   }
 };
 
+const changeBody = (opacity: "0" | "1", overflowY: "scroll" | "hidden") => {
+  document.body.style.opacity = opacity;
+  document.body.style.overflowY = overflowY;
+};
+
 export const useAccessibilityButton = () => {
+  const { asPath } = useRouter();
+
   const isLoadAccessibility = useAccessibilityStore(
     (state) => state.isLoadAccessibility,
   );
@@ -21,6 +29,7 @@ export const useAccessibilityButton = () => {
         bviPanel.remove();
       }
       if (bviBody) {
+        changeBody("0", "hidden");
         bviBody.querySelector("a")?.remove();
         removeAttributes(bviBody);
       }
@@ -28,14 +37,16 @@ export const useAccessibilityButton = () => {
       // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       //@ts-ignore
       const { isvek } = window;
-      new isvek.Bvi({
-        reload: true,
-        speech: false,
-        panelHide: true,
-        panelFixed: true,
-      });
-    }
-  }, [isLoadAccessibility]);
 
-  return {};
+      setTimeout(() => {
+        new isvek.Bvi({
+          reload: true,
+          speech: false,
+          panelHide: true,
+          panelFixed: true,
+        });
+        changeBody("1", "scroll");
+      }, 2000);
+    }
+  }, [isLoadAccessibility, asPath]);
 };

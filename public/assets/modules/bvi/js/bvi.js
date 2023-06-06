@@ -743,7 +743,7 @@
     // as the regeneratorRuntime namespace. Otherwise create a new empty
     // object. Either way, the resulting object will be used to initialize
     // the regeneratorRuntime variable at the top of this file.
-    module.exports 
+    module.exports
   ));
 
   try {
@@ -1786,9 +1786,9 @@
 
           if (stringToBoolean(getCookie('panelFixed'))) {
             if (scroll > 200) {
-              document.querySelector('.bvi-panel').classList.add('bvi-fixed-top');
+              document.querySelector('.bvi-panel')?.classList?.add('bvi-fixed-top');
             } else {
-              document.querySelector('.bvi-panel').classList.remove('bvi-fixed-top');
+              document.querySelector('.bvi-panel')?.classList?.remove('bvi-fixed-top');
             }
           }
         };

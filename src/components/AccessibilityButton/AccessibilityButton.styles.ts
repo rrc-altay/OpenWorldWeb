@@ -17,7 +17,7 @@ const ButtonSC = styled(Button)`
   justify-content: flex-end;
 
   transform: translateX(calc(100% - 75px));
-  transition: 0.2s all linear;
+  transition: 0.1s all linear;
 
   &:hover {
     transform: translateY(0);

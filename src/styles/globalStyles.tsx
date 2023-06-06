@@ -22,6 +22,11 @@ export const GlobalStyles = createGlobalStyle`
     font-family: "Lato";
     font-size: 14px;
     font-weight: 600;
+      
+    opacity: 0;
+    overflow-y: hidden;
+      
+    transition: .2s all linear;
   }
   
   *, *:after, *:before {
