@@ -18,6 +18,7 @@ const TitleSC = styled(Typography)`
 
 const TypographySC = styled(Typography)`
   margin-bottom: 32px;
+  text-indent: 0px;
 
   @media (max-width: ${Breakpoints.BIG_MOBILE}px) {
     margin-bottom: 20px;

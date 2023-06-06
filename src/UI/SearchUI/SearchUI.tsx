@@ -8,10 +8,12 @@ import {
 } from "@mui/material";
 import ColorScheme from "@/styles/theme/colorScheme";
 import { Breakpoints } from "@/styles/breakpoints";
+import { bviNoStyle } from "@/lib/constants/bvi";
 
 const SearchUI = (props: TextFieldProps) => {
   return (
     <TextFieldSC
+      {...bviNoStyle}
       variant="standard"
       placeholder="Поиск по сайту"
       {...props}
@@ -46,6 +48,12 @@ const TextFieldSC = styled(TextField)`
     padding-bottom: 14px;
     padding-right: 10px;
     min-height: 37px;
+  }
+
+  & .MuiInputAdornment-root {
+    & > span.notranslate {
+      display: none;
+    }
   }
 
   @media (max-width: ${Breakpoints.BIG_TABLET}px) {

@@ -246,7 +246,8 @@ body.bvi-active.bvi-noscroll {
   overflow: hidden !important;
 }
 body .bvi-body {
-  padding: 0 0.5rem;
+  /*padding: 0 0.5rem;*/
+  padding: 0 !important;
 }
 body .bvi-body[data-bvi-theme=white]:not(.bvi-no-styles) {
   background-color: #ffffff !important;
@@ -263,6 +264,7 @@ body .bvi-body[data-bvi-theme=white] *:not(.bvi-no-styles) {
   border-color: #000000 !important;
   box-shadow: none !important;
   text-shadow: none !important;
+  stroke: #000000 !important;
 }
 body .bvi-body[data-bvi-theme=white] *:not(.bvi-no-styles) .bvi-speech-link,
 body .bvi-body[data-bvi-theme=white] *:not(.bvi-no-styles) .bvi-speech-text {

@@ -4,6 +4,7 @@ import { usePdfStyles } from "@/components/Pdf/Pdf.styles";
 import { usePdf } from "@/components/Pdf/usePdf";
 import { BASE_URL } from "@/lib/constants";
 import PdfFrame from "@/components/Pdf/PdfFrame/PdfFrame";
+import { bviHide, bviNoStyle } from "@/lib/constants/bvi";
 
 const Pdf = ({ name, link, autoOpen }: ContentPdfModel) => {
   const { isVisible, handleChangeVisible } = usePdf({
@@ -16,11 +17,14 @@ const Pdf = ({ name, link, autoOpen }: ContentPdfModel) => {
     <ContainerSC>
       <TextSC>{name}</TextSC>
       <ButtonContainerSC>
-        <ButtonSC onClick={handleChangeVisible}>
+        <ButtonSC
+          onClick={handleChangeVisible}
+          {...bviHide}>
           {isVisible ? "Скрыть документ" : "Показать документ"}
         </ButtonSC>
         <ButtonSC>
           <a
+            {...bviNoStyle}
             href={pdfLink}
             download={true}>
             Скачать документ
@@ -29,7 +33,8 @@ const Pdf = ({ name, link, autoOpen }: ContentPdfModel) => {
       </ButtonContainerSC>
       <CollapseSC
         in={isVisible}
-        visible={isVisible}>
+        visible={isVisible}
+        {...bviHide}>
         <PdfContainerSC>
           <PdfWrapperSC>
             <PdfFrame src={pdfLink} />

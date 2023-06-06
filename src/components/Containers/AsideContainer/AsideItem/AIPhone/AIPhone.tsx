@@ -4,6 +4,7 @@ import WaveLeftIcon from "@/assets/icons/WaveLeftIcon.svg";
 import WaveMiddleIcon from "@/assets/icons/WaveMiddleIcon.svg";
 import { useAIPhoneStyles } from "@/components/Containers/AsideContainer/AsideItem/AIPhone/AIPhone.styles";
 import { BASE_URL } from "@/lib/constants";
+import { bviHide } from "@/lib/constants/bvi";
 
 interface AIPhoneProps {
   phone: PhoneModel;
@@ -19,10 +20,10 @@ const AIPhone = ({ phone }: AIPhoneProps) => {
         rel="noopener noreferrer">
         <IconSC />
       </InfoSC>
-      <WaveContainerSC>
+      <WaveContainerSC {...bviHide}>
         <WaveLeftIcon />
       </WaveContainerSC>
-      <WaveTwoContainerSC>
+      <WaveTwoContainerSC {...bviHide}>
         <WaveMiddleIcon />
       </WaveTwoContainerSC>
     </ContainerSC>

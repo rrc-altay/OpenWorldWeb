@@ -2,6 +2,7 @@ import React from "react";
 import { YMaps, Placemark } from "@pbe/react-yandex-maps";
 import { aboutMock } from "@/lib/mock/aboutMock";
 import { useDCMapStyles } from "@/components/DynamicContent/DCMap/DCMap.styles";
+import { bviHide } from "@/lib/constants/bvi";
 
 const DCMap = () => {
   return (
@@ -25,7 +26,7 @@ const DCMap = () => {
         {"\n"}Республика Алтай, г. Горно-Алтайск, пр. Коммунистический 156
         {"\n"}Телефон/факс заведующего отделением: +7(38822)6-10-93
       </TypographySC>
-      <MapContainerSC>
+      <MapContainerSC {...bviHide}>
         <YMaps>
           <MapSC
             style={{ width: "100%" }}
