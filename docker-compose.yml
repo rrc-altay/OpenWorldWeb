@@ -1,0 +1,10 @@
+version: "3.9"
+services:
+  app:
+    image: openworld_front
+    container_name: openworld_front
+    restart: always
+    ports:
+      - "5779:3000"
+    tty: true
+    stdin_open: true
