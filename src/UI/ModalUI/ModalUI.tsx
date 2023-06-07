@@ -1,21 +1,33 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { DialogProps } from "@mui/material";
 import { useModalUIStyles } from "@/UI/ModalUI/ModalUI.styles";
 import { Children } from "@/types/types";
 import CloseIcon from "@/assets/icons/CloseIcon.svg";
+import { createPortal } from "react-dom";
 
 type ModalUIProps = DialogProps & Children & { handleClose: () => void };
 
 const ModalUI = ({ children, handleClose, ...dialogProps }: ModalUIProps) => {
-  return (
+  const [isVisible, setIsVisible] = useState<boolean>(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
+  //? SSR SKIP
+  if (!isVisible) return null;
+
+  return createPortal(
     <DialogSC
       {...dialogProps}
-      onClose={handleClose}>
+      onClose={handleClose}
+      disablePortal={true}>
       <CloseButtonSC onClick={handleClose}>
         <CloseIcon />
       </CloseButtonSC>
       <WrapperSC>{children}</WrapperSC>
-    </DialogSC>
+    </DialogSC>,
+    document.querySelector("#__next") as Element,
   );
 };
 

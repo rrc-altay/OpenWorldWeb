@@ -2,6 +2,8 @@ import { Dialog, styled } from "@mui/material";
 import ColorScheme from "@/styles/theme/colorScheme";
 
 const DialogSC = styled(Dialog)`
+  height: 100vh;
+
   & .MuiBackdrop-root {
     background-color: ${ColorScheme.BACKDOOR};
   }
