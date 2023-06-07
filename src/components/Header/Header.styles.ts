@@ -8,7 +8,7 @@ const HeaderSC = styled("header")`
   top: 0;
 
   padding: 14px 0;
-  z-index: ${zIndexes.UPPER};
+  z-index: ${zIndexes.HEADER};
 
   background-color: ${ColorScheme.MAIN};
 

@@ -1,23 +1,48 @@
 import React from "react";
 import AccessibilityButton from "@/components/AccessibilityButton/AccessibilityButton";
 import { useMBannerStyles } from "@/components/Main/MBanner/MBanner.styles";
+import { Breakpoints } from "@/styles/breakpoints";
+import { aboutMock } from "@/lib/mock/aboutMock";
 
 const MBanner = () => {
   return (
     <ContainerSC>
-      <WrapperSC className="container p-0">
-        <ImageSC
-          src="https://placehold.co/1920x416"
-          alt="placeholder"
+      <picture>
+        <source
+          srcSet="/assets/images/DBanner.jpg"
+          media={`(min-width: ${Breakpoints.BIG_TABLET}px)`}
         />
-        <AccessibilityContainerSC>
-          <AccessibilityButton />
-        </AccessibilityContainerSC>
+        <source
+          srcSet="/assets/images/TBanner.jpg"
+          media={`(min-width: ${Breakpoints.BIG_MOBILE}px)`}
+        />
+        <ImageSC
+          src="/assets/images/MBanner.jpg"
+          alt="банер"
+        />
+      </picture>
+      <AccessibilityContainerSC>
+        <AccessibilityButton />
+      </AccessibilityContainerSC>
+      <WrapperSC className="container-two bvi-no-styles">
+        <LogoSC
+          src="/assets/images/Logo.png"
+          alt="логотип"
+        />
+        <TitleSC>{aboutMock.name}</TitleSC>
+        <TitleMobileSC>{aboutMock.nameMobile}</TitleMobileSC>
       </WrapperSC>
     </ContainerSC>
   );
 };
 
-const { ContainerSC, WrapperSC, ImageSC, AccessibilityContainerSC } =
-  useMBannerStyles();
+const {
+  ContainerSC,
+  WrapperSC,
+  ImageSC,
+  AccessibilityContainerSC,
+  LogoSC,
+  TitleSC,
+  TitleMobileSC,
+} = useMBannerStyles();
 export default React.memo(MBanner);
