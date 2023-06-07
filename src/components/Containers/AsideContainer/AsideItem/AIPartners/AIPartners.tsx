@@ -10,7 +10,7 @@ interface AIPartnersProps {
 const AIPartners = ({ partners }: AIPartnersProps) => {
   return (
     <ContainerSC>
-      {partners.map(({ link, src }) => (
+      {partners.map(({ link, src }, index) => (
         <ItemSC key={link}>
           <LinkSC
             href={link || "#"}
@@ -18,7 +18,7 @@ const AIPartners = ({ partners }: AIPartnersProps) => {
             rel="noopener noreferrer">
             <ImgSC
               src={`${BASE_URL}/${src}`}
-              alt="partners"
+              alt={`Партнер номер ${index + 1}`}
             />
           </LinkSC>
         </ItemSC>
