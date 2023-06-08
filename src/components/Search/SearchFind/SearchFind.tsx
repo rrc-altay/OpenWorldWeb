@@ -7,7 +7,7 @@ const SearchFind = ({ find }: Pick<SearchProps, "find">) => {
   const { value, handleChangeValue, handleSubmit } = useSearch(find);
 
   return (
-    <FormSC onSubmit={handleSubmit(false)}>
+    <FormSC onSubmit={handleSubmit}>
       <TitleContainerSC>
         <SearchIconSC />
         <TitleSC variant="h1">Результаты поиска для: {find}</TitleSC>
