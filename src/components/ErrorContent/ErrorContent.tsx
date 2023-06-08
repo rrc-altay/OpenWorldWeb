@@ -8,7 +8,7 @@ interface ErrorPageProps {
   description: string;
   button: {
     text: string;
-    onClick: () => void;
+    href: string;
   };
   buttonTwo?: {
     text: string;
@@ -36,7 +36,7 @@ const ErrorContent = ({
         </TitleSC>
         <SubtitleSC>{subtitle}</SubtitleSC>
         <DescriptionSC>{description}</DescriptionSC>
-        <ButtonSC onClick={button.onClick}>{button.text}</ButtonSC>
+        <ButtonSC href={button.href}>{button.text}</ButtonSC>
         {buttonTwo && (
           <ButtonSC
             sx={{ marginTop: "10px" }}
