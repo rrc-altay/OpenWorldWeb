@@ -1,6 +1,5 @@
 import React from "react";
 import { navigationMock } from "@/lib/mock/navigationMock";
-import Link from "next/link";
 import { useMNavigationStyles } from "@/components/Main/MNavigation/MNavigation.styles";
 
 const MNavigation = () => {
@@ -9,11 +8,11 @@ const MNavigation = () => {
       <ListSC>
         {navigationMock.map((navigationItem) => (
           <ItemSC key={navigationItem.path}>
-            <Link
+            <a
               href={navigationItem.path}
               target={navigationItem?.target}>
               {navigationItem.title}
-            </Link>
+            </a>
           </ItemSC>
         ))}
       </ListSC>

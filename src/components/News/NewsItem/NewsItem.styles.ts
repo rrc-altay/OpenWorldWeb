@@ -1,11 +1,9 @@
 import { styled } from "@mui/material";
 import ColorScheme from "@/styles/theme/colorScheme";
 import { Breakpoints } from "@/styles/breakpoints";
-import Link from "next/link";
 
-const ContainerSC = styled(Link)`
+const ContainerSC = styled("a")`
   width: 100%;
-  //min-height: 240px;
 
   display: flex;
   flex-direction: column;

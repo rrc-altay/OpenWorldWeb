@@ -2,6 +2,7 @@ import React from "react";
 import { useBreadCrumbsUIStyles } from "@/UI/BreadCrumbsUI/BreadCrumbsUI.styles";
 import { BreadCrumbsUIProps } from "@/UI/BreadCrumbsUI/types";
 import { RoutesNamespace } from "@/lib/constants/routesNamespace";
+import { getDynamicPath } from "@/lib/services/services";
 
 const BreadCrumbsUI = ({ breadCrumbs }: BreadCrumbsUIProps) => {
   const lastIndex = breadCrumbs.length - 1;
@@ -19,7 +20,7 @@ const BreadCrumbsUI = ({ breadCrumbs }: BreadCrumbsUIProps) => {
             <LiSC
               key={breadItem.title}
               isActive={isLast}>
-              <LinkSC href={breadItem.href}>
+              <LinkSC href={getDynamicPath(breadItem.href)}>
                 &nbsp;
                 {breadItem.title}
                 {isLast ? "" : " —"}

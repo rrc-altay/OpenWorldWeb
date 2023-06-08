@@ -1,5 +1,4 @@
 import { css, styled } from "@mui/material";
-import Link from "next/link";
 import ColorScheme from "@/styles/theme/colorScheme";
 import { WMSItemProps } from "@/components/WebsiteMap/WMSItem/WMSItem";
 import { Breakpoints } from "@/styles/breakpoints";
@@ -33,7 +32,7 @@ const ItemSC = styled("li")<Pick<WMSItemProps, "isHorizontalPadding">>`
   }
 `;
 
-const LinkSC = styled(Link)`
+const LinkSC = styled("a")`
   display: flex;
 
   font-size: 16px;
