@@ -8,7 +8,7 @@ const HSearch = () => {
   const { value, handleSubmit, handleChangeValue } = useSearch();
 
   return (
-    <ContainerSC onSubmit={handleSubmit(true)}>
+    <ContainerSC onSubmit={handleSubmit}>
       <SearchUI
         value={value}
         onChange={handleChangeValue}

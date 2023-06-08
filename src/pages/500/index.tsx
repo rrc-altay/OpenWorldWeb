@@ -20,12 +20,12 @@ const Index = () => {
         description="Мы уже устраняем неисправность, попробуйте обновить страницу через некоторое время.
       Приносим извинения за временные неудобства."
         button={{
-          text: "Перезагрузить",
-          onClick: () => router.reload(),
+          text: "Вернуться на главную",
+          href: RoutesNamespace.HOME,
         }}
         buttonTwo={{
-          text: "Вернуться на главную",
-          onClick: () => router.push(RoutesNamespace.HOME),
+          text: "Перезагрузить",
+          onClick: () => router.reload(),
         }}
       />
     </TitleLayout>
