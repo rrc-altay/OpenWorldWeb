@@ -1,6 +1,7 @@
 import React from "react";
 import { useBoxWrapperStyles } from "@/components/Wrappers/BoxWrapper/BoxWrapper.styles";
 import { BoxWrapperProps } from "@/components/Wrappers/BoxWrapper/types";
+import { bviSpeech } from "@/lib/constants/bvi";
 
 const BoxWrapper = ({
   title,
@@ -11,7 +12,13 @@ const BoxWrapper = ({
   return (
     <>
       <ContainerSC isPaddingBottom={isPaddingBottom}>
-        {title && <TitleSC variant="h1">{title}</TitleSC>}
+        {title && (
+          <TitleSC
+            {...bviSpeech}
+            variant="h1">
+            {title}
+          </TitleSC>
+        )}
         {children}
       </ContainerSC>
       {button && <ButtonSC {...button}>{button.children}</ButtonSC>}

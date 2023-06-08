@@ -4,6 +4,7 @@ import { BASE_URL } from "@/lib/constants";
 import { useNewsItemStyles } from "@/components/News/NewsItem/NewsItem.styles";
 import RusDateSSR from "@/components/RusDateSSR/RusDateSSR";
 import { RoutesNamespace } from "@/lib/constants/routesNamespace";
+import { bviSpeech } from "@/lib/constants/bvi";
 
 const NewsItem = ({
   id,
@@ -27,9 +28,9 @@ const NewsItem = ({
           />
         )}
         <TextContainerSC>
-          <TitleSC>{title}</TitleSC>
+          <TitleSC {...bviSpeech}>{title}</TitleSC>
           <DescContainerSC>
-            <DescriptionSC>{description}</DescriptionSC>
+            <DescriptionSC {...bviSpeech}>{description}</DescriptionSC>
           </DescContainerSC>
           {created_at && (
             <DateContainerSC>

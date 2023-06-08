@@ -6,6 +6,7 @@ import { useNEwsIdStyles } from "@/components/NewsId/NewsId.styles";
 import SwiperUI from "@/UI/SwiperUI/SwiperUI";
 import { Typography } from "@mui/material";
 import { RoutesNamespace } from "@/lib/constants/routesNamespace";
+import { bviSpeech } from "@/lib/constants/bvi";
 
 const NewsId = ({ title, description, created_at, images }: NewsModel) => {
   return (
@@ -19,6 +20,7 @@ const NewsId = ({ title, description, created_at, images }: NewsModel) => {
         }}>
         <WrapperSC>
           <Typography
+            {...bviSpeech}
             variant="body1"
             component="pre">
             {description}
