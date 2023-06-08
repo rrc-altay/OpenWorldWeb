@@ -59,7 +59,7 @@ const IconSC = styled(GlassIcon)`
   }
 `;
 
-export const useAccessibilityButtonStyles = () => ({
+export const useBVIButtonStyles = () => ({
   ButtonSC,
   IconSC,
 });

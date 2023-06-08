@@ -19,7 +19,7 @@ module.exports = {
     sourceType: "module",
   },
   plugins: ["react", "prettier", "@typescript-eslint"],
-  ignorePatterns: ["/public/assets/modules"],
+  ignorePatterns: ["/public/modules"],
   rules: {
     "prettier/prettier": "error",
     "react/react-in-jsx-scope": "off",

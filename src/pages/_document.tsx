@@ -5,14 +5,7 @@ import React, { FC } from "react";
 function MyDocument() {
   return (
     <Html lang="ru">
-      <Head>
-        {/* eslint-disable-next-line @next/next/no-css-tags */}
-        <link
-          rel="stylesheet"
-          href="/assets/modules/bvi/css/bvi.css"
-          type="text/css"
-        />
-      </Head>
+      <Head />
       <body>
         <Main />
         <NextScript />

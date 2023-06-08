@@ -1,12 +1,12 @@
 import React from "react";
-import AccessibilityInit from "../../init/Accessibility/AccessibilityInit";
 import GosUslugiInit from "../../init/GosUslugiInit/GosUslugiInit";
+import BVIInit from "@/init/BVIInit/BVIInit";
 
 const ScriptsLayout = () => {
   return (
     <>
-      <AccessibilityInit />
       <GosUslugiInit />
+      <BVIInit />
     </>
   );
 };
