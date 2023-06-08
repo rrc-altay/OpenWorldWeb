@@ -1,8 +1,6 @@
 import React from "react";
 import { GosUslugiStyles } from "@/components/GosUslugi/GosUslugi.styles";
 
-// В дом дереве работает только 1 виджет гос услуг (который отрисовался быстрее всех)
-
 const GosUslugi = () => {
   return (
     <div id="gos-uslugi-widget">

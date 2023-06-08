@@ -5,6 +5,7 @@ import { useNewsItemStyles } from "@/components/News/NewsItem/NewsItem.styles";
 import RusDateSSR from "@/components/RusDateSSR/RusDateSSR";
 import { RoutesNamespace } from "@/lib/constants/routesNamespace";
 import { bviSpeech } from "@/lib/constants/bvi";
+import { BVI_CLASS } from "@/init/BVIInit/constants";
 
 const NewsItem = ({
   id,
@@ -23,6 +24,7 @@ const NewsItem = ({
       <WrapperSC>
         {previewImage?.src && (
           <ImageSC
+            className={BVI_CLASS.IMG}
             src={`${BASE_URL}${previewImage.src}`}
             alt={`Превью фото новости ${title}`}
           />

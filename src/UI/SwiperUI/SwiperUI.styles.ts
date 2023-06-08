@@ -61,8 +61,6 @@ const ImgSC = styled("img")`
   width: 100%;
   height: 100%;
 
-  max-height: 504px;
-
   border-radius: 30px;
   object-fit: cover;
 
