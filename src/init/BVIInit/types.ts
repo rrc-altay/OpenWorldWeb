@@ -1,5 +1,5 @@
 //? https://github.com/veks/button-visually-impaired-javascript#settings
-export interface BviConfig {
+export interface BVIConfig {
   target?: string; // Класс ссылки включения плагина
   theme?: "white" | "black" | "blue" | "brown" | "green"; // Цвет сайта
   fontFamily?: "arial" | "times"; // Шрифт

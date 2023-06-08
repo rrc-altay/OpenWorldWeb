@@ -1,5 +1,5 @@
 import React from "react";
-import AccessibilityButton from "@/components/AccessibilityButton/AccessibilityButton";
+import BVIButton from "@/components/BVIButton/BVIButton";
 import { useMBannerStyles } from "@/components/Main/MBanner/MBanner.styles";
 import { Breakpoints } from "@/styles/breakpoints";
 import { aboutMock } from "@/lib/mock/aboutMock";
@@ -22,7 +22,7 @@ const MBanner = () => {
         />
       </picture>
       <AccessibilityContainerSC>
-        <AccessibilityButton />
+        <BVIButton />
       </AccessibilityContainerSC>
       <WrapperSC className="container-two bvi-no-styles">
         <LogoSC
