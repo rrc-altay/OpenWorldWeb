@@ -50,11 +50,11 @@ export const checkIsOdd = (length: number) => {
 
 export const getSearch = (find: string) => `🔎 : ${find}`;
 
-export const loadScript = (src: string) => {
+export const loadScript = (src: string, id = "loadScript") => {
   return new Promise(function (resolve, reject) {
     const script = document.createElement("script");
     script.src = src;
-    script.id = "loadScript";
+    script.id = id;
 
     script.onload = () => resolve({ load: "success", script: src });
     script.onerror = () => reject({ load: "error", script: src });

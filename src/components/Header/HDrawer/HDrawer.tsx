@@ -2,7 +2,6 @@ import React from "react";
 import CloseIcon from "@/assets/icons/CloseIcon.svg";
 import { useHDrawer } from "@/components/Header/HDrawer/useHDrawer";
 import { navigationMock } from "@/lib/mock/navigationMock";
-import Link from "next/link";
 import { useHDrawerStyles } from "@/components/Header/HDrawer/HDrawer.styles";
 
 const HDrawer = () => {
@@ -27,11 +26,11 @@ const HDrawer = () => {
               <DrawerItemSC
                 key={item.path}
                 onClick={handleClick(item.path)}>
-                <Link
+                <a
                   href={item.path}
                   target={item?.target}>
                   {item.title}
-                </Link>
+                </a>
               </DrawerItemSC>
             ))}
           </DrawerWrapperSC>

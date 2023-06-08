@@ -1,6 +1,5 @@
 import { css, styled } from "@mui/material";
 import ColorScheme from "@/styles/theme/colorScheme";
-import Link from "next/link";
 import { Breakpoints } from "@/styles/breakpoints";
 
 const ContainerSC = styled("nav")``;
@@ -31,7 +30,7 @@ const LiSC = styled("li")<{ isActive: boolean }>`
     line-height: 17px;
   }
 `;
-const LinkSC = styled(Link)`
+const LinkSC = styled("a")`
   padding: 10px 0;
 
   @media (max-width: ${Breakpoints.BIG_TABLET}px) {

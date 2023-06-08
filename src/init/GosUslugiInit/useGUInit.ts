@@ -2,13 +2,22 @@
 // @ts-nocheck
 
 import { useEffect, useState } from "react";
-import useWidgetsStore from "@/components/GosUslugi/widgetsStore";
+import { useBigTablet } from "@/hooks/useAdaptive";
 
-export const useGosUslugi = () => {
-  const isLoadGosUslugi = useWidgetsStore((state) => state.isLoadGosUslugi);
-  const [isLoadingStyles, setIsLoadingStyles] = useState<boolean>(false);
+const FORM_ID = 235629;
+
+export const useGUInit = () => {
+  const [isActive, setIsActive] = useState<boolean>(false);
+
+  const isBigTablet = useBigTablet();
 
   useEffect(() => {
+    if (isActive) {
+      onLoad();
+    }
+  }, [isBigTablet]);
+
+  function onLoad() {
     (function () {
       "use strict";
       function ownKeys(e, t) {
@@ -123,15 +132,11 @@ export const useGosUslugi = () => {
         });
     })();
 
-    // ПОСЛЕ ИНИЦИАЛИЗАЦИИ ВСЕХ CSS КОНСТАНТ
-    setIsLoadingStyles(true);
-
-    if (!isLoadGosUslugi) return;
-
-    window.Widget("https://pos.gosuslugi.ru/form", 235629);
-  }, [isLoadGosUslugi]);
+    window.Widget("https://pos.gosuslugi.ru/form", FORM_ID);
+    setIsActive(true);
+  }
 
   return {
-    isLoadingStyles,
+    onLoad,
   };
 };
