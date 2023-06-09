@@ -1,8 +1,8 @@
 import { BVIConfig } from "./types";
 
 export enum BVI_SETTINGS {
-  JS = "/modules/bvi/js/bvi.js",
-  CSS = "/modules/bvi/css/bvi.css",
+  JS = "/modules/bvi/js/bvi.min.js",
+  CSS = "/modules/bvi/css/bvi.min.css",
   TARGET = "bvi-open",
 }
 
