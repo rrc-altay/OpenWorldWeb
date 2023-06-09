@@ -1067,35 +1067,16 @@
    * Licensed under MIT (https://github.com/veks/button-visually-impaired-javascript/blob/master/LICENSE.md)
    * --------------------------------------------------------------------------
    */
-  var setCookie = function setCookie() {
-    var name = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
-    var value = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : '';
-    var now = new Date();
-    var time = now.getTime();
-    time += 24 * 60 * 60 * 1000;
-    now.setTime(time);
-    document.cookie = "bvi_".concat(name, "=").concat(value, ",path=/,expires=").concat(now.toUTCString(), ",domain=").concat(location.host);
+  var setCookie = function setCookie(name = "", value = "") {
+    localStorage.setItem(`bvi_${name}=`, value);
   };
 
-  var getCookie = function getCookie() {
-    var name = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
-    name = "bvi_".concat(name, "=");
-    var decodedCookie = decodeURIComponent(document.cookie);
-    var cookies = decodedCookie.split(';');
-
-    for (var i = 0; i < cookies.length; i++) {
-      var cookie = cookies[i].trim();
-
-      if (cookie.indexOf(name) !== -1) {
-        var options = cookie.split(",");
-        return options[0].substring(name.length, options[0].length);
-      }
-    }
+  var getCookie = function getCookie(name = "") {
+    return localStorage.getItem(`bvi_${name}=`)
   };
 
   var removeCookie = function removeCookie() {
-    var name = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
-    document.cookie = "bvi_".concat(name, "=,path=/,expires=Thu, 01 Jan 1970 00:00:01 GMT,domain=").concat(location.host);
+    localStorage.clear();
   };
 
   /**
