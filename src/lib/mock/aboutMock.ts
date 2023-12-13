@@ -1,3 +1,5 @@
+import { BASE_URL } from "@/lib/constants";
+
 export const aboutMock = {
   developer: "Разработано студией INDEX",
   developerLink: "https://index-studio.ru",
@@ -23,7 +25,7 @@ export const aboutMock = {
     { src: "vk.png", name: "vk icon", href: "https://vk.com/public211642995" },
   ],
 
-  downloadAppLink: "https://1openworld.ru/media/build/file/app-release.apk",
+  downloadAppLink: `${BASE_URL}/media/build/file/app-release.apk`,
 
   yandexForm: "https://forms.yandex.ru/u/627db72e9144d4b9c72a00a2/",
 };
