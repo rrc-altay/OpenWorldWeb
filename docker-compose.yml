@@ -3,6 +3,8 @@ services:
   app:
     image: openworld_front
     container_name: openworld_front
+    build:
+      context: .
     restart: always
     ports:
       - "5779:3000"
